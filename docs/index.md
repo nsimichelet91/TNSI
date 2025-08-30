@@ -1,60 +1,63 @@
 
 
 !!! abstract "Actualités"
-    - :new: page sur l'orientation post-bac :new: à retrouver [ici](T7_Divers/10_orientation/cours/){. target="_blank"}.
+    - Bonne rentrée à tous.
+
+=== "Programme"
+    Le [programme](data/Tle_NSI_Specialite_Voie_G_1126614.pdf) de terminale NSI est articulé autour de cinq thèmes.
+
+    Nous traiterons les différentes entrées du programme dans les chapitres suivants.
+
+    === "Thème 1"
+
+        1.1 Listes chaînées 
+        
+        1.2 Piles et Files 
+
+        1.3 Dictionnaires 
+
+        1.4 Arbres 
+        
+        1.5 Graphes
+
+    
+    === "Thème 2"
+
+        2.1 Programmation orientée objet 
+
+        2.2 Récursivité 
+
+        2.3 Calculabilité et décidabilité
+
+        2.4 Paradigmes de programmation
+
+    === "Thème 3"
+
+        3.1 Diviser pour régner 
+
+        3.2 Programmation dynamique
+
+        3.3 Recherche textuelle
+
+    === "Thème 4"
+
+        4.1 Modèle relationnel 
+
+        4.2 Langage SQL
 
 
+    === "Thème 5"
 
+        5.1 Protocoles de routage
 
+        5.2 Gestion des processus
 
+        5.3 Sécurisation des communications
 
-
-
-
-!!! note ":star: Thèmes en cours d'étude :star: "
-    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-
-
-### *Thèmes déjà traités*
-- [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
-- [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-- [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-- [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
-- [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-- [Projet en POO sur les balles rebondissantes](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)   
-- [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)   
-
+        5.4 Système sur puce
 
 <!--
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
-        
-
-
-
-
-!!! abstract ":star: Actualités :star:"
-    - Organisez-vous avec (par exemple) [Trello](https://trello.com/fr){. target="_blank"}, [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
-    - Épreuves Pratiques : [entraînez-vous sur nsi-pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
-    - [Trouvez un emploi en Suède](https://www.reddit.com/r/ProgrammerHumor/comments/tw2ner/interesting_job_offer_in_gothenburg/){. target="_blank"}
-    - [Ressources](T7_Divers/8_Zenika/) pour l'intervention développeurs Zenika
-    - [Sujet](data/BacBlancTNSI_2022.pdf){. target="_blank"} du Bac Blanc et son [corrigé](data/BacBlancTNSI_2022corr.pdf){. target="_blank"}.
-    - Les sujets de la BNS 2022 de l'Épreuve Pratique sont parus, vous pouvez les retrouver [ici](T6_6_Epreuve_pratique/BNS_2022/)
-    - **Infos orientation :**
-        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
-        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
-
-
-
-## Thème en cours d'étude : [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)   
-
-!!! note "*Thèmes traités*"
+=== "Progression"
     - [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
     - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
@@ -67,6 +70,64 @@
     - [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
     - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
     - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  
+    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  -->
+    
+=== "Liens utiles"
 
--->
+    **À propos de la spécialité NSI**
+
+    - [Le site Eduscol](https://eduscol.education.fr/2068/programmes-et-ressources-en-numerique-et-sciences-informatiques-voie-g){:target="_blank"} 
+    - [Les trophées NSI](https://trophees-nsi.fr/){:target="_blank"} 
+
+    **À propos de la culture des sciences de l'informatique**
+
+    - [Interstices](https://interstices.info/){:target="_blank"} 
+
+    - [Inria](https://www.inria.fr/fr){:target="_blank"} 
+
+    **À propos de Python**
+
+    - Une [interview](https://www.lemonde.fr/pixels/article/2018/07/25/je-n-imaginais-pas-que-python-connaitrait-un-tel-succes_5335917_4408996.html){:target="_blank"} de [Guido van Rossum](https://fr.wikipedia.org/wiki/Guido_van_Rossum){:target="_blank"} , le créateur de Python
+
+    **À propos de l'orientation**
+
+    - [BD à télécharger en PDF : Les décodeuses du numérique](data/les_decodeuses_du_numerique_web.pdf){:target="_blank"} 
+    - [Talents du numérique](https://talentsdunumerique.com/){:target="_blank"} 
+    - Une [brochure](data/Infographie_TN.pdf){:target="_blank"} intéressante sur les métiers du numérique.
+    - Un [podcast](https://pixees.fr/podcast/pod-nsi-orientation-post-bac/){:target="_blank"} sur les poursuites d'études (CPGE MPI, IUT, Université) après avoir choisi NSI comme spécialité au lycée.
+    - [Zoom sur les métiers des mathématiques et de l'informatique](data/Zoom_metiers_maths.pdf){:target="_blank"} 
+    - [Onisep](https://www.onisep.fr/Decouvrir-les-metiers/Actus-2022/Journee-nationale-NSI-numerique-et-sciences-informatiques){:target="_blank"} 
+    - Les [métiers de la cybersécurité](https://www.demainspecialistecyber.fr/){:target="_blank"} 
+
+
+    **Pour se creuser la tête**
+
+    Quelques sites de challenges/énigmes/défis de programmation:
+
+    - [PyDéfis](https://pydefis.callicode.fr/){:target="_blank"} 
+    - [Codémoi](https://iremsinfo.callicode.fr/concours/infos/){:target="_blank"}
+    - [Advent of Code](https://adventofcode.com/){:target="_blank"} 
+    - [Hackinscience](https://www.hackinscience.org/){:target="_blank"} 
+    - [The OSINT Project](https://the-osint-project.fr/){:target="_blank"} :fr:
+    - [Root me](https://www.root-me.org/){:target="_blank"} :fr:
+    - [Try hack me](https://tryhackme.com/){:target="_blank"} :gb:
+
+    **Pour se former en autonomie**
+
+    Au cas où vous vous ennuieriez...
+
+    - [France-IOI](http://www.france-ioi.org/){:target="_blank"} :fr:
+    - [CheckIO](https://checkio.org/){:target="_blank"} :gb:
+    - [CodinGame](https://www.codingame.com/start){:target="_blank"} :fr: 
+
+=== "Sources"
+    L'essentiel des sources des contenus de ce site:
+
+    - L'excellentissime site de Gilles Lassus : [https://glassus.github.io/terminale_nsi/](https://glassus.github.io/terminale_nsi/){:target="_blank"} 
+    - L'excellentissime site de Cédric Gouygou : [https://cgouygou.github.io/TNSI/](https://cgouygou.github.io/TNSI/){:target="_blank"} 
+    - Le site de David Roche, [https://pixees.fr/informatiquelycee](https://pixees.fr/informatiquelycee){:target="_blank"} 
+    - *Prépabac NSI, Tle générale*, C. Adobet, G. Connan, G. Rozsavolgyi, L. Signac, Hatier
+    - *NSI Tle, 24 leçons avec exercices corrigés*, T. Balabonski, S. Conchon, J-C. Filiâtre, K. Nguyen, Ellipses
+    - *Informatique et Sciences du Numérique*, G. Dowek, Eyrolles
+    - Les ressources disponibles sur [https://gitlab.com/eskool/profs-info](https://gitlab.com/eskool/profs-info){:target="_blank"} et sur le [forum NSI - INRIA](https://mooc-forums.inria.fr/moocnsi/){:target="_blank"}
+  
