@@ -3,7 +3,7 @@
 
 ### Exercices que vous pouvez travailler par thème : 
 
-!!! example "Thème Calcul de moyenne" : 
+!!! example "Thème Calcul de moyenne"
     Tous les exercices sauf "Eleve en POO"
 
 #### Thème "Découverte des listes":
