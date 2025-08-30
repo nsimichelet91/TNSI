@@ -1,5 +1,5 @@
-site_name: "Terminale NSI - Lycée François Mauriac - Bordeaux"
-site_url: https://glassus.github.io/terminale_nsi/
+site_name: "Terminale NSI - Lycée Edmond Michelet Arpajon"
+site_url: https://nsimichelet91.io/TNSI/
 #nav:
 #  - 'accueil' : 'index.md'
 
@@ -123,8 +123,3 @@ extra_css:
   - xtra/stylesheets/pyoditeur.css
 
 
-copyright:  CC BY-SA / G.Lassus
-
-repo_url: https://github.com/glassus/terminale_nsi
-
-repo_name: glassus/terminale_nsi
