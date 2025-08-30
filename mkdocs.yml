@@ -97,7 +97,6 @@ extra:
   analytics: 
     provider: google
     property: G-NXDLLVVQEB
-:
 
   social:
     - icon: fontawesome/solid/school
