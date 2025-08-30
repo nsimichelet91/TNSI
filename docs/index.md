@@ -1,10 +1,10 @@
 
 
 !!! abstract "Actualités"
-    - Bonne rentrée à tous.
+    ⭐Bonne rentrée à tous⭐
 
 === "Programme"
-    Le [programme](data/Tle_NSI_Specialite_Voie_G_1126614.pdf) de terminale NSI est articulé autour de cinq thèmes.
+    Le [programme](data/programme_TNSI.pdf) de terminale NSI est articulé autour de cinq thèmes.
 
     Nous traiterons les différentes entrées du programme dans les chapitres suivants.
 

@@ -3,9 +3,6 @@
 
 _abrégée par POO en français, OOP en anglais (ne pas confondre)_
 
-![image](data/meme3.jpg){: .center width='50%'}
-
-
 
 ## 0. Introduction
 La POO est un **paradigme** de programmation, au même titre que la programmation impérative (que nous pratiquons déjà) ou la programmation fonctionnelle (qui sera étudiée cette année en Terminale), ou encore d'autres paradigmes (la liste est longue).  
@@ -516,8 +513,6 @@ Ce type de méthode s'appelle un ```getter```.
 ??? Abstract "Sources et bibliographie"
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
 
-
-[DS01](/data/DS01_POO.pdf)
 
 
 
