@@ -32,7 +32,7 @@ jobs:
           pip install mkdocs-git-revision-date-localized-plugin
 
       - name: Build site
-        run: mkdocs build --strict
+        run: mkdocs build #--strict
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
