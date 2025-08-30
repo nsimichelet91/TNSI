@@ -1,5 +1,5 @@
 site_name: "Terminale NSI - Lycée Edmond Michelet Arpajon"
-site_url: https://nsimichelet91.io/TNSI/
+site_url: https://nsimichelet91.github.io/TNSI/
 #nav:
 #  - 'accueil' : 'index.md'
 
@@ -97,19 +97,12 @@ extra:
   analytics: 
     provider: google
     property: G-NXDLLVVQEB
+:
 
   social:
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:gilles.lassus@ac-bordeaux.fr
-      name: Écrire à l'auteur
-
-    - icon: fontawesome/brands/github
-      link: https://github.com/glassus/terminale_nsi
-      name: Dépôt git
-
     - icon: fontawesome/solid/school
-      link: https://lyceemauriac.fr
-      name: Lycée François Mauriac - Bordeaux
+      link: https://lyc-michelet-arpajon.ac-versailles.fr/
+      name: Lycée Edmond Michelet - Arpajon
 
 extra_javascript:
   - scripts/mathjax.js
