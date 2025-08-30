@@ -3,8 +3,8 @@
 
 ### Exercices que vous pouvez travailler par thème : 
 
-#### example "Thème Calcul de moyenne" : 
-Tous les exercices sauf "Eleve en POO"
+!!! example "Thème Calcul de moyenne" : 
+    Tous les exercices sauf "Eleve en POO"
 
 #### Thème "Découverte des listes":
 Fonctions simples : écrire des fonctions très simples
