@@ -1,6 +1,6 @@
 ## Cours de Terminale NSI 
 
-Lycée Edmond Michelet / Arpajon  
+Lycée Edmond Michelet - Arpajon  
 
 L'ensemble des documents disponibles est publié sous licence CC-BY-SA.
 
