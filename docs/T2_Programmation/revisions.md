@@ -1,6 +1,5 @@
 ## Parcours Informatique du site [Codex](https://codex.forge.apps.education.fr/parcours/) : 
 
-
 ### Exercices que vous pouvez travailler par thème : 
 
 !!! Example "Thème Calcul de moyenne"

@@ -2,7 +2,7 @@
 
 ## Cours de Première
 
-À retrouver [ici](https://glassus.github.io/premiere_nsi/){:target="_blank"}
+À retrouver [ici](https://nsimichelet91.github.io/1NSI/){:target="_blank"}
 
 ## À propos de la spécialité NSI
 

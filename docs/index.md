@@ -1,7 +1,7 @@
 
 
-!!! abstract "Actualités"
-    ⭐Bonne rentrée à tous⭐
+!!! abstract "⭐ Actualités ⭐"
+    Bonne rentrée à tous !
 
 === "Programme"
     Le [programme](data/programme_TNSI.pdf) de terminale NSI est articulé autour de cinq thèmes.
