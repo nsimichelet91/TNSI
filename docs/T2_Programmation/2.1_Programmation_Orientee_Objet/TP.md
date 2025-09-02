@@ -2,7 +2,8 @@
 
 ![image](data/balles1.png){: .center witdh=40%}
 
-!!! capytale "Dépôt de projet sur Capytale : [notebook](https://capytale2.ac-paris.fr/web/c/0d5d-6963432){:target="_blank"}
+!!! Capytale 
+    "Dépôt de projet sur Capytale : [notebook](https://capytale2.ac-paris.fr/web/c/0d5d-6963432){:target="_blank"}
     Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.  
     Je pourrai ainsi le consulter au fur et à mesure de votre progression.  
 
