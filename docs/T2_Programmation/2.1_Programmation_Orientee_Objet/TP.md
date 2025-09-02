@@ -2,6 +2,13 @@
 
 ![image](data/balles1.png){: .center witdh=40%}
 
+!!! capytale "Dépôt de projet sur Capytale : [notebook](https://capytale2.ac-paris.fr/web/c/0d5d-6963432){:target="_blank"}
+    Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.  
+    Je pourrai ainsi le consulter au fur et à mesure de votre progression.  
+
+    Ce que je ne veux pas voir :  
+    ![](data/paste.jpg){: .center width=40%} 
+
 ## 1. Prise en main de Pygame
 
 ```python linenums='1'
@@ -42,7 +49,7 @@ while True :
 
 ### 1.1  Rajout d'un rebond sur les parois
 Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il suffit de modifier intelligemment les variables de vitesse ```dx``` et ```dy```).
-
+<!--
 ??? info "Correction"
     ```python linenums='1'
     import pygame, sys
@@ -90,6 +97,7 @@ Modifiez le code précédent afin que la balle rebondisse sur chaque paroi (il s
         time.sleep(0.02)
 
     ```
+-->
 
 ### 1.2 Rajout d'une deuxième balle
 Attention au nommage des variables...
@@ -477,11 +485,6 @@ Puis plusieurs balles ! (qui se collisionnent...)
     ```
 
  -->
-!!! capytale "Dépôt de projet sur Capytale : [fd7c-59906](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/fd7c-59906)"
-    Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.
-    Je pourrai ainsi le consulter au fur et à mesure de votre progression.
 
-    Ce que je ne veux pas voir :
-    ![](data/paste.jpg){: .center width=40%} 
 
 
