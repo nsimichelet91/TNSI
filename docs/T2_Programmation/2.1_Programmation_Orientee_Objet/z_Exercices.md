@@ -170,27 +170,27 @@
         ```
 -->
 
-    !!! example "Exercice 5"
-        === "Énoncé"
-            Créer une classe ```Compte_bancaire``` dont la méthode constructeur recevra en paramètres :
+!!! example "Exercice 5"
+    === "Énoncé"
+        Créer une classe ```Compte_bancaire``` dont la méthode constructeur recevra en paramètres :
 
-            - un attribut ```titulaire``` stockant le nom du propriétaire.
-            - un attribut ```solde``` contenant le solde disponible sur le compte.  
-            
-            Cette classe contiendra deux méthodes ```retrait()``` et ```depot()``` qui permettront de retirer ou de déposer de l'argent sur le compte. 
+        - un attribut ```titulaire``` stockant le nom du propriétaire.
+        - un attribut ```solde``` contenant le solde disponible sur le compte.  
         
-            !!! info "Exemple d'utilisation de la classe"
-                ```python
-                >>> compte_picsou = Compte_bancaire("Picsou", 1000)
-                >>> compte_picsou.retrait(50)
-                Vous avez retiré 50 euros
-                Solde actuel du compte : 950 euros
-                >>> compte_picsou.retrait(40000)
-                Retrait impossible
-                >>> compte_picsou.depot(10000000)
-                Vous avez déposé 10000000 euros
-                Solde actuel du compte : 10000950 euros
-                ```
+        Cette classe contiendra deux méthodes ```retrait()``` et ```depot()``` qui permettront de retirer ou de déposer de l'argent sur le compte. 
+    
+        !!! info "Exemple d'utilisation de la classe"
+            ```python
+            >>> compte_picsou = Compte_bancaire("Picsou", 1000)
+            >>> compte_picsou.retrait(50)
+            Vous avez retiré 50 euros
+            Solde actuel du compte : 950 euros
+            >>> compte_picsou.retrait(40000)
+            Retrait impossible
+            >>> compte_picsou.depot(10000000)
+            Vous avez déposé 10000000 euros
+            Solde actuel du compte : 10000950 euros
+            ```
 <!--                
         === "Correction"
             ```python linenums='1'
