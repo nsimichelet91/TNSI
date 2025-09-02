@@ -114,8 +114,8 @@
                 # il ne faut garder des minutes que ce qui n'a pas servi
                 # à fabriquer des heures supplémentaires
                 self.minutes = self.minutes % 60
--->        ```
-  
+        ```
+-->  
 
 !!! example "Exercice 4"
     === "Énoncé"
