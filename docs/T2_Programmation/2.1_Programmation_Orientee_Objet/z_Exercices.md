@@ -1,9 +1,6 @@
 # Exercices
 
-
-         
-
-
+[notebook d'exercices](https://capytale2.ac-paris.fr/web/c/a37f-6964227){:target="_blank"}   
 
 !!! example "Exercice 1"
     === "Énoncé"
@@ -19,7 +16,7 @@
             >>> compare(riri, fifi)
             'Philippe'
             ```
-
+<!--
     === "Correction"
 
    
@@ -36,18 +33,18 @@
             else:
                 return eleve2.nom
         ```
-
+-->
 
 !!! example "Exercice 2"
     === "Énoncé"
-        Écrire une classe ```TriangleRect``` qui contiendra les attributs ```cote1```, ```cote2``` et ```hypotenuse```.
+        Écrire une classe ```Triangle_rect``` qui contiendra les attributs ```cote1```, ```cote2``` et ```hypotenuse```.
 
         La méthode constructeur ne prendra en paramètres que ```cote1``` et ```cote2```, l'attribut ```hypotenuse``` se calculera automatiquement.
 
         ??? info "Exemple d'utilisation de la classe"
 
             ```python
-            >>> mon_triangle = TriangleRect(3,4)
+            >>> mon_triangle = Triangle_rect(3,4)
             >>> mon_triangle.cote1
             3
             >>> mon_triangle.cote2
@@ -61,7 +58,7 @@
 <!--     === "Correction"
 
         ```python linenums='1'
-        class TriangleRect:
+        class Triangle_rect:
             def __init__(self, a, b):
                 self.cote1 = a
                 self.cote2 = b
@@ -90,6 +87,7 @@
             >>> t.affiche()
             'Il est 17 heures, 26 minutes et 5 secondes'
             ```
+<!--
     === "Correction"
         ```python linenums='1'
         class Chrono:
@@ -99,8 +97,8 @@
                 self.secondes = s
                 
             def affiche(self):
-                return "Il est {} heures, {} minutes \
-        et {} secondes".format(self.heures, self.minutes, self.secondes)
+                return f"Il est {self.heures} heures, {self.minutes} minutes \
+                et {self.secondes} secondes"
 
             def avance(self, s):
                 self.secondes += s
@@ -116,7 +114,7 @@
                 # il ne faut garder des minutes que ce qui n'a pas servi
                 # à fabriquer des heures supplémentaires
                 self.minutes = self.minutes % 60
-        ```
+-->        ```
   
 
 !!! example "Exercice 4"
@@ -153,6 +151,7 @@
             >>> mario.energie
             0
             ```
+<!--
     === "Correction"
         ```python linenums='1'
         class Player:
@@ -169,12 +168,11 @@
                 if self.energie > 0:
                     self.energie += 1
         ```
+-->
 
-
-!!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c/2ef0-54279/mlc){. target="_blank"}"
     !!! example "Exercice 5"
         === "Énoncé"
-            Créer une classe ```CompteBancaire``` dont la méthode constructeur recevra en paramètres :
+            Créer une classe ```Compte_bancaire``` dont la méthode constructeur recevra en paramètres :
 
             - un attribut ```titulaire``` stockant le nom du propriétaire.
             - un attribut ```solde``` contenant le solde disponible sur le compte.  
@@ -183,48 +181,45 @@
         
             !!! info "Exemple d'utilisation de la classe"
                 ```python
-                >>> compteGL = CompteBancaire("G.Lassus", 1000)
-                >>> compteGL.retrait(50)
+                >>> compte_picsou = Compte_bancaire("Picsou", 1000)
+                >>> compte_picsou.retrait(50)
                 Vous avez retiré 50 euros
                 Solde actuel du compte : 950 euros
-                >>> compteGL.retrait(40000)
+                >>> compte_picsou.retrait(40000)
                 Retrait impossible
-                >>> compteGL.depot(10000000)
+                >>> compte_picsou.depot(10000000)
                 Vous avez déposé 10000000 euros
                 Solde actuel du compte : 10000950 euros
                 ```
-                
+<!--                
         === "Correction"
             ```python linenums='1'
-            class CompteBancaire:
+            class Compte_bancaire:
                 def __init__(self, titulaire, solde):
                     self.titulaire = titulaire
                     self.solde = solde
-                    
-                def retrait(self, somme):
-                    if somme > self.solde:
+
+                def retrait(self, montant):
+                    if montant > self.solde:
                         print("Retrait impossible")
-                    else :
-                        self.solde -= somme
-                        print("Vous avez retiré {} euros".format(somme))
-                        print("Solde actuel du compte : {} euros".format(self.solde))
+                    else:
+                        self.solde -= montant
+                        print(f"Vous avez retiré {montant} euros")
+                        print(f"Solde actuel du compte : {self.solde} euros")
 
-                def depot(self, somme):
-                    self.solde += somme
-                    print("Vous avez déposé {} euros".format(somme))
-                    print("Solde actuel du compte : {} euros".format(self.solde))
-            ```
-
+                def depot(self, montant):
+                    self.solde += montant
+                    print(f"Vous avez déposé {montant} euros")
+                    print(f"Solde actuel du compte : {self.solde} euros")
+                        ```
+-->
 
 
 !!! abstract "Exercice 6"
     === "Énoncé"
         **Cet exercice est l'exercice 5.2 de la BNS (version 2022)**.
 
-        On dispose d’un programme permettant de créer un objet de type `PaquetDeCarte`,
-        selon les éléments indiqués dans le code ci-dessous.
-        Compléter ce code aux endroits indiqués par `#A compléter`, puis ajouter des
-        assertions dans l’initialiseur de `Carte`, ainsi que dans la méthode `getCarteAt()`.
+        On dispose d’un programme permettant de créer un objet de type Paquet_de_carte, selon les éléments indiqués dans le code ci-dessous. Compléter ce code aux endroits indiqués par ???, puis ajouter des assertions dans l’initialiseur de Carte, ainsi que dans la méthode get_cart_at().
 
         ```python linenums='1'
         class Carte:
@@ -234,8 +229,8 @@
                 self.Valeur = v
 
             """Renvoie le nom de la Carte As, 2, ... 10, 
-               Valet, Dame, Roi"""
-            def getNom(self):
+            Valet, Dame, Roi"""
+            def get_nom(self):
                 if ( self.Valeur > 1 and self.Valeur < 11):
                     return str( self.Valeur)
                 elif self.Valeur == 11:
@@ -248,10 +243,10 @@
                     return "As"
 
             """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
-            def getCouleur(self):
+            def get_couleur(self):
                 return ['pique', 'coeur', 'carreau', 'trefle' ][self.Couleur - 1]
 
-        class PaquetDeCarte:
+        class Paquet_de_carte:
             def __init__(self):
                 self.contenu = []
 
@@ -259,35 +254,34 @@
             def remplir(self):
                 ??? = [ ??? for couleur in range(1, ???) for valeur in range( 1, ???)]
 
-            """Renvoie la Carte qui se trouve a  la position donnee"""
-            def getCarteAt(self, pos):
+            """Renvoie la Carte qui se trouve à la position donnee"""
+            def get_carte_at(self, pos):
                 if 0 <= pos < ??? :
-                    return ???
+                    return ???  
         ```
 
         Exemple :
 
         ```python
-        >>> unPaquet = PaquetDeCarte()
-        >>> unPaquet.remplir()
-        >>> uneCarte = unPaquet.getCarteAt(20)
-        >>> print(uneCarte.getNom() + " de " + uneCarte.getCouleur())
+        >>> un_paquet = Paquet_de_carte()
+        >>> un_paquet.remplir()
+        >>> une_carte = un_paquet.get_carte_at(20)
+        >>> print(une_carte.get_nom() + " de " + une_carte.get_couleur())
         8 de coeur
         ```
-
+<!--
     === "Correction"
         ```python linenums='1'
         class Carte:
-            """Initialise Couleur (entre 1 à 4), et Valeur (entre 1 à 13)"""
+            """Initialise Couleur (entre 1 a 4), et Valeur (entre 1 a 13)"""
             def __init__(self, c, v):
-                assert c in range(1,5)
-                assert v in range(1,14)
                 self.Couleur = c
                 self.Valeur = v
 
-            """Renvoie le nom de la Carte As, 2, ... 10, Valet, Dame, Roi"""
-            def getNom(self):
-                if (self.Valeur > 1 and self.Valeur < 11):
+            """Renvoie le nom de la Carte As, 2, ... 10, 
+            Valet, Dame, Roi"""
+            def get_nom(self):
+                if ( self.Valeur > 1 and self.Valeur < 11):
                     return str( self.Valeur)
                 elif self.Valeur == 11:
                     return "Valet"
@@ -299,146 +293,22 @@
                     return "As"
 
             """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
-            def getCouleur(self):
-                return ['pique', 'coeur', 'carreau', 'trefle'][self.Couleur - 1]
+            def get_couleur(self):
+                return ['pique', 'coeur', 'carreau', 'trefle' ][self.Couleur - 1]
 
-        class PaquetDeCarte:
+        class Paquet_de_carte:
             def __init__(self):
                 self.contenu = []
 
             """Remplit le paquet de cartes"""
             def remplir(self):
-                self.contenu = [Carte(couleur, valeur) for couleur in range(1, 5) for valeur in range(1, 14)]
+                self.contenu = [ Carte(couleur, valeur) for couleur in range(1, 5) for valeur in range( 1, 14)]
 
-            """Renvoie la Carte qui se trouve à la position donnée"""
-            def getCarteAt(self, pos):
+            """Renvoie la Carte qui se trouve à la position donnee"""
+            def get_carte_at(self, pos):
                 if 0 <= pos < len(self.contenu) :
                     return self.contenu[pos]
 
         ```
+-->
 
-!!! abstract "DS02"
-    === "Sujet"
-        ## Gestion d'une bibliothèque
-
-        Il s'agit de gérer les livres d'une bibliothèque, à l'aide de deux classes, la classe `Livre` et la classe `Bibliotheque`.
-
-        Le cahier des charges ci-dessous comporte la description des deux classes, ainsi qu'un exemple concret de leur utilisation.
-
-        ### ▸ classe `Livre` 
-        Elle comporte 3 attributs :
-        - `titre` : le titre du livre
-        - `auteur` : le nom de l'auteur
-        - `etat` : un nombre entier entre 0 et 5. Si l'état vaut 0, le livre est trop abîmé et doit être retiré de la bibliothèque. L'état d'un livre ne peut pas être négatif.
-
-        Elle comporte 2 méthodes :
-        - `degrade` : enlève 1 à l'état du livre.
-        - `description` : affiche les renseignements sur le livre
-
-
-        ### ▸ classe `Bibliotheque`
-
-        Elle comporte 1 attribut :
-        - `livres` : une liste (vide à la création de l'objet)
-
-        Elle comporte 3 méthodes :
-        - `ajoute` : prend un livre en paramètre et l'ajoute à la bibliothèque.
-        - `supprime_livres_abimes` : enlève de la bibliothèque les livres trop abîmés.
-        - `inventaire` : affiche le contenu de la bibliothèque
-
-
-        ### ▸ Exemple d'utilisation des classes 
-
-        ```python
-        >>> ma_bibli = Bibliotheque()
-        >>> livre1 = Livre("Les Misérables", "Victor Hugo", 3)
-        >>> livre2 = Livre("Les fleurs du mal", "Charles Baudelaire", 1)
-        >>> ma_bibli.ajoute(livre1)
-        >>> ma_bibli.ajoute(livre2)
-        >>> livre1.description()
-        Titre : Les Misérables
-        Auteur : Victor Hugo
-        Etat : 3
-        >>> livre2.degrade()
-        >>> livre2.description()
-        Titre : Les fleurs du mal
-        Auteur : Charles Baudelaire
-        Etat : 0
-        >>> ma_bibli.inventaire()
-        -------------------------------
-        contenu de ma bibliothèque :
-        -------------------------------
-
-        Titre : Les Misérables
-        Auteur : Victor Hugo
-        Etat : 3
-
-        Titre : Les fleurs du mal
-        Auteur : Charles Baudelaire
-        Etat : 0
-
-        >>> ma_bibli.supprime_livres_abimes()
-        >>> ma_bibli.inventaire()
-        -------------------------------
-        contenu de ma bibliothèque :
-        -------------------------------
-
-        Titre : Les Misérables
-        Auteur : Victor Hugo
-        Etat : 3
-
-        ```
-
-        ### ▸ Question
-
-        Proposer un code pour la classe `Livre` et la classe `Bibliotheque` répondant au cahier des charges.
-
-    === "Correction"
-
-        ```python linenums='1'
-        class Livre():
-            def __init__(self, titre, auteur, etat):
-                self.titre = titre
-                self.auteur = auteur
-                self.etat = etat
-
-            def degrade(self):
-                if self.etat > 0:
-                    self.etat -= 1
-
-            def description(self):
-                print("Titre :", self.titre)
-                print("Auteur :",self.auteur)
-                print("Etat :", self.etat)
-
-        class Bibliotheque:
-            def __init__(self):
-                self.livres = []
-
-            def ajoute(self, livre):
-                self.livres.append(livre)
-
-            def supprime_livres_abimes(self):
-                for livre in self.livres:
-                    if livre.etat == 0:
-                        self.livres.remove(livre)
-
-            def inventaire(self):
-                print("---------------")
-                print("contenu de ma bibliothèque :")
-                print("---------------")
-                for livre in self.livres:
-                    livre.description()
-                    print()
-
-        ma_bibli = Bibliotheque()
-        livre1 = Livre("Les Misérables", "Victor Hugo", 3)
-        livre2 = Livre("Les fleurs du mal", "Charles Baudelaire", 1)
-        livre1.description()
-        ma_bibli.ajoute(livre1)
-        ma_bibli.ajoute(livre2)
-        ma_bibli.inventaire()
-
-
-
-        ```
