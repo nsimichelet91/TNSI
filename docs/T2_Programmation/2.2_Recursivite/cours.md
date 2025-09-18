@@ -1,4 +1,6 @@
-# Récursivité
+# La Récursivité
+
+[notebook du cours](https://capytale2.ac-paris.fr/web/c/573f-696757){target=_blank}
 
 ![image](data/BO.png){: .center}
 
@@ -124,7 +126,7 @@ Trois choses sont essentielles et doivent se retrouver dans tout programme récu
 ```
 
 !!! aide "Analyse grâce à PythonTutor"
-    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20mystere%28n%29%3A%0A%20%20%20%20if%20n%20%3D%3D%200%20%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20else%20%3A%20%0A%20%20%20%20%20%20%20%20return%20n%20%2B%20mystere%28n-1%29%0A%0Amystere%284%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+    <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/visualize.html#code=def%20mystere%28n%29%3A%0A%20%20%20%20if%20n%20%3D%3D%200%20%3A%0A%20%20%20%20%20%20%20%20return%200%0A%20%20%20%20else%20%3A%20%0A%20%20%20%20%20%20%20%20return%20n%20%2B%20mystere%28n-1%29%0A%0Aprint%28mystere%285%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
 Que se passe-t-il lorsqu'on appelle ```mystere(4)``` ?
@@ -160,16 +162,17 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Coder la fonction ```prix(etage)``` de la BD présentée plus haut. 
-    <!--    
-    === "Correction"
-        ```python linenums='1'
-        def prix(etage):
-            if etage == 0:
-                return 3
-            else:
-                return 2 * prix(etage - 1)
-        ```
-    -->
+        
+<!--    
+=== "Correction"
+    ```python linenums='1'
+    def prix(etage):
+        if etage == 0:
+            return 3
+        else:
+            return 2 * prix(etage - 1)
+    ```
+-->
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
@@ -185,22 +188,22 @@ Cette fonction ```mystere(n)``` calcule donc la somme des entiers positifs infé
         2. Programmer de façon récursive la fonction factorielle. On l'appelera ```fact_rec()```.
 
         Quelle paradigme de programmation vous a semblé le plus naturel ?
-    <!--
-    === "Correction"
-        ```python linenums='1'
-        def fact_imp(n):
-            p = 1
-            for k in range(1, n + 1):
-                p = p * k
-            return p
+<!--
+=== "Correction"
+    ```python linenums='1'
+    def fact_imp(n):
+        p = 1
+        for k in range(1, n + 1):
+            p = p * k
+        return p
 
-        def fact_rec(n):
-            if n == 1:
-                return 1
-            else:
-                return n * fact_rec(n - 1)
-        ```
-    -->
+    def fact_rec(n):
+        if n == 1:
+            return 1
+        else:
+            return n * fact_rec(n - 1)
+    ```
+-->
 <!--
 
 Lien vers une [correction](https://gist.github.com/glassus/de73e52a753f58e2e29e2ebad5a09871)
@@ -216,7 +219,7 @@ Lors d'un appel à une fonction récursive, le processeur utilise une structure 
 La pile d'appels de notre fonction ```mystere(5)``` peut donc être schématisée comme ceci :
 
 <center>
-<gif-player src="https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/data/pile_exec.gif" speed="1" play></gif-player>
+<gif-player src="https://github.com/nsimichelet91/TNSI/T2_Programmation/2.2_Recursivite/data/pile_exec.gif" speed="1" play></gif-player>
 </center>
 
 <!-- ![](data/pile_exec.webp){: .center width=30%} -->
@@ -278,18 +281,18 @@ On a donc $F_2=0+1=1, F_3=F_2+F_1=1+1=2, F_4=F_3+F_2=2+1=3, F_5=F_4+F_3=3+2=5$ .
     === "Énoncé"
         Implémenter de façon récursive la suite de Fibonnaci.
 
-    <!--    
-    === "Correction"
-        ```python linenums='1'
-        def fibo(n):
-            if n == 0 :
-                return 0   
-            elif n == 1 :
-                return 1
-            else :
-                return fibo(n-1) + fibo(n-2)
-        ```
-    -->
+<!--    
+=== "Correction"
+    ```python linenums='1'
+    def fibo(n):
+        if n == 0 :
+            return 0   
+        elif n == 1 :
+            return 1
+        else :
+            return fibo(n-1) + fibo(n-2)
+    ```
+-->
 
 
 **Observation de la pile d'exécution**
@@ -298,12 +301,12 @@ Appelons ```F(n)``` la fonction calculant de manière récursive le n-ième term
 
 
 <center>
-<gif-player src="https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/data/pile_fibo.gif" speed="1" play></gif-player>
+<gif-player src="https://github.com/nsimichelet91/TNSI/T2_Programmation/2.2_Recursivite/data/pile_fibo.gif" speed="1" play></gif-player>
 </center>
 
 
 !!! aide "Analyse grâce à PythonTutor"
-    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fibo%28n%29%3A%0A%20%20%20%20%0A%20%20%20%20if%20n%20%3D%3D%200%20or%20n%20%3D%3D%201%20%3A%0A%20%20%20%20%20%20%20%20return%20n%0A%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20return%20fibo%28n-1%29%20%2B%20fibo%28n-2%29%0A%0Aprint%28fibo%284%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+    <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/visualize.html#code=def%20fibo%28n%29%3A%0A%20%20%20%20%0A%20%20%20%20if%20n%20%3D%3D%200%20or%20n%20%3D%3D%201%20%3A%0A%20%20%20%20%20%20%20%20return%201%0A%20%20%20%20else%20%3A%0A%20%20%20%20%20%20%20%20return%20fibo%28n-1%29%20%2B%20fibo%28n-2%29%0A%0Aprint%28fibo%284%29%29%0A&cumulative=false&curInstr=38&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 On s'aperçoit notamment que :
 
@@ -311,7 +314,7 @@ On s'aperçoit notamment que :
 - conséquence de la remarque précédente : le calcul de $F_2$ s'effectue 2 fois. Une amélioration future (appelée **mémoïsation**, voir le cours de programmation dynamique) sera de conserver cette valeur de $F_2$ afin d'améliorer les calculs.
 
 
-Observation sur [Capytale](https://capytale2.ac-paris.fr/web/c-auth/list?returnto=/web/code/2692-90916) avec ```rcviz```  
+Observation sur [Capytale](https://capytale2.ac-paris.fr/web/c/be8d-698084/mln) avec ```rcviz```  
 
 On peut y construire par exemple l'arbre d'appel de ```fibo(6)``` :
 
@@ -325,19 +328,19 @@ On y remarque (par exemple) que ```fibo(2)``` est calculé 5 fois...
     === "Énoncé"
         Écrire une fonction ```fibo_imperatif(n)``` qui calcule de façon directe (*impérative*) le n-ième terme de la suite de Fibonnaci.
 
-    <!--    
-    === "Correction"
-        ```python linenums='1'
-        def fibo_imperatif(n):
-            a = 0
-            b = 1
-            for k in range(n-1):
-                t = b
-                b = a + b
-                a = t
-            return b
-        ```
-        -->
+<!--    
+=== "Correction"
+    ```python linenums='1'
+    def fibo_imperatif(n):
+        a = 0
+        b = 1
+        for k in range(n-1):
+            t = b
+            b = a + b
+            a = t
+        return b
+    ```
+    -->
 
 
 
@@ -345,21 +348,21 @@ Observons grâce au module ```timeit``` le temps moyen pris pour calculer $F(20)
 
 
 ```python
-%timeit fibo_imperatif(20)
+timeit("fibo_imperatif(20)", globals=globals(), number=1000)
 ```
 
-    1.02 µs ± 14 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+    0.0009999999999763531
 
 
 
 ```python
-%timeit fibo_recursif(20)
+timeit("fibo_recursif(20)", globals=globals(), number=1000)
 ```
 
-    2.35 ms ± 10.8 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+    2.7719999999999345
 
 
-La programmation récursive apparait donc comme quasiment 1000 fois plus lente que l'impérative.
+La programmation récursive apparait donc comme de l'ordre de 1000 fois plus lente que l'impérative.
 
 :warning: **Attention :** cette comparaison des vitesses d'éxécution peut être critiquée car les deux programmes n'ont pas la même _complexité_. Nous étudierons la complexité au moment des algorithmes de tri. 
 
