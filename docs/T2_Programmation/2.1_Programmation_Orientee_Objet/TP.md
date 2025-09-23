@@ -589,7 +589,7 @@ correction(False,
 - Vous pouvez créer une balle que vous déplacerez au clavier (voir [ici](https://nsimichelet91.github.io/1NSI/T7_Pygame/Initiation_Pygame/){. target="_blank"} pour la gestion des déplacements)
 - ...
 - Ce que je ne veux pas voir : 
-![](data/paste_chatgpt.png){: .center width=40%}  
+![](data/paste_chtgpt.png){: .center width=40%}  
 
 ## 4. Organisation du projet
 
