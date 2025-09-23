@@ -2,14 +2,6 @@
 
 ![image](data/balles1.png){: .center witdh=40%}
 
-!!! Capytale 
-    "Dépôt de projet sur Capytale : [notebook](https://capytale2.ac-paris.fr/web/c/0d5d-6963432){:target="_blank"}
-    Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.  
-    Je pourrai ainsi le consulter au fur et à mesure de votre progression.  
-
-    Ce que je ne veux pas voir :  
-    ![](data/paste_chatgpt.jpg){: .center width=40%} 
-
 ## 1. Prise en main de Pygame
 
 ```python linenums='1'
@@ -350,144 +342,267 @@ Q3. Pour l'illusion du rebond, échangez les valeurs respectives de ```dx``` et 
 
 ### 2.1 la classe Balle
 L'objectif est que la méthode constructeur dote chaque nouvelle balle de valeurs aléatoires : abscisse, ordonnée, vitesse, couleur...  
+
+- Pour l'aléatoire, on pourra utiliser ```randint(a, b)``` qui renvoie un nombre pseudo-aléatoire entre ```a``` et ```b```.
+Il faut pour cela importer la fonction, par ```from random import randint``` 
+
+- Vous pouvez aussi doter votre classe ```Balle``` d'une méthode ```dessine``` (qui affiche la balle), ainsi qu'une méthode ```bouge``` qui la fait bouger. 
+
 Créez cette classe et instanciez une balle.
 
-<!-- ??? info "Correction"
+<!--
+{{
+correction(True,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
     import time
     from pygame.locals import *
     from random import randint
+
     # randint(0,10) -> nb aléatoire entre 0 et 10
 
-    largeur = 400
-    hauteur = 400
-    taille = 20
-
+    LARGEUR = 640
+    HAUTEUR = 480
+    RAYON = 20
 
     pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
+    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+    fenetre.fill([0, 0, 0])
 
 
     class Balle:
         def __init__(self):
-            self.x = randint(0, largeur)
-            self.y = randint(0, hauteur)        
-            self.dx = randint(2,5)
-            self.dy = randint(2,5)
-            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
-            self.taille = taille
-            
+            self.x = randint(0, LARGEUR)
+            self.y = randint(0, HAUTEUR)
+            self.dx = randint(2, 5)
+            self.dy = randint(2, 5)
+            self.couleur = (randint(0, 255), randint(0, 255), randint(0, 255))
+            self.taille = RAYON
+
         def dessine(self):
-            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
-            
+            pygame.draw.circle(fenetre, self.couleur, (self.x, self.y), self.taille)
+
         def bouge(self):
             self.x += self.dx
             self.y += self.dy
-            
-    ma_balle = Balle()     
-            
-    while True :
-        fenetre.fill([0,0,0])
-        
+
+            if self.y < self.taille or self.y > HAUTEUR - self.taille:
+                self.dy = -self.dy
+            if self.x < self.taille or self.x > LARGEUR - self.taille:
+                self.dx = -self.dx
+
+
+    ma_balle = Balle()
+
+    while True:
+        fenetre.fill([0, 0, 0])
+
         ma_balle.dessine()
         ma_balle.bouge()
-        
+
         pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.display.quit()
                 sys.exit()
 
-
         time.sleep(0.05)
 
-    ``` -->
+    ```    
+"""
+)
+}}
+-->
+    
 
+### 2.2 Plusieurs balles
 
-
-Puis plusieurs balles ! (qui se collisionnent...)
-
-<!-- ??? info "Correction"
+L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé de balles... 
+<!--
+{{
+correction(True,
+"""
+??? success \"Correction\" 
     ```python linenums='1'
     import pygame, sys
     import time
     from pygame.locals import *
     from random import randint
 
+    # randint(0,10) -> nb aléatoire entre 0 et 10
 
-    largeur = 800
-    hauteur = 600
-    taille = 20
-    nb_balles = 100
+    LARGEUR = 640
+    HAUTEUR = 480
+    RAYON = 20
+    NB_BALLES = 10
 
     pygame.display.init()
-    fenetre = pygame.display.set_mode((largeur, hauteur))
-    fenetre.fill([0,0,0])
+    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+    fenetre.fill([0, 0, 0])
 
 
     class Balle:
         def __init__(self):
-            self.x = randint(0, largeur)
-            self.y = randint(0, hauteur)        
-            self.dx = randint(2,5)
-            self.dy = randint(2,5)
-            self.couleur = (randint(0,255), randint(0,255), randint(0,255))
-            self.taille = taille
+            self.x = randint(0, LARGEUR)
+            self.y = randint(0, HAUTEUR)
+            self.dx = randint(2, 5)
+            self.dy = randint(2, 5)
+            self.couleur = (randint(0, 255), randint(0, 255), randint(0, 255))
+            self.taille = RAYON
 
         def dessine(self):
-            pygame.draw.circle(fenetre,self.couleur,(self.x,self.y),self.taille)    
+            pygame.draw.circle(fenetre, self.couleur, (self.x, self.y), self.taille)
 
         def bouge(self):
             self.x += self.dx
             self.y += self.dy
-            
-            # 1. rebond sur les parois
-            if self.y < self.taille or self.y > hauteur - self.taille:
+
+            if self.y < self.taille or self.y > HAUTEUR - self.taille:
                 self.dy = -self.dy
-            if self.x < self.taille or self.x > largeur - self.taille:
+            if self.x < self.taille or self.x > LARGEUR - self.taille:
                 self.dx = -self.dx
 
-            
-            # 4. gérer la collision de toutes les balles
-            # je teste la collision de self avec chacune des autres balles
-            for balle in mon_sac_a_balles:
-                # collision entre self et balle
-                if ((self.x-balle.x)**2 + (self.y-balle.y)**2)**0.5 < self.taille + balle.taille:
-                    self.dx, balle.dx = balle.dx, self.dx
-                    self.dy, balle.dy = balle.dy, self.dy
-       
-            
-            
-    # 2. Créer 10 balles  (par ex)     
 
-    mon_sac_a_balles = []
-    for k in range(nb_balles):
-        new_ball = Balle()
-        mon_sac_a_balles.append(new_ball)
+    mon_sac_a_balles = [Balle() for _ in range(NB_BALLES)]
 
+    while True:
+        fenetre.fill([0, 0, 0])
 
-
-    while True :
-        fenetre.fill([0,0,0])
-        
-        #3. Animer toutes les balles
         for balle in mon_sac_a_balles:
             balle.dessine()
             balle.bouge()
 
+        pygame.display.update()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.display.quit()
+                sys.exit()
+
+        time.sleep(0.05)
+
+
+    ```    
+"""
+)
+}}
+-->
+
+    
+
+    
+
+### 2.3 Collision de toutes les balles
+
+Il «suffit» , dans la méthode constructeur, de tester la collision de la balle ```self``` avec chacune des balles de notre ```sac_a_balles```. 
+<!--
+{{
+correction(False,
+"""
+??? success \"Correction\" 
+    ```python linenums='1'
+    import pygame, sys
+    import time
+    from pygame.locals import *
+    from random import randint
+
+    # randint(0,10) -> nb aléatoire entre 0 et 10
+
+    LARGEUR = 640
+    HAUTEUR = 480
+    RAYON = 20
+    NB_BALLES = 10
+
+    pygame.display.init()
+    fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
+    fenetre.fill([0, 0, 0])
+
+
+    class Balle:
+        def __init__(self):
+            self.x = randint(0, LARGEUR)
+            self.y = randint(0, HAUTEUR)
+            self.dx = randint(2, 5)
+            self.dy = randint(2, 5)
+            self.couleur = (randint(0, 255), randint(0, 255), randint(0, 255))
+            self.taille = RAYON
+
+        def dessine(self):
+            pygame.draw.circle(fenetre, self.couleur, (self.x, self.y), self.taille)
+
+        def bouge(self):
+            self.x += self.dx
+            self.y += self.dy
+
+            if self.y < self.taille or self.y > HAUTEUR - self.taille:
+                self.dy = -self.dy
+            if self.x < self.taille or self.x > LARGEUR - self.taille:
+                self.dx = -self.dx
+
+            for balle in mon_sac_a_balles:
+                if (
+                    (self.x - balle.x) ** 2 + (self.y - balle.y) ** 2
+                ) ** 0.5 < self.taille + balle.taille:
+                    self.dx, balle.dx = balle.dx, self.dx
+                    self.dy, balle.dy = balle.dy, self.dy
+
+
+    mon_sac_a_balles = []
+    for _ in range(NB_BALLES):
+        new_ball = Balle()
+        mon_sac_a_balles.append(new_ball)
+
+    # ces 4 dernières lignes peuvent s'écrire par une seule ligne en compréhension :
+    # mon_sac_a_balles = [Balle() for _ in range(NB_BALLES)]
+
+    while True:
+        fenetre.fill([0, 0, 0])
+
+        for balle in mon_sac_a_balles:
+            balle.dessine()
+            balle.bouge()
 
         pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.display.quit()
                 sys.exit()
-            
+
         time.sleep(0.05)
-    ```
-
- -->
 
 
+    ```    
+"""
+)
+}}
+-->
+
+
+
+
+
+## 3. Extensions
+
+- Vous pouvez créer des balles de couleurs identiques, sauf une. Cette balle diffusera sa couleur à toutes les balles avec qui elle rentrera en collision.
+- En la supprimant de la liste ```sac_a_balles```, vous pouvez faire disparaitre une balle.
+- Vous pouvez créer une balle que vous déplacerez au clavier (voir [ici](https://nsimichelet91.github.io/1NSI/T7_Pygame/Initiation_Pygame/){. target="_blank"} pour la gestion des déplacements)
+- ...
+- Ce que je ne veux pas voir : 
+![](data/paste_chatgpt.png){: .center width=40%}  
+
+## 4. Organisation du projet
+
+!!! tip "Calendrier du projet"
+    - 25/09/2025 : démarrage du projet
+    - remise du projet sur Capytale : **jeudi 16/10/2025 dernier délai**
+
+!!! Capytale 
+    "Dépôt de projet sur Capytale : [notebook](https://capytale2.ac-paris.fr/web/c/0d5d-6963432){:target="_blank"}
+    Servez-vous de cette feuille de projet pour y déposer les différentes versions de votre travail.  
+    Je pourrai ainsi le consulter au fur et à mesure de votre progression.  
+
+!!! abstract "Évaluation du projet"
+    - sur 10 points : note globale du projet.
+    - sur 10 points : entretien individuel autour du code du projet. 
 
