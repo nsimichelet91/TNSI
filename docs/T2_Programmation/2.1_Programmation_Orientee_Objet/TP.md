@@ -8,7 +8,7 @@
     Je pourrai ainsi le consulter au fur et à mesure de votre progression.  
 
     Ce que je ne veux pas voir :  
-    ![](data/paste.jpg){: .center width=40%} 
+    ![](data/paste_chatgpt.jpg){: .center width=40%} 
 
 ## 1. Prise en main de Pygame
 
