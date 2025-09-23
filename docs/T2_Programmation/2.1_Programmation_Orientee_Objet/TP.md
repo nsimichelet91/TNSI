@@ -17,10 +17,12 @@ import pygame, sys
 import time
 from pygame.locals import *
 
-
+LARGEUR = 640
+HAUTEUR = 480
+RAYON = 20
 
 pygame.display.init()
-fenetre = pygame.display.set_mode((640, 480))
+fenetre = pygame.display.set_mode((LARGEUR, HAUTEUR))
 fenetre.fill([0,0,0])
 
 x = 300
