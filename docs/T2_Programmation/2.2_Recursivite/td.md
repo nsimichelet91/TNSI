@@ -2,4 +2,4 @@
 
 ## TD2 : [Récursivité (2/3) : notions de récursivité](https://capytale2.ac-paris.fr/web/c/acb4-7183421){target = _blank}
 
-## TD3 : [](){target = _blank}
+## TD3 : [Récursivité (3/3) : mise en pratique](https://capytale2.ac-paris.fr/web/c/5082-7360300){target = _blank}
