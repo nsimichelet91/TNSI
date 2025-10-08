@@ -634,7 +634,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie.
 
 !!! example "{{ exercice() }}"
     === "Énoncé"
-        Implémentez une file avec 2 Piles
+        Implémentez une file avec 2 piles
 
 <!--
 ```python linenums='1'
