@@ -564,8 +564,7 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
 - ```defile()``` : renvoie la valeur de l'élément en tête de la file ET le supprime de la file.
 - ```__str__()``` : permet d'afficher la file sous forme agréable (par ex : ```|3|6|2|5|```) par ```print()```
 
-
-!!! example "Exercice"
+!!! example "{{ exercice() }}"
     === "Énoncé"
         Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé.
         
@@ -633,7 +632,11 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie.
 <gif-player src="https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/data/2piles1file.gif" speed="1" play></gif-player>
 </center>
 
+!!! example "{{ exercice() }}"
+    === "Énoncé"
+        Implémentez une file avec 2 Piles
 
+<!--
 ```python linenums='1'
 # il est impératif de comprendre qu'on peut choisir l'implémentation
 # de la classe Pile qu'on préfère parmi les deux traitées plus haut.
@@ -708,9 +711,7 @@ class File:
 >>> f.defile()
 5
 ```
-
-
-
+-->
 
 
 ---
