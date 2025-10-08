@@ -2,6 +2,8 @@
 # Listes, piles, files
 *Exemples de structures de données linéaires.*
 
+[notebook du cours](https://capytale2.ac-paris.fr/web/c/87f6-7534257){:target="_blank"}
+
 ![image](data/data.jpeg){: .center width=40%}
 
 
