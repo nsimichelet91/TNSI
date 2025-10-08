@@ -169,6 +169,7 @@ Mais plus précisément, on a :
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Retrouvez comment accéder aux éléments 3, 5 et 1.
+<!--
     === "Correction"
         {{ correction(True,
         "
@@ -182,7 +183,7 @@ Mais plus précisément, on a :
         ``` 
         "
         ) }}
-
+-->
 
 
 On pourra remarquer que l'interface proposée à l'utilisateur n'est pas des plus pratiques...
@@ -237,6 +238,7 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
         10. lst.renvoie_tete()
         11. lst.est_vide()    
         ```
+<!--        
     === "Correction"
         {{ correction(True,
         "
@@ -255,7 +257,7 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
         ```
         "
         ) }}
-
+-->
 
 ## 3. Les piles
 
@@ -293,6 +295,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
         9. p.depile() 
         10. p.est_vide() 
         ```
+<!--
     === "Correction"
         {{ correction(True,
         "
@@ -311,7 +314,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
         ```
         "
         ) }}
-
+-->
 
 ### 3.2 Implémentation(s) d'une pile
 
@@ -330,6 +333,8 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
         Créer la classe ```Pile```   ci-dessus. 
         
         Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
+
+<!--
     === "Correction :heart:"
         {{ correction(True,
         "
@@ -376,7 +381,7 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
         
         "
         ) }}
-
+-->
 
 
 
@@ -397,6 +402,7 @@ class Cellule :
     === "Énoncé"
         À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
 
+<!--
     === "Correction :heart:"
         {{ correction(True,
         "
@@ -437,7 +443,7 @@ class Cellule :
         ```
         "
         ) }}
-
+-->
 
 
 
@@ -466,7 +472,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
         >>> n.back()
         page quittée : google.fr
         ```
-
+<!--
     === "Correction"
         {{ correction(True,
         "
@@ -485,7 +491,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
         ```      
         "
         ) }}
-
+-->
 
 
 
@@ -525,6 +531,7 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
         10. f.defile()
         11. f.est_vide() 
         ```
+<!--
     === "Correction"
         {{ correction(True,
         "
@@ -543,7 +550,7 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
         ```
         "
         ) }}
-
+-->
 
 
 ### 4.2 Implémentation d'une file
@@ -561,7 +568,7 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
         Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé.
         
         Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```, notamment la méthode ```insert```.
-
+<!--
     === "Correction"
         {{ correction(True,
         "
@@ -603,7 +610,7 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
 
         "
         ) }}
-
+-->
 
 **Remarque :**  
 Notre implémentation répond parfaitement à l'interface qui était demandée. Mais si le «cahier des charges» obligeait à ce que les opérations ```enfile()``` et ```defile()``` aient lieu en temps constant (en $O(1)$), notre implémentation ne conviendrait pas.  
