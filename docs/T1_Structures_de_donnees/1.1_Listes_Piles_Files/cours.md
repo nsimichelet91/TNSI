@@ -467,10 +467,10 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
         page actuelle : lemonde.fr
         >>> n.visite('google.fr')
         page actuelle : google.fr
-        >>> n.visite('lyceemauriac.fr')
-        page actuelle : lyceemauriac.fr
+        >>> n.visite('lyceeedmondmichelet.fr')
+        page actuelle : lyceeedmondmichelet.fr
         >>> n.back()
-        page quittée : lyceemauriac.fr
+        page quittée : lyceeedmondmichelet.fr
         >>> n.back()
         page quittée : google.fr
         ```
