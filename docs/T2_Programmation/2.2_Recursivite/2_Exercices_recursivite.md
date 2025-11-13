@@ -309,6 +309,342 @@
         ``` -->
 
 
+!!! example "{{ exercice() }}"
+    Exercice 4 du sujet [Amérique du Nord J1 2022](../../T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1.a.\" 
+        Proposition 3        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1.b.\" 
+        ```txt[0]``` vaut 'b'  
+        ```txt[taille-1]``` vaut 'r'  
+        ```interieur``` vaut 'onjou'          
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2.\" 
+        ```python linenums='1'
+        def test_palindrome():
+            assert palindrome('kayak') == True
+            assert palindrome('canoe') == False   
+            print('tests ok')
+        ```
+        On teste les deux cas possibles.        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3.\" 
+        ```python linenums='1'
+        def palindrome_imperatif(txt):
+            i = 0
+            j = len(txt)-1
+            while i<j:
+                if txt[i] != txt[j]:
+                    return False
+                i += 1
+                j -= 1
+            return True
+        ```        
+    """
+    )
+    }}
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4.a.\" 
+        ```python linenums='1'
+        def complementaire(txt):
+            comp = {'A':'T', 'T':'A', 'G':'C', 'C':'G'}
+            sol = ''
+            for c in txt:
+                sol += comp[c]
+            return sol
+        ```         
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4.b\" 
+        'GATCGTCTAGCA' n'est pas un palindrome donc 'GATCGT' n'est pas palindromique.        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4.c\" 
+        ```python linenums='1'
+        def est_palindromique(txt):
+            txt_total = txt + complementaire(txt)
+            return palindrome(txt_total)
+        ```        
+    """
+    )
+    }}
+
+
+
+
+
+!!! example "{{ exercice() }}"
+    Exercice 1 du sujet [Centres Étrangers J2 2022](../../T6_Annales/data/2022/2022_Centres_Etrangers_J2.pdf){. target="_blank"}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1.a.\" 
+        ```f(5)``` affichera :
+        ```5
+        4
+        3
+        2
+        1
+        Partez!``        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1.b.\" 
+        On dit que cette fonction est récursive car elle s'appelle elle-même à l'intérieur de sa propre définition.        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction  Q2.a.\" 
+        ```python linenums='1'
+        def ajouter(s, liste):
+            res = []
+            for m in liste:
+                res.append(s + m)
+            return res
+        ```        
+    """
+    )
+    }}
+    
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2.b.\" 
+        La commande renvoie :
+        ```python
+        ['ba', 'bb', 'bc']
+        ```        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2.c.\" 
+        La commande renvoie :
+        ```python
+        ['a']
+        ```        
+    """
+    )
+    }}
+
+    {#
+    La question 3. est difficile, vous pouvez vous aider du code ci-dessous :
+
+
+    ```python
+    def ajouter(s, liste):
+        res = []
+        for m in liste:
+            res.append(s + m)
+        return res
+
+
+    def produit(s, n):
+        if n == 0:
+            return [""]
+        else:
+            res = []
+            for i in range(len(s)):
+                res = res + ajouter(s[i], produit(s, n-1))
+            return res
+
+
+    ```
+    #}
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3.a.\" 
+        Comme ```n``` vaut 0, on est dans le cas de base et donc la commande renvoie ```[\"\"]```.
+
+        ```[\"\"]``` **n'est pas** une liste vide, car elle contient un élément (une chaine de caractères vide). La liste vide est ```[]```.        
+    """
+    )
+    }}
+        
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3.b.\" 
+        ```produit('ab', 1) ``` renvoie  ```['a', 'b']```.        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3.c.\" 
+        ```produit('ab', 2) ``` renvoie  ```['aa', 'ab', 'ba', 'bb']```.           
+    """
+    )
+    }}
+
+        
+
+!!! example "{{ exercice() }} <i id="ex1J2AN2024"></i>"
+
+    Exercice 1 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}    
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1\" 
+        ```python linenums='1'
+        def echange(tab, i, j):
+            temp = tab[i]
+            tab[i] = tab[j]
+            tab[j] = temp       
+        ``` 
+    """
+    )
+    }}
+    
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2\" 
+        ```python linenums='1' hl_lines='6-8'
+        def triStooge(tab, i, j):
+            if tab[i] > tab[j]:
+                echange(tab, i, j)
+            if j - i > 1:
+                k = (j - i + 1) // 3
+                triStooge(tab, i, j-k)
+                triStooge(tab, i+k, j)
+                triStooge(tab, i, j-k)
+        ``` 
+    """
+    )
+    }}
+
+
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3\" 
+        Cet algorithme est récursif car aux lignes 6, 7 et 8, la fonction s'appelle elle-même.
+    """
+    )
+    }}
+    
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4\" 
+        ```k``` vaut ```(5 - 0 + 1) // 3```, donc ```k``` vaut 2. 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q5\" 
+        - étape 1 : 3 appels
+        - étape 2 : 9 appels
+        - étape 3 : 27 appels
+
+        Il y a donc 39 appels au total.
+    """
+    )
+    }}
+    
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q6\" 
+        - case 1 : ```triStooge(A,1,3)``` 
+        - case 2 : ```triStooge(A,2,3)```
+        - case 3 : ```triStooge(A,0,3)```        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q7\" 
+
+        Correction probable, mais cette question est incompréhensible...
+
+        | Appel | Valeur de A avant l'appel | Valeur de A après l'appel |
+        |:---:|:---:|:---:|
+        | ```triStooge(A,0,3) ```  | [5, 6, 4, 2] | [2, 6, 4, 5] |
+        |  ```triStooge(A,0,2) ```| [2, 6, 4, 5] | [2, 4, 6, 5] |
+        |  ```triStooge(A,1,3) ```| [2, 4, 6, 5]| [2, 4, 5, 6]  |
+        |  ```triStooge(A,0,2) ```| [2, 4, 5, 6] | [2, 4, 5, 6]   |
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q8\" 
+        Nous connaissons (par exemple) le tri par sélection, dont l'ordre est en $n^2$. 
+
+        Comme $2 < \\frac{8}{3}$, on en déduit que le tri par sélection a un coût meilleur que le tri de Stooge. 
+    """
+    )
+    }}
+
+
+
+
+
 ??? info "Bibliographie"
     - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
     - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
