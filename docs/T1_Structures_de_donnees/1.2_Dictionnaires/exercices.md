@@ -1,5 +1,7 @@
 # Exercices sur les dictionnaires
 
+[notebook d'exercices](https://capytale2.ac-paris.fr/web/c/1fd6-8036842){:target="_blank"}   
+
 {{initexo(0)}}    
 
 !!! example "{{ exercice() }}"
