@@ -51,7 +51,7 @@ DOM : Document Object Model
 Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arborescence ci-dessous :
 ![image](data/arbo-unix.gif){: .center width=40%}
 
-
+<!--
 !!! example "{{ exercice() }}"
     Quelque part à l'intérieur des dossiers contenus dans l'archive [dossiers.zip](data/dossiers.zip) se trouve un fichier ```tresor.txt```. Quel secret renferme-t-il ?
 
@@ -63,6 +63,7 @@ Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arb
     - ```unzip monarchive.zip``` : pour décompresser une archive
     - ```tree``` : pour afficher l'arborescence du répertoire courant
     - ```sudo apt install monprog``` : pour installer le programme ```monprog``` si celui-ci est manquant.
+-->
 
 ### 1.3 Caractéristiques d'un arbre
 
@@ -93,9 +94,6 @@ Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arb
 
 
 #### 1.4 Arbres binaires
-
-![image](data/binary.jpg){: .center width=50%}
-
 
 !!! note "Définition :heart:"
     Un arbre binaire est un arbre dont chaque nœud possède **au plus** deux fils.
@@ -887,7 +885,7 @@ False
 
 Imaginons un arbre équilibré de taille $n$. Combien d'étapes faudra-t-il, dans le pire des cas, pour trouver (ou pas) une clé particulière dans cet arbre ?
 
-Après chaque nœud, le nombre de nœuds restant à explorer est divisé par 2. On retrouve là le principe de recherche dichotomique, vu en classe de Première (voir [ici](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/05_Dichotomie.ipynb)).
+Après chaque nœud, le nombre de nœuds restant à explorer est divisé par 2. On retrouve là le principe de recherche dichotomique, vu en classe de Première (voir [ici](https://nsimichelet91.github.io/1NSI/T4_Algorithmique/4.5_Dichotomie/cours/)).
 
 S'il faut parcourir tous les étages de l'arbre avant de trouver (ou pas) la clé recherchée, le nombre de nœuds parcourus est donc égal à la hauteur $h$ de l'arbre.
 
