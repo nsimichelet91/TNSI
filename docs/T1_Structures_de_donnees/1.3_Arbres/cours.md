@@ -882,13 +882,15 @@ False
 ### 5.3  Coût de la recherche dans un ABR équilibré
 ![](data/rechercheABR.png){: .center}
 
+***définition : un arbre binaire de recherche équilibré est un arbre binaire de recherche qui maintient une profondeur équilibré entre ses branches.***  
+
 Imaginons un arbre équilibré de taille $n$. Combien d'étapes faudra-t-il, dans le pire des cas, pour trouver (ou pas) une clé particulière dans cet arbre ?
 
 Après chaque nœud, le nombre de nœuds restant à explorer est divisé par 2. On retrouve là le principe de recherche dichotomique, vu en classe de Première (voir [ici](https://nsimichelet91.github.io/1NSI/T4_Algorithmique/4.5_Dichotomie/cours/)).
 
 S'il faut parcourir tous les étages de l'arbre avant de trouver (ou pas) la clé recherchée, le nombre de nœuds parcourus est donc égal à la hauteur $h$ de l'arbre.
 
-Pour un arbre complet, cette hauteur vérifie la relation $2^h -1= n$. et donc $2^h = n+1$.
+Pour un arbre complet de taille $n$ , cette hauteur vérifie la relation $2^h -1= n$ et donc $2^h = n+1$.
 
 $h$ est donc le «nombre de puissance de 2» que l'on peut mettre dans $n+1$. Cette notion s'appelle le logarithme de base 2 et se note $\log_2$.
 
@@ -896,7 +898,7 @@ Par exemple, $\log_2(64)=6$ car $2^6=64$.
 
 Le nombre maximal de nœuds à parcourir pour rechercher une clé dans un ABR équilibré de taille $n$ est donc de l'ordre de $\log_2(n)$, ce qui est très performant !
 
-Pour arbre contenant 1000 valeurs, 10 étapes suffisent.
+Pour un arbre contenant 1000 valeurs, 10 étapes suffisent.
 
 Cette **complexité logarithmique** est un atout essentiel de la structure d'arbre binaire de recherche.
 
