@@ -1,7 +1,20 @@
 
+!!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"
+    - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
-!!! abstract "⭐ Actualités ⭐"
-    Bonne rentrée à tous !
+!!! note ":star: Thème en cours d'étude :star: "
+    - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
+    - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
+
+### *Thèmes déjà traités*
+- [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+- [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/)
+- [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
+- [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/exercices/) 
+- [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+- [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/) 
+- [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
+- [Révisions](T2_Programmation/2.0_Revisions/revisions/)
 
 === "Programme"
     Le [programme](data/programme_TNSI.pdf) de terminale NSI est articulé autour de cinq thèmes.
