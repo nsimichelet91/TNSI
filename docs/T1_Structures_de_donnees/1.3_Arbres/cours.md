@@ -787,10 +787,9 @@ L'arbre 5 n'est pas un ABR à cause de la feuille 9, qui fait partie du sous-arb
 
 ### 5.1 Déterminer si un arbre est un ABR
 
-Employer une méthode récursive imposerait de garder en mémoire dans l'exploration des sous-arbres la valeur maximale ou minimale. Nous allons plutôt utiliser la remarque précédente, et nous servir du parcours infixe.
+Nous allons utiliser la remarque précédente, et nous servir du parcours infixe.
 
 Méthode : récupérer le parcours infixe dans une liste, et faire un test sur cette liste.
-
 
 !!! note "Être ou ne pas être un ABR"
     ```python linenums='1'
