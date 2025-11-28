@@ -767,7 +767,8 @@ a.right.right = Arbre(3)
 >>> BFS(a)
 [8, 4, 5, 2, 1, 3]
 ```
-[Quiz rappels Arbres Binaires](quiz_ab.html){:target="_blank"}
+
+[Quiz rappels Arbres Binaires](./quiz_ab.html){:target="_blank"}
 
 ## 5. Arbres binaires de recherche (ABR)
 
