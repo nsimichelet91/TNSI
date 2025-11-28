@@ -72,20 +72,46 @@
 
 <!--
 === "Progression"
-    - [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
-    - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
-    - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
-    - [Cryptographie](T5_Architecture_materielle/5.4_Cryptographie/cours/)
-    - [Diviser pour régner](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-    - [Arbres](T1_Structures_de_donnees/1.3_Arbres/cours/)
-    - [Protocoles de routage](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-    - [Dictionnaires](T1_Structures_de_donnees/1.2_Dictionnaires/cours/)  
-    - [Langage SQL](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-    - [Modèle relationnel](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-    - [Listes / piles / files](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)  
-    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)  
-    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/)  -->
-    
+- [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+- [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
+- [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
+- [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
+- [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
+- [Programmation dynamique : Rendu de monnaie](T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/)
+- [Programmation dynamique : TP Plus Grand Carré Blanc](T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/)
+- [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
+- [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
+- [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
+- [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)
+- [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
+- [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
+- [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+- [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
+- [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
+- [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+- [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
+- [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
+- [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
+- [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
+- [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
+- [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
+- [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
+- [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
+- [Dictionnaires :  cours](T1_Structures_de_donnees/1.2_Dictionnaires/cours/) 
+- [Dictionnaires :  exercices](T1_Structures_de_donnees/1.2_Dictionnaires/exercices/) 
+- [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+- [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/)
+- [Récursivité](T2_Programmation/2.2_Recursivite/cours/) 
+- [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/exercices/) 
+- [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+- [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/)   
+- [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
+- [Révisions](T2_Programmation/2.0_Revisions/revisions/)
+  -->
+
+
+
+
 === "Liens utiles"
 
     **À propos de la spécialité NSI**

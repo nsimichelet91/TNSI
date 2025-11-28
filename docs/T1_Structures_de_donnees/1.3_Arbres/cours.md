@@ -767,7 +767,7 @@ a.right.right = Arbre(3)
 >>> BFS(a)
 [8, 4, 5, 2, 1, 3]
 ```
-
+[Quiz rappels Arbres Binaires](quiz_ab.html){:target="_blank"}
 
 ## 5. Arbres binaires de recherche (ABR)
 
@@ -775,7 +775,7 @@ a.right.right = Arbre(3)
     Un **arbre binaire de recherche** est un arbre binaire dont les valeurs des nœuds (valeurs qu'on appelle étiquettes, ou clés) vérifient la propriété suivante :
 
     - l'étiquette d'un nœud est **supérieure ou égale** à celle de **chaque** nœud de son **sous-arbre gauche**.
-    - l'étiquette d'un nœud est **strictement inférieure** à celle du **chaque** nœud de son **sous-arbre droit**.
+    - l'étiquette d'un nœud est **strictement inférieure** à celle de **chaque** nœud de son **sous-arbre droit**.
 
 ![](data/exABR.png){: .center}
 
