@@ -62,7 +62,8 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      align-items: flex-start;
+      align-items: center; /* Ajoute cette ligne pour centrer horizontalement les enfants */
+
       justify-content: flex-start;
       width: 100%;
       margin-bottom: 12px;
@@ -74,7 +75,7 @@
       line-height: 1.4;
     }
     .tree-img {
-      width: 90%;
+      width: 30%;
       max-width: 520px;
       height: auto;
       border-radius: 8px;
@@ -83,7 +84,9 @@
       display: block;
     }
     pre {
-      width: 100%;
+      width: auto; /* Remplace "width: 100%" par "width: auto" */
+      max-width: 90%; /* Limite la largeur maximale */
+      margin: 10px auto; /* Centre horizontalement */
       background: #1e1e1e;
       color: #fff;
       padding: 12px;
@@ -172,20 +175,27 @@
   <div class="flashcards-container" id="flashcards-container"></div>
   <script>
     const initialFlashcardsData = [
-      { question: `1.1) Un arbre est composé de **...** reliés entre eux par des liens appelés **...**.`, answer: `Nœuds — Arêtes` },
-      { question: `1.2) Le **...** est le nœud situé au sommet de l’arbre.`, answer: `La racine` },
-      { question: `1.3) Un nœud sans enfant est appelé une **...**.`, answer: `Feuille` },
-      { question: `1.4) La **...** d’un arbre correspond au nombre de nœuds qu’il contient.`, answer: `Taille` },
-      { question: `1.5) La **...** d’un arbre correspond à la longueur du plus long chemin jusqu’à une feuille.`, answer: `Hauteur` },
-      { question: `1.6) Un arbre où chaque nœud n’a qu’un seul enfant est appelé un **...**.`, answer: `Arbre peigne` },
-      { question: `1.7) Un arbre où tous les niveaux sauf éventuellement le dernier sont remplis et où les feuilles sont le plus à gauche possible est un **...**.`, answer: `Arbre complet` },
-      { question: `2) Taille, hauteur et feuilles\n\nVoici l'arbre :`, questionImage: "data/arbre_q2.png", answer: `Taille = 7\nHauteur = 4\nNombre de feuilles = 3` },
-      { question: `3.1) On visite la racine en premier : parcours ...`, answer: `Préfixe` },
-      { question: `3.2) On visite la racine en dernier : parcours ...`, answer: `Suffixe` },
-      { question: `3.3) La racine est visitée entre le sous-arbre gauche et le sous-arbre droit : parcours ...`, answer: `Infixe` },
-      { question: `4) Parcours d'arbre\n\nVoici l'arbre :`, questionImage: "data/arbre_q4.png", answer: `Préfixe : A B D E C F G\nInfixe : D B E A C F G\nSuffixe : D E B G F C A` },
+      { question: `Un arbre est composé de ... reliés entre eux par des liens appelés ...`, answer: `Nœuds — Arêtes` },
+      { question: `La ... est le nœud situé au sommet de l’arbre.`, answer: `La racine` },
+      { question: `Un nœud sans enfant est appelé une ....`, answer: `Feuille` },
+      { question: `La ... d’un arbre correspond au nombre de nœuds qu’il contient.`, answer: `Taille` },
+      { question: `la ... d'un nœud est le nombre de nœuds de son chemin le plus court vers la racine.`, answer: `Profondeur` },
+      { question: `la ... d'un arbre est la profondeur de son nœud le plus profond`, answer: `Hauteur` },      
+      { question: `Un arbre où chaque nœud n’a qu’un seul enfant est appelé un ...`, answer: `Arbre peigne` },
+      { question: `Un arbre où tous les niveaux sauf éventuellement le dernier sont remplis et où les feuilles sont le plus à gauche possible est un ...`, answer: `Arbre complet` },
+      { question: `Taille, hauteur et feuilles\n\nVoici l'arbre :`, questionImage: "data/arbre_q2.png", answer: `Taille = 7\nHauteur = 4\nNombre de feuilles = 3` },
+      { question: `On visite la racine en premier : parcours ...`, answer: `Préfixe` },
+      { question: `On visite la racine en dernier : parcours ...`, answer: `Suffixe` },
+      { question: `La racine est visitée entre le sous-arbre gauche et le sous-arbre droit : parcours ...`, answer: `Infixe` },
+      { question: `Parcours d'arbre\n\nVoici l'arbre :`, questionImage: "data/arbre_q2.png", answer: `Préfixe : A B D E C F G\nInfixe : D B E A C F G\nSuffixe : D E B G F C A` },
       {
-        question: `5) Compléter un programme Python pour la taille :\n\nRemplir la ligne manquante dans la fonction suivante :`,
+        question: `Compléter un programme Python pour la taille :\n\nRemplir la ligne manquante dans la fonction suivante :\n\n`,
+        questionCode: `<pre><code class="language-python">
+def taille(arbre):
+    if arbre is None:
+        return 0
+    return ... + ... + ...
+        </code></pre>`,
         answer: `<pre><code class="language-python">
 def taille(arbre):
     if arbre is None:
@@ -194,19 +204,19 @@ def taille(arbre):
         </code></pre>`
       },
       {
-        question: `6) Quel est le rôle de cette fonction ?\n\n`,
+        question: `Quel est le rôle de cette fonction ?\n\n`,
         questionCode: `<pre><code class="language-python">
 def mystere(arbre):
     if arbre is None:
-        return -1
+        return 0
     gauche = mystere(arbre.gauche)
     droite = mystere(arbre.droit)
     return 1 + max(gauche, droite)
         </code></pre>`,
-        answer: `Cette fonction calcule la hauteur de l'arbre (en comptant -1 pour l'arbre vide -> convention).`
+        answer: `Cette fonction calcule la hauteur de l'arbre (en comptant 0 pour l'arbre vide -> convention).`
       },
       {
-        question: `7) Identifier le parcours pour le code suivant :\n\n`,
+        question: `Identifier le parcours pour le code suivant :\n\n`,
         questionCode: `<pre><code class="language-python">
 def parcours(r):
     if r is not None:
@@ -214,12 +224,12 @@ def parcours(r):
         parcours(r.droit)
         print(r.valeur)
         </code></pre>`,
-        answer: `Parcours suffixe (post-order)`
+        answer: `Parcours suffixe (postfixe)`
       },
-      { question: `8.a) Arbre peigne :\n\n`, questionImage: "data/arbre8_peigne.png", answer: `h = 4\nn = 4\nRelation h ≤ n ≤ 2^h − 1 vérifiée ? Oui` },
-      { question: `8.b) Arbre complet :\n\n`, questionImage: "data/arbre8_complet.png", answer: `h = 3\nn = 7\nRelation h ≤ n ≤ 2^h − 1 vérifiée ? Oui` },
+      { question: `Arbre peigne : La relation <b>h ≤ n ≤ 2^h − 1</b> est elle vérifiée ?\n\n`, questionImage: "data/peigne.png", answer: `Oui :\nh = 4 ; n = 4\n4 ≤ 4 ≤ 15` },
+      { question: `Arbre complet : La relation <b>h ≤ n ≤ 2^h − 1</b> est elle vérifiée ?\n\n`, questionImage: "data/AB_complet.png", answer: `Oui :\nh = 3 ; n = 7\n3 ≤ 7 ≤ 7` },
       {
-        question: `9) Dans cette implémentation, comment représente-t-on un arbre vide ?\n\nCode :`,
+        question: `Dans cette implémentation, comment représente-t-on un arbre vide ?\n\nCode :`,
         questionCode: `<pre><code class="language-python">
 class Arbre:
     def __init__(self, data):
@@ -230,7 +240,7 @@ class Arbre:
         answer: `Un arbre vide est représenté par la valeur None (ex : variable == None).`
       },
       {
-        question: `10) Toujours avec la même implémentation, comment tester qu'un arbre est vide ?\n\nChoix :\n1) if arbre.est(vide) :\n2) if None.est_vide() :\n3) if arbre is None :`,
+        question: `Toujours avec la même implémentation, comment tester qu'un arbre est vide ?\n\nChoix :\n1) if arbre.est(vide) :\n2) if None.est_vide() :\n3) if arbre is None :`,
         answer: `Réponse correcte : 3) if arbre is None :`
       }
     ];
