@@ -24,7 +24,7 @@ Mais de plus en plus de SGBD **non-relationnels** sont utilisés, spécialement 
 
 La quasi-totalité de ces SGBD fonctionnent avec un modèle client-serveur. 
 
-Nous allons travailler principalement avec le langage SQLite peut lui s'utiliser directement sans démarrer un serveur : la base de données est entièrement représentée dans le logiciel utilisant SQLite (dans notre cas, DB Browser for SQLite).  
+Nous allons travailler principalement avec le langage SQLite qui peut s'utiliser directement sans démarrer un serveur : la base de données est entièrement représentée dans le logiciel utilisant SQLite (dans notre cas, DB Browser for SQLite).  
 Sa simplicité d'utilisation en fera notre choix pour illustrer cette présentation du langage SQL. 
 
 
