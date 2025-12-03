@@ -28,7 +28,7 @@ Deux relations modélisent la flotte de voitures d'un réseau de location de voi
     === "Énoncé"
         1. Combien la relation ```Voitures``` comporte-t-elle d'attributs ?
         2. Que vaut son cardinal ?
-        3. Quel est le domaine de l'attribut ```ig_agence```  dans la relation ```Voitures``` ?
+        3. Quel est le domaine de l'attribut ```id_agence```  dans la relation ```Voitures``` ?
         4. Quel est le schéma relationnel de la relation ```Agences ``` ?
         5. Quelle est la clé primaire de la relation ```Agences ``` ?
         6. Quelle est la clé primaire de la relation ```Voitures ``` ?
