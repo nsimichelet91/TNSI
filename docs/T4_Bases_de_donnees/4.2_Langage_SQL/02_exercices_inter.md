@@ -394,7 +394,7 @@
     La base de données [locations.db](data/locations.db) contient les tables ```Agences```,```Locations```, ```Vehicules```.
     ![](data/diag_locations.png)
 
-    {!{ sqlide titre="**Requête :**"  base="T4_Bases_de_donnees/4.2_Langage_SQL/data/locations.db" }!}
+    !{{ sqlide titre="**Requête :**"  base="T4_Bases_de_donnees/4.2_Langage_SQL/data/locations.db" }}!
 
     ??? note "Questions sur la relation ```Agences```"
 
