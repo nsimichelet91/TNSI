@@ -24,7 +24,7 @@ jobs:
       - run: |
           python - << 'EOF'
           from importlib.metadata import entry_points
-          eps = entry_points().get("mkdocs.plugins", [])
+          eps = entry_points().select(group="mkdocs.plugins")
           print([ep.name for ep in eps])
           EOF
       - run: mkdocs gh-deploy --force
