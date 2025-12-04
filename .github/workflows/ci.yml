@@ -18,14 +18,13 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-macros-plugin
       - run: pip install mkdocs-awesome-pages-plugin
-      - run: pip install mkdocs-git-revision-date-localized-plugin
       - run: pip install git+https://github.com/Epithumia/mkdocs-sqlite-console.git
-      - run: mkdocs gh-deploy --force
       - run: pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-awesome-pages-plugin git+https://github.com/Epithumia/mkdocs-sqlite-console.git
       - run: pip list
       - run: |
           python - << 'EOF'
-          import pkg_resources
-          print([ep.name for ep in pkg_resources.iter_entry_points('mkdocs.plugins')])
+          from importlib.metadata import entry_points
+          eps = entry_points().get("mkdocs.plugins", [])
+          print([ep.name for ep in eps])
           EOF
       - run: mkdocs gh-deploy --force
