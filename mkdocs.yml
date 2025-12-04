@@ -115,4 +115,8 @@ extra_css:
   - stylesheets/extra.css
   - xtra/stylesheets/pyoditeur.css
 
+validation:
+  absolute_links: ignore
+  unrecognized_links: ignore
+
 
