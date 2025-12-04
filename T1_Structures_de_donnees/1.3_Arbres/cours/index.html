@@ -1,0 +1,5959 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nsimichelet91.github.io/TNSI/T1_Structures_de_donnees/1.3_Arbres/cours/">
+      
+      
+        <link rel="prev" href="../../1.2_Dictionnaires/exercices/">
+      
+      
+        <link rel="next" href="../exercices/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../xtra/favTNSI.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Cours - Terminale NSI - Lycée Edmond Michelet Arpajon</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M471.6%2021.7c-21.9-21.9-57.3-21.9-79.2%200L368%2046.1l97.9%2097.9%2024.4-24.4c21.9-21.9%2021.9-57.3%200-79.2zm-299.2%20220c-6.1%206.1-10.8%2013.6-13.5%2021.9l-29.6%2088.8c-2.9%208.6-.6%2018.1%205.8%2024.6s15.9%208.7%2024.6%205.8l88.8-29.6c8.2-2.7%2015.7-7.4%2021.9-13.5L432%20177.9%20334.1%2080zM96%2064c-53%200-96%2043-96%2096v256c0%2053%2043%2096%2096%2096h256c53%200%2096-43%2096-96v-96c0-17.7-14.3-32-32-32s-32%2014.3-32%2032v96c0%2017.7-14.3%2032-32%2032H96c-17.7%200-32-14.3-32-32V160c0-17.7%2014.3-32%2032-32h96c17.7%200%2032-14.3%2032-32s-14.3-32-32-32z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+    
+      
+    
+    <script src="../../../xtra/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../../xtra/gifplayer/gif-player.es6.js" defer async></script>
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../xtra/stylesheets/pyoditeur.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NXDLLVVQEB"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NXDLLVVQEB",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NXDLLVVQEB",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arbres" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Terminale NSI - Lycée Edmond Michelet Arpajon" class="md-header__button md-logo" aria-label="Terminale NSI - Lycée Edmond Michelet Arpajon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Terminale NSI - Lycée Edmond Michelet Arpajon
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cours
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../sommaire/" class="md-tabs__link">
+          
+  
+  
+  T1 Structures de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../T2_Programmation/sommaire/" class="md-tabs__link">
+          
+  
+  
+  T2 Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../T3_Algorithmique/sommaire/" class="md-tabs__link">
+          
+  
+  
+  T3 Algorithmique
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-tabs__link">
+          
+  
+  
+  T4 Base de données
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../T5_Architecture_materielle/sommaire/" class="md-tabs__link">
+          
+  
+  
+  T5 Architecture matérielle
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../T6_5_algos_coeur/cours/" class="md-tabs__link">
+          
+  
+  
+  Algos ❤
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../T6_6_Epreuve_pratique/BNS_2026/" class="md-tabs__link">
+          
+  
+  
+  EP 💻
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../T6_Annales/epreuve_bac/" class="md-tabs__link">
+          
+  
+  
+  Bac 🖊️
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../T7_Divers/Entrainement_CTF/" class="md-tabs__link">
+          
+  
+  
+  Divers
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Terminale NSI - Lycée Edmond Michelet Arpajon" class="md-nav__button md-logo" aria-label="Terminale NSI - Lycée Edmond Michelet Arpajon" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.41 7.41 15 12l-4.59 4.6L9 15.18 12.18 12 9 8.82M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/></svg>
+
+    </a>
+    Terminale NSI - Lycée Edmond Michelet Arpajon
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T1 Structures de données
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    T1 Structures de données
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sommaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 Listes Piles Files
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1.1 Listes Piles Files
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.1_Listes_Piles_Files/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.1_Listes_Piles_Files/Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 Dictionnaires
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1.2 Dictionnaires
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.2_Dictionnaires/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.2_Dictionnaires/exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3 Arbres
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1.3 Arbres
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-terminologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Terminologie
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Terminologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-vocabulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Vocabulaire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-exemples-darbres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Exemples d'arbres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-caracteristiques-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Caractéristiques d'un arbre
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parcours-darbres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Parcours d'arbres
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Parcours d&#39;arbres">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-parcours-en-largeur-dabord-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Parcours en largeur d'abord (BFS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-parcours-prefixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Parcours préfixe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-parcours-infixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Parcours infixe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-parcours-postfixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Parcours postfixe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-comment-ne-pas-se-melanger-entre-le-pre-in-post-fixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Comment ne pas se mélanger entre le pré / in / post fixe ?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementations-dun-arbre-binaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Implémentations d'un arbre binaire
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Implémentations d&#39;un arbre binaire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-en-utilisant-la-programmation-orientee-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 En utilisant la Programmation Orientée Objet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-implementation-a-partir-de-tuples-imbriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Implémentation à partir de tuples imbriqués
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-implementation-a-partir-dune-simple-liste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Implémentation à partir d'une «simple» liste
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-utilisation-de-limplementation-parcours-taille" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Utilisation de l'implémentation : parcours, taille...
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Utilisation de l&#39;implémentation : parcours, taille...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-parcours-prefixe-infixe-postfixe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Parcours préfixe, infixe, postfixe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-calcul-de-la-taille-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Calcul de la taille d'un arbre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-calcul-de-la-hauteur-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Calcul de la hauteur d'un arbre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-calcul-du-nombre-de-feuilles-dun-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Calcul du nombre de feuilles d'un arbre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-recherche-dune-valeur-dans-un-arbre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Recherche d'une valeur dans un arbre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-parcours-en-largeur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Parcours en largeur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-arbres-binaires-de-recherche-abr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Arbres binaires de recherche (ABR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Arbres binaires de recherche (ABR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-determiner-si-un-arbre-est-un-abr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Déterminer si un arbre est un ABR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-rechercher-une-cle-dans-un-abr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Rechercher une clé dans un ABR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-cout-de-la-recherche-dans-un-abr-equilibre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Coût de la recherche dans un ABR équilibré
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-insertion-dans-un-abr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Insertion dans un ABR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliographie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliographie
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4 Graphes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1.4 Graphes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.4_Graphes/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T2 Programmation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    T2 Programmation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/sommaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.0 Revisions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2.0 Revisions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/2.0_Revisions/revisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revisions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1 Programmation Orientee Objet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2.1 Programmation Orientee Objet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/2.1_Programmation_Orientee_Objet/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/2.1_Programmation_Orientee_Objet/TP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2 Recursivite
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2.2 Recursivite
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/2.2_Recursivite/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/2.2_Recursivite/td/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3 Calculabilite Decidabilite
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2.3 Calculabilite Decidabilite
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/2.3_Calculabilite_Decidabilite/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Décidabilité, calculabilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4 Pratiques de programmation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2.4 Pratiques de programmation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T2_Programmation/2.4_Pratiques_de_programmation/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonnes pratiques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T3 Algorithmique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    T3 Algorithmique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Algorithmique/sommaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.1 Diviser pour regner
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3.1 Diviser pour regner
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Algorithmique/3.1_Diviser_pour_regner/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.2 Programmation dynamique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3.2 Programmation dynamique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Algorithmique/3.2_Programmation_dynamique/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programmation dynamique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3.3 Recherche textuelle
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3.3 Recherche textuelle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T3_Algorithmique/3.3_Recherche_textuelle/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recherche textuelle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T4 Base de données
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    T4 Base de données
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Bases_de_donnees/sommaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.1 Modele relationnel
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4.1 Modele relationnel
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Bases_de_donnees/4.1_Modele_relationnel/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4.2 Langage SQL
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4.2 Langage SQL
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Bases_de_donnees/4.2_Langage_SQL/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices SQL interactifs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices SQL débranchés
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices Python-SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    T5 Architecture matérielle
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    T5 Architecture matérielle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Architecture_materielle/sommaire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sommaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.0 Autour de GNU Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5.0 Autour de GNU Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Architecture_materielle/5.0_Autour_de_GNU_Linux/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.1 Systemes sur puce
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5.1 Systemes sur puce
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.2 Gestion des processus
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5.2 Gestion des processus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Architecture_materielle/5.2_Gestion_des_processus/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.3 Protocoles de routage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5.3 Protocoles de routage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cours
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5.4 Cryptographie
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5.4 Cryptographie
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Architecture_materielle/5.4_Cryptographie/Exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Architecture_materielle/5.4_Cryptographie/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cryptographie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algos ❤
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algos ❤
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_5_algos_coeur/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithmes de référence ❤
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EP 💻
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EP 💻
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BNS 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (!!! old !!!) BNS 2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (!!! old !!!) BNS 2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (!!! old !!!) BNS 2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (!!! old !!!) BNS 2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_6_Epreuve_pratique/BNS_2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (!!! old !!!) BNS 2021
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bac 🖊️
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bac 🖊️
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/epreuve_bac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Épreuves du baccalauréat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T6_Annales/liste_sujets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liste des sujets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Divers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Divers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/Entrainement_CTF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entraînement aux CTF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    00 Grand Oral
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    00 Grand Oral
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/00_Grand_Oral/sujets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exemples de sujets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 Conseils generaux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    01 Conseils generaux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/01_Conseils_generaux/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conseils de travail
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 Capytale
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 Capytale
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/02_Capytale/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilisation du service Capytale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03 Thonny
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    03 Thonny
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/03_Thonny/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thonny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 Processing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/04_Processing/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 Processing Capytale
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    05 Processing Capytale
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/05_Processing_Capytale/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processing sur Capytale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_8" id="__nav_10_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    06 Pygame
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    06 Pygame
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/06_Pygame/05_Initiation_Pygame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initiation à Pygame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 Liens
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    07 Liens
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/07_Liens/liens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liens utiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 Zenika
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    08 Zenika
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/08_Zenika/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources intervention 29 mars
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_11" id="__nav_10_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 AOC
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    09 AOC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/09_AOC/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advent Of Code - conseils
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_12" id="__nav_10_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    10 orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/10_orientation/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Post-Bac
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_13" id="__nav_10_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 parcoursup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    11 parcoursup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_Divers/11_parcoursup/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gale-Shapley et l'algorithme de Parcoursup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+    
+                  
+
+
+
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js"></script>
+<script src="https://nsimichelet91.github.io/TNSI//js/sqlite_ide.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.css">
+<link rel="stylesheet" href="https://nsimichelet91.github.io/TNSI//css/sqlite_ide.css">
+<script>sqljs_base_path="https://nsimichelet91.github.io/TNSI/"</script>
+
+<h1 id="arbres">Arbres<a class="headerlink" href="#arbres" title="Permanent link">⚓︎</a></h1>
+<p><img alt="image" class="center" src="../data/banniere.png" width="70%" /></p>
+<p><img alt="image" class="center" src="../data/BO1.png" /></p>
+<p><img alt="image" class="center" src="../data/BO2.png" /></p>
+<h2 id="1-terminologie">1. Terminologie<a class="headerlink" href="#1-terminologie" title="Permanent link">⚓︎</a></h2>
+<h3 id="11-vocabulaire">1.1 Vocabulaire<a class="headerlink" href="#11-vocabulaire" title="Permanent link">⚓︎</a></h3>
+<p>Un arbre est une structure hiérarchique de données, composée de nœuds. Si on adopte le vocabulaire des graphes, un arbre est un graphe non orienté, connexe, sans cycle, et dans lequel un nœud joue le rôle de racine.</p>
+<p><img alt="" class="center" src="../data/term.png" /></p>
+<ul>
+<li>
+<p>Chaque <strong>nœud</strong> a exactement un seul <strong>nœud père</strong>, à l'exception du nœud <strong>racine</strong> qui est le seul nœud à ne pas avoir de père. (oui, <strong>la</strong> racine d'une arbre est <strong>en haut</strong>)
+<img alt="image" class="center" src="../data/real_tree.png" width="30%" /></p>
+</li>
+<li>
+<p>Chaque nœud peut avoir un nombre quelconque de <strong>fils</strong>, dont il est le père.</p>
+</li>
+<li>Les nœuds qui n'ont pas de fils sont appelés les <strong>feuilles</strong> (ou nœuds externes).</li>
+<li>Les nœuds qui ne sont pas des feuilles sont des <strong>nœuds internes</strong>.</li>
+<li>Le nom de chaque nœud est appelé son <strong>étiquette</strong>.</li>
+</ul>
+<p><strong>Exemples :</strong>
+dans l'arbre ci-dessus,</p>
+<ul>
+<li>C est la racine, E, Z A et G sont les feuilles.</li>
+<li>K est le père de A et G.</li>
+<li>F est le père de Z.</li>
+<li>C est le père de B et K</li>
+<li>B est le père de E et F.</li>
+</ul>
+<h3 id="12-exemples-darbres">1.2 Exemples d'arbres<a class="headerlink" href="#12-exemples-darbres" title="Permanent link">⚓︎</a></h3>
+<h4 id="121-la-famille-royale-britannique-avant-le-08-septembre-2022">1.2.1 La famille royale britannique (avant le 08 septembre 2022)<a class="headerlink" href="#121-la-famille-royale-britannique-avant-le-08-septembre-2022" title="Permanent link">⚓︎</a></h4>
+<p><img alt="image" class="center" src="../data/windsor.png" width="60%" /></p>
+<p>Redessinez de manière plus schématique cet arbre. Pour quelle raison cet arbre a-t-il été modifié par rapport à sa version orginale (voir <a href="https://i.pinimg.com/originals/e8/d1/c7/e8d1c7b2834ce2c368848cf7fc91a057.jpg">ici</a> ), qui laissait apparaître les parents de chaque enfant ?</p>
+<h4 id="122-le-dom-dune-page-web">1.2.2 Le DOM d'une page web<a class="headerlink" href="#122-le-dom-dune-page-web" title="Permanent link">⚓︎</a></h4>
+<p>DOM : Document Object Model</p>
+<p><img alt="image" class="center" src="../data/dom.svg" width="40%" /></p>
+<h4 id="123-larborescence-dun-disque-dur">1.2.3 L'arborescence d'un disque dur<a class="headerlink" href="#123-larborescence-dun-disque-dur" title="Permanent link">⚓︎</a></h4>
+<p>Les systèmes Unix (MacOS ou GNU/Linux) organisent leur disque dur suivant l'arborescence ci-dessous :
+<img alt="image" class="center" src="../data/arbo-unix.gif" width="40%" /></p>
+<!--
+!!! example "Exercice  1"
+    Quelque part à l'intérieur des dossiers contenus dans l'archive [dossiers.zip](data/dossiers.zip) se trouve un fichier ```tresor.txt```. Quel secret renferme-t-il ?
+
+    Attention, cette recherche est à faire uniquement en ligne de commande :
+
+    - ```ls``` : pour lister les dossiers et fichiers d'un répertoire
+    - ```cd Dossier``` : pour se rendre dans le repértoire ```Dossier```
+    - ```cd ..``` : pour remonter d'un niveau dans l'arborescence
+    - ```unzip monarchive.zip``` : pour décompresser une archive
+    - ```tree``` : pour afficher l'arborescence du répertoire courant
+    - ```sudo apt install monprog``` : pour installer le programme ```monprog``` si celui-ci est manquant.
+-->
+
+<h3 id="13-caracteristiques-dun-arbre">1.3 Caractéristiques d'un arbre<a class="headerlink" href="#13-caracteristiques-dun-arbre" title="Permanent link">⚓︎</a></h3>
+<h4 id="131-outils-numeriques-de-description">1.3.1 Outils numériques de description<a class="headerlink" href="#131-outils-numeriques-de-description" title="Permanent link">⚓︎</a></h4>
+<p><img alt="" class="center" src="../data/carac.png" width="30%" /></p>
+<div class="admonition note">
+<p class="admonition-title">Définitions <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<ul>
+<li>
+<p>la <strong>taille</strong> d'un arbre est son nombre total de nœuds. Ici, elle vaut 8.</p>
+</li>
+<li>
+<p>l'<strong>arité</strong> d'un nœud est son nombre de fils. Ici, l'arité de B vaut 2, celle de F vaut 1, celle de Z vaut 0.</p>
+</li>
+<li>
+<p>la <strong>profondeur</strong> d'un nœud est le nombre de nœuds de son chemin le plus court vers la racine. 
+Ici, la profondeur de G est 3 (G-K-C), la profondeur de B est 2 (B-C), la profondeur de Z est 4 (Z-F-B-C), la profondeur de C est 1.</p>
+</li>
+<li>
+<p>la <strong>hauteur</strong> d'un arbre est la profondeur de son nœud le plus profond. 
+Ici, la hauteur de l'arbre est 4.<br />
+    Nous prendrons comme <strong>convention</strong> que :  </p>
+<ul>
+<li>si un arbre est réduit à <strong>un seul nœud-racine</strong>, sa hauteur sera <strong>1</strong>.</li>
+<li>si un arbre est <strong>vide</strong>, sa hauteur est <strong>0</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><em>Cette convention est celle adoptée dans le sujet 0 publié le 15/12/2020. Attention, dans certains ouvrages, l'arbre vide a pour hauteur -1, et donc l'arbre réduit à un seul nœud a pour hauteur 0, donc notre arbre aurait avec cette convention une hauteur 3.</em></p>
+<h4 id="14-arbres-binaires">1.4 Arbres binaires<a class="headerlink" href="#14-arbres-binaires" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Définition <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Un arbre binaire est un arbre dont chaque nœud possède <strong>au plus</strong> deux fils.</p>
+</div>
+<p>L'arbre généalogique de la famille royale britannique n'est pas un arbre binaire. </p>
+<p>L'arbre ci-dessous est lui un arbre binaire.</p>
+<p><img alt="" class="center" src="../data/carac3.png" /></p>
+<h4 id="141-sous-arbres-dun-arbre-binaire">1.4.1 Sous-arbres d'un arbre binaire<a class="headerlink" href="#141-sous-arbres-dun-arbre-binaire" title="Permanent link">⚓︎</a></h4>
+<p>Chaque nœud d'un arbre binaire ne pouvant pas avoir plus de 2 fils, il est possible de séparer le «dessous» de chaque nœud en deux sous-arbres (éventuellement vides) : le <strong>sous-arbre gauche</strong> et le <strong>sous-arbre droit</strong>.</p>
+<p><img alt="" class="center" src="../data/sousarbres.png" /></p>
+<ul>
+<li>Les deux sous-arbres représentés ici sont les sous-arbres du nœud-racine T. </li>
+<li>Le nœud O admet comme sous-arbre gauche le nœud H et comme sous-arbre droit le nœud N.</li>
+<li>Les feuilles P, H et N ont pour sous-arbre gauche et pour sous-arbre droit l'<strong>arbre vide</strong>.</li>
+</ul>
+<h4 id="143-cas-des-arbres-binaires-complets">1.4.3 Cas des arbres binaires complets<a class="headerlink" href="#143-cas-des-arbres-binaires-complets" title="Permanent link">⚓︎</a></h4>
+<p>On rencontre très souvent des arbres binaires dits <strong>complets</strong> parce qu'aucun des fils gauche ou droit n'est manquant.</p>
+<p><img alt="" class="center" src="../data/complet.png" /></p>
+<p><strong>Taille d'un arbre complet de hauteur <span class="arithmatex">\(h\)</span> :</strong>
+<span class="arithmatex">\(1 + 2 + 2^2 + 2^3 + \dots + 2^{h-1} = 2^{h} - 1\)</span></p>
+<p><em>preuve</em> : ceci est la somme <span class="arithmatex">\(S\)</span> des <span class="arithmatex">\(h\)</span> premiers termes d'une suite géométrique de raison 2 et de premier terme 1, d'où <span class="arithmatex">\(S= \frac{1-2^{h}}{1-2} = 2^{h} -1\)</span>.</p>
+<p>Un arbre complet de hauteur <span class="arithmatex">\(h\)</span> (en prenant la convention que l'arbre vide a pour hauteur 0) a donc une taille égale à <span class="arithmatex">\(2^{h}-1\)</span>.</p>
+<p><strong>Remarque :</strong> On en déduit une inégalité classique sur l'encadrement de la taille <span class="arithmatex">\(t\)</span> d'un arbre binaire (non nécessairement complet) de hauteur <span class="arithmatex">\(h\)</span> :</p>
+<div class="arithmatex">\[h \leqslant t \leqslant 2^{h}-1\]</div>
+<h2 id="2-parcours-darbres">2. Parcours d'arbres<a class="headerlink" href="#2-parcours-darbres" title="Permanent link">⚓︎</a></h2>
+<p>Les arbres étant une structure hiérarchique, leur utilisation implique la nécessité d'un <strong>parcours</strong> des valeurs stockées. Par exemple pour toutes les récupérer dans un certain ordre, ou bien pour en chercher une en particulier.  </p>
+<p>Il existe plusieurs manières de parcourir un arbre.</p>
+<h3 id="21-parcours-en-largeur-dabord-bfs">2.1 Parcours en largeur d'abord (BFS)<a class="headerlink" href="#21-parcours-en-largeur-dabord-bfs" title="Permanent link">⚓︎</a></h3>
+<p><em>BFS : Breadth First Search</em></p>
+<div class="admonition note">
+<p class="admonition-title">Méthode du parcours en largeur (BFS) <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Le parcours en largeur d'abord est un parcours étage par étage (de haut en bas) et de gauche à droite.</p>
+</div>
+<p><img alt="" class="center" src="../data/BFS.png" /></p>
+<p>L'ordre des lettres parcourues est donc T-Y-O-P-H-N.</p>
+<p>Les trois parcours que nous allons voir maintenant sont des parcours en <strong>profondeur d'abord</strong>, ou <strong>DPS</strong> (<em>Depth First Search</em>). Ce qui signifie qu'un des deux sous-arbres sera totalement parcouru avant que l'exploration du deuxième ne commence. </p>
+<h3 id="22-parcours-prefixe">2.2 Parcours préfixe<a class="headerlink" href="#22-parcours-prefixe" title="Permanent link">⚓︎</a></h3>
+<p>Le parcours <strong>préfixe</strong> est un parcours <strong>en profondeur d'abord</strong>. </p>
+<div class="admonition note">
+<p class="admonition-title">Méthode du parcours préfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<p>(parfois aussi appelé <em>préordre</em>)</p>
+<ul>
+<li>Chaque nœud est visité <strong>avant</strong> que ses fils le soient.</li>
+<li>On part de la racine, puis on visite son fils gauche (et éventuellement le fils gauche de celui-ci, etc.) avant de remonter et de redescendre vers le fils droit.</li>
+</ul>
+</div>
+<p><img alt="" class="center" src="../data/prefixe.png" /></p>
+<p>L'ordre des lettres parcourues est donc T-Y-P-O-H-N.</p>
+<h3 id="23-parcours-infixe">2.3 Parcours infixe<a class="headerlink" href="#23-parcours-infixe" title="Permanent link">⚓︎</a></h3>
+<p>Le parcours <strong>infixe</strong> est aussi un parcours en profondeur d'abord.</p>
+<div class="admonition note">
+<p class="admonition-title">Méthode du parcours infixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<p>(parfois aussi appelé <em>en ordre</em>)</p>
+<ul>
+<li>Chaque nœud est visité <strong>après son fils gauche mais avant son fils droit</strong>.</li>
+<li>On part donc de la feuille la plus à gauche et on remonte par vagues sucessives. Un nœud ne peut pas être visité si son fils gauche ne l'a pas été.</li>
+</ul>
+</div>
+<p><img alt="" class="center" src="../data/infixe.png" /></p>
+<p>L'ordre des lettres parcourues est donc P-Y-T-H-O-N.</p>
+<h3 id="24-parcours-postfixe">2.4 Parcours postfixe<a class="headerlink" href="#24-parcours-postfixe" title="Permanent link">⚓︎</a></h3>
+<p>Le parcours <strong>postfixe</strong> est aussi un parcours en profondeur d'abord.</p>
+<div class="admonition note">
+<p class="admonition-title">Méthode du parcours postfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<p>(parfois aussi appelé <strong>post-ordre</strong> ou encore <strong>suffixe</strong>)</p>
+<ul>
+<li>Chaque nœud est visité <strong>après</strong> ses fils le soient.</li>
+<li>On part donc de la feuille la plus à gauche, et on ne remonte à un nœud père que si ses fils ont tous été visités. </li>
+</ul>
+</div>
+<p><img alt="" class="center" src="../data/postfixe.png" /></p>
+<p>L'ordre des lettres parcourues est donc P-Y-H-N-O-T.</p>
+<h3 id="25-comment-ne-pas-se-melanger-entre-le-pre-in-post-fixe">2.5 Comment ne pas se mélanger entre le pré / in / post fixe ?<a class="headerlink" href="#25-comment-ne-pas-se-melanger-entre-le-pre-in-post-fixe" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li><em>pré</em> veut dire <em>avant</em></li>
+<li><em>in</em> veut dire <em>au milieu</em></li>
+<li><em>post</em> veut dire <em>après</em></li>
+</ul>
+<p>Ces trois mots-clés parlent de la place du <strong>père</strong> par rapport à ses fils. 
+Ensuite, il faut toujours se souvenir qu'on traite le fils gauche avant le fils droit.</p>
+<ul>
+<li>préfixe : le père doit être le premier par rapport à ses fils.</li>
+<li>infixe : le père doit être entre son fils gauche (traité en premier) et son fils droit.</li>
+<li>postfixe : le père ne doit être traité que quand ses deux fils (gauche d'abord, droite ensuite) l'ont été.</li>
+</ul>
+<p>Un parcours préfixe commencera toujours par la racine, alors qu'un parcours postfixe finira toujours par la racine. Dans un parcours infixe, la racine sera «au milieu» (pas nécessairement parfaitement).</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  2</p>
+<p><img alt="" class="center" src="../data/exo_parcours.png" /></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Corr. largeur</label><label for="__tabbed_1_3">Corr. préfixe</label><label for="__tabbed_1_4">Corr. infixe</label><label for="__tabbed_1_5">Corr. postfixe</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner le rendu de chaque parcours :</p>
+<ol>
+<li>Parcours en largeur </li>
+<li>Parcours préfixe</li>
+<li>Parcours infixe</li>
+<li>Parcours postfixe</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>largeur : 1 2 3 4 5 6 7 8 9</p>
+</div>
+<div class="tabbed-block">
+<p>préfixe : 1 2 4 5 7 8 3 6 9</p>
+</div>
+<div class="tabbed-block">
+<p>infixe : 4 2 7 5 8 1 3 9 6</p>
+</div>
+<div class="tabbed-block">
+<p>postfixe : 4 7 8 5 2 9 6 3 1</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  3</p>
+<p><img alt="" class="center" src="../data/exo_2.png" /></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Corr. largeur</label><label for="__tabbed_2_3">Corr. préfixe</label><label for="__tabbed_2_4">Corr. infixe</label><label for="__tabbed_2_5">Corr. postfixe</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner le rendu de chaque parcours :</p>
+<ol>
+<li>Parcours en largeur </li>
+<li>Parcours préfixe</li>
+<li>Parcours infixe</li>
+<li>Parcours postfixe</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>largeur : 9 8 7 6 2 5 1 4 3</p>
+</div>
+<div class="tabbed-block">
+<p>préfixe : 9 8 6 2 1 7 5 4 3</p>
+</div>
+<div class="tabbed-block">
+<p>infixe : 6 8 1 2 9 7 4 5 3</p>
+</div>
+<div class="tabbed-block">
+<p>postfixe : 6 1 2 8 4 3 5 7 9</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="3-implementations-dun-arbre-binaire">3. Implémentations d'un arbre binaire<a class="headerlink" href="#3-implementations-dun-arbre-binaire" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-en-utilisant-la-programmation-orientee-objet">3.1 En utilisant la Programmation Orientée Objet<a class="headerlink" href="#31-en-utilisant-la-programmation-orientee-objet" title="Permanent link">⚓︎</a></h3>
+<p>Le but est d'obtenir l'interface ci-dessous.</p>
+<p>Il est à remarquer que ce que nous allons appeler «Arbre» est en fait un nœud et ses deux fils gauche et droit.</p>
+<div class="admonition abstract">
+<p class="admonition-title">interface souhaitée</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># pour créer l&#39;arbre dont le nœud a pour valeur 4,</span>
+            <span class="c1"># et dont les sous-arbres gauche et droit sont None</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># pour donner la valeur 3 au nœud du sous-arbre gauche de a</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># pour donner la valeur 1 au nœud du sous-arbre droit de a</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">data</span> <span class="c1"># pour accéder à la valeur du fils droit de a</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  4</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Dessinez l'arbre créé par les instructions suivantes :
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="correction" class="center" src="../data/exo_imp.png" /></p>
+</div>
+</div>
+</div>
+</div>
+<p><strong><img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /> Implémentation <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2b50.svg" title=":star:" /></strong></p>
+<p>⯈ <strong>Principe</strong> : nous allons créer une classe <code>Arbre</code>, qui contiendra 3 attributs : </p>
+<ul>
+<li><code>data</code> : la valeur du nœud (de type <code>Int</code>)</li>
+<li><code>left</code> : le sous-arbre gauche (de type <code>Arbre</code>)</li>
+<li><code>right</code> : le sous-arbre droit (de type <code>Arbre</code>).</li>
+</ul>
+<p>Par défaut, les attributs <code>left</code> et <code>right</code> seront à <code>None</code>, qui représentera l'arbre vide (ce qui n'est pas très rigoureux, car <code>None</code> n'est pas de type <code>Arbre</code>...).</p>
+<p>⯈ <strong>Encapsulation ou pas ???</strong> : </p>
+<p>Afin de respecter le paradigme de la Programmation Orientée Objet, nous devrions jouer totalement le jeu de l'<strong>encapsulation</strong> en nous refusant d'accéder directement aux attributs.</p>
+<p>Pour cela  il faut construire des méthodes permettant d'accéder à ces attributs (avec des <strong>getters</strong>, ou <strong>accesseurs</strong> en français) ou de les modifier (avec des <strong>setters</strong>, ou <strong>mutateurs</strong> en français) .</p>
+<h4 id="311-implementation-avec-encapsulation">3.1.1 Implémentation avec encapsulation<a class="headerlink" href="#311-implementation-avec-encapsulation" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Classe <code>Arbre</code> avec encapsulation</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_left</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sousarbre</span><span class="p">):</span> <span class="c1"># mutateur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">sousarbre</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_right</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sousarbre</span><span class="p">):</span> <span class="c1"># mutateur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">sousarbre</span>  
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># accesseur</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>L'implémentation précédente permet d'utiliser les instructions de l'exercice précédent et de vérifier que l'arbre a bien été créé.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">set_left</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">set_right</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">set_left</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">set_right</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_left</span><span class="p">()</span><span class="o">.</span><span class="n">set_left</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">set_left</span><span class="p">(</span><span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+   <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Arbre</span> <span class="n">at</span> <span class="mh">0x7f0100361f40</span><span class="o">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">get_right</span><span class="p">()</span><span class="o">.</span><span class="n">get_left</span><span class="p">()</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+   <span class="mi">2</span>
+</code></pre></div>
+<h4 id="311-implementation-sans-encapsulation">3.1.1 Implémentation sans encapsulation<a class="headerlink" href="#311-implementation-sans-encapsulation" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Classe <code>Arbre</code> sans encapsulation <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>C'est déjà fini !</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+   <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Arbre</span> <span class="n">at</span> <span class="mh">0x7f0100361f40</span><span class="o">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">data</span>
+   <span class="mi">2</span>
+</code></pre></div>
+<p>On voit que l'implémentation avec accès direct aux attributs est beaucoup plus simple et rapide. Néanmoins, elle peut être considérée comme incorrecte dans certains langages qui obligent à passer par des accesseurs ou mutateurs pour lire ou modifier les attributs.</p>
+<h4 id="312-representation-graphique-en-console">3.1.2 Représentation graphique en console<a class="headerlink" href="#312-representation-graphique-en-console" title="Permanent link">⚓︎</a></h4>
+<p>La méthode <code>affiche</code> suivante (qui n'est pas à connaître) permet d'avoir un semblant de représentation graphique de l'arbre en console :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">affiche</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="s1">&#39;None&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>     
+
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">affiche</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">indent</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|&#39;</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="s1">&#39;None&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>  
+    <span class="k">return</span> <span class="n">s</span>
+</code></pre></div></td></tr></table></div>
+<p>La représentation de cet arbre :
+<img alt="" class="center" src="../data/exo_imp.png" />
+donnera alors :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">affiche</span><span class="p">())</span>
+<span class="o">|</span><span class="n">_4</span>
+  <span class="o">|</span><span class="n">_3</span>
+    <span class="o">|</span><span class="n">_6</span>
+    <span class="o">|</span><span class="n">_None</span>
+  <span class="o">|</span><span class="n">_1</span>
+    <span class="o">|</span><span class="n">_2</span>
+    <span class="o">|</span><span class="n">_7</span>
+      <span class="o">|</span><span class="n">_9</span>
+      <span class="o">|</span><span class="n">_None</span>
+</code></pre></div>
+<h3 id="32-implementation-a-partir-de-tuples-imbriques">3.2 Implémentation à partir de tuples imbriqués<a class="headerlink" href="#32-implementation-a-partir-de-tuples-imbriques" title="Permanent link">⚓︎</a></h3>
+<div class="admonition note">
+<p class="admonition-title"><code>Arbre</code> sous forme de tuples imbriqués <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Un arbre peut se représenter par le tuple <code>(valeur, sous-arbre gauche, sous-arbre droit)</code>.
+L'arbre ci-dessous :
+<img alt="" class="center" src="../data/imp_tuple.png" />
+est représenté par le tuple :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="p">(</span><span class="mi">6</span><span class="p">,(),()),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,(),())),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="p">(),()),</span> <span class="p">()))</span>
+</code></pre></div>
+</div>
+<p>Le sous-arbre gauche est alors <code>a[1]</code> et le sous-arbre droit est <code>a[2]</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="p">(),</span> <span class="p">()),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="p">(),</span> <span class="p">()))</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="p">(),</span> <span class="p">()),</span> <span class="p">())</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice  5</p>
+<p><img alt="" class="center" src="../data/carac3.png" /></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Énoncé</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Écrire le tuple représentant l'arbre ci-dessous.       </p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span><span class="p">,(</span><span class="n">Y</span><span class="p">,(</span><span class="n">P</span><span class="p">,(),()),()),(</span><span class="n">O</span><span class="p">,(</span><span class="n">H</span><span class="p">,(),()),(</span><span class="n">N</span><span class="p">,(),())))</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="33-implementation-a-partir-dune-simple-liste">3.3 Implémentation à partir d'une «simple» liste<a class="headerlink" href="#33-implementation-a-partir-dune-simple-liste" title="Permanent link">⚓︎</a></h3>
+<p>De manière plus surprenante, il existe une méthode pour implémenter un arbre binaire (qui est une structure hiérarchique) avec une liste (qui est une structure linéaire). 
+Ceci peut se faire par le biais d'une astuce sur les indices :</p>
+<p><strong>Les fils du nœud d'indice i sont placés aux indice 2i+1 et 2i+2</strong>.</p>
+<p>Cette méthode est connue sous le nom de «méthode d'Eytzinger», et utilisée notamment en <a href="https://fr.wikipedia.org/wiki/Num%C3%A9rotation_de_Sosa-Stradonitz">généalogie</a> pour numéroter facilement les individus d'un arbre généalogique.</p>
+<p><strong>Exemple :</strong></p>
+<p><img alt="" class="center" src="../data/eytzinger.png" /></p>
+<p>Pour comprendre facilement la numérotation, il suffit de s'imaginer l'arbre complet (en rajoutant les fils vides) et de faire une numérotation en largeur, niveau par niveau :</p>
+<p><img alt="" class="center" src="../data/eytzinger2.png" /></p>
+<div class="admonition example">
+<p class="admonition-title">Exercice  6</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Énoncé</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Si on note Δ le sous-arbre vide, dessiner l'arbre représenté par la liste :
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">Δ</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="correction" class="center" src="../data/corrtuple.png" /></p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Remarque :</strong> parfois (comme dans le sujet 0...) la racine de l'arbre est placée à l'indice 1. Dans ce cas, les fils du nœud d'indice i sont placés aux indice 2i et 2i+1.</p>
+<h2 id="4-utilisation-de-limplementation-parcours-taille">4. Utilisation de l'implémentation : parcours, taille...<a class="headerlink" href="#4-utilisation-de-limplementation-parcours-taille" title="Permanent link">⚓︎</a></h2>
+<p>Dans toute la suite, sauf mention contraire, on utilisera l'implémentation en Programmation Orientée Objet, en version sans encapsulation (la plus simple).
+Nous allons créer des fonctions renvoyant les différents parcours d'un arbre, ou encore sa taille, sa hauteur, son nombre de feuilles... Toutes ses fonctions exploiteront la structure <strong>récursive</strong> d'un arbre.</p>
+<p><strong>Rappel de l'implémentation :</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Arbre</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="41-parcours-prefixe-infixe-postfixe">4.1 Parcours préfixe, infixe, postfixe<a class="headerlink" href="#41-parcours-prefixe-infixe-postfixe" title="Permanent link">⚓︎</a></h3>
+<h4 id="411-parcours-prefixe">4.1.1 Parcours préfixe<a class="headerlink" href="#411-parcours-prefixe" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Parcours préfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+    <span class="n">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="n">prefixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Exemple avec l'arbre 
+<img alt="" class="center" src="../data/exo_2.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">prefixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">9</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span>
+</code></pre></div>
+<h4 id="412-parcours-infixe">4.1.2 Parcours infixe<a class="headerlink" href="#412-parcours-infixe" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Parcours infixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">6</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span>
+</code></pre></div>
+<h4 id="413-parcours-postfixe">4.1.3 Parcours postfixe<a class="headerlink" href="#413-parcours-postfixe" title="Permanent link">⚓︎</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Parcours postfixe <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="n">postfixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">postfixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">6</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span>
+</code></pre></div>
+<div class="admonition aide">
+<p class="admonition-title">Pause vidéo</p>
+<ul>
+<li>Regardez et appréciez <a class="" href="https://youtu.be/OTfp2_SwxHk" target="_blank">cette vidéo</a></li>
+<li>À l'aide de la vidéo, codez le parcours infixe en itératif.  </li>
+</ul>
+<details class="tip">
+<summary>solution</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="n">parcours</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">pile</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">current</span> <span class="o">=</span> <span class="n">arbre</span>
+
+    <span class="k">while</span> <span class="n">pile</span> <span class="o">!=</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pile</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">left</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">pile</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">parcours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">right</span>
+
+    <span class="k">return</span> <span class="n">parcours</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h3 id="42-calcul-de-la-taille-dun-arbre">4.2 Calcul de la taille d'un arbre<a class="headerlink" href="#42-calcul-de-la-taille-dun-arbre" title="Permanent link">⚓︎</a></h3>
+<p>Rappel : la taille d'un arbre est le nombre de ses nœuds.</p>
+<div class="admonition note">
+<p class="admonition-title">Taille d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>Exemple avec l'arbre 
+<img alt="" class="center" src="../data/exo_2.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">9</span>
+</code></pre></div>
+<h3 id="43-calcul-de-la-hauteur-dun-arbre">4.3 Calcul de la hauteur d'un arbre<a class="headerlink" href="#43-calcul-de-la-hauteur-dun-arbre" title="Permanent link">⚓︎</a></h3>
+<p>Rappel : on prendra comme convention que l'arbre vide a pour hauteur 0.</p>
+<div class="admonition note">
+<p class="admonition-title">Hauteur d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">),</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">hauteur</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">4</span>
+</code></pre></div>
+<h3 id="44-calcul-du-nombre-de-feuilles-dun-arbre">4.4 Calcul du nombre de feuilles d'un arbre<a class="headerlink" href="#44-calcul-du-nombre-de-feuilles-dun-arbre" title="Permanent link">⚓︎</a></h3>
+<p>Rappel : une feuille est un nœud d'arité 0, autrement dit sans fils gauche ni fils droit.</p>
+<div class="admonition note">
+<p class="admonition-title">Nombre de feuilles d'un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">)</span> <span class="o">+</span>  <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">nb_feuilles</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">4</span>
+</code></pre></div>
+<h3 id="45-recherche-dune-valeur-dans-un-arbre">4.5 Recherche d'une valeur dans un arbre<a class="headerlink" href="#45-recherche-dune-valeur-dans-un-arbre" title="Permanent link">⚓︎</a></h3>
+<p>On renverra <code>True</code> ou <code>False</code> en fonction de la présence ou non de la valeur dans l'arbre.</p>
+<div class="admonition note">
+<p class="admonition-title">Recherche d'une valeur dans un arbre <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span>  <span class="n">valeur</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span> <span class="ow">or</span> <span class="n">recherche</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h3 id="46-parcours-en-largeur">4.6 Parcours en largeur<a class="headerlink" href="#46-parcours-en-largeur" title="Permanent link">⚓︎</a></h3>
+<p>Le parcours en largeur (BFS) est le plus simple à faire visuellement : mais il est plus difficile à coder que les parcours préfixe, infixe, postfixe.<br />
+Il est nécessaire d'utiliser une <strong>file</strong>  :</p>
+<ul>
+<li>On place l'arbre dans la file.</li>
+<li>Tant que la file n'est pas vide, on procède comme suit :<ul>
+<li>On défile, donc on récupère l'arbre situé en haut de la file.  </li>
+<li>Si cet arbre n'est pas vide :<ul>
+<li>On garde son étiquette.</li>
+<li>On enfile son sous-arbre gauche, puis son sous-arbre droit.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" class="center" src="../data/parcoursBFS.png" /></p>
+<p>On importera l'objet <code>Queue()</code> du module <code>queue</code> de Python, qui permet de  :</p>
+<ul>
+<li>créer une file vide avec <code>file = Queue()</code></li>
+<li>défiler un élément par <code>file.get()</code></li>
+<li>enfiler l'élément <code>a</code> par <code>file.put(a)</code></li>
+<li>savoir si la file est vide par le booléen <code>file.empty()</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># arbre-test</span>
+<span class="c1"># ne pas oublier de remonter plus haut dans le document pour relancer la classe Arbre</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Parcours en largeur (BFS) </p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">queue</span><span class="w"> </span><span class="kn">import</span> <span class="n">Queue</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">BFS</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>        
+    <span class="n">file</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">file</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="p">:</span>
+            <span class="n">sol</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sol</span>
+</code></pre></div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">BFS</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+<p><a href="../quiz_ab.html" target="_blank">Quiz rappels Arbres Binaires</a></p>
+<h2 id="5-arbres-binaires-de-recherche-abr">5. Arbres binaires de recherche (ABR)<a class="headerlink" href="#5-arbres-binaires-de-recherche-abr" title="Permanent link">⚓︎</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Définition d'un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<p>Un <strong>arbre binaire de recherche</strong> est un arbre binaire dont les valeurs des nœuds (valeurs qu'on appelle étiquettes, ou clés) vérifient la propriété suivante :</p>
+<ul>
+<li>l'étiquette d'un nœud est <strong>supérieure ou égale</strong> à celle de <strong>chaque</strong> nœud de son <strong>sous-arbre gauche</strong>.</li>
+<li>l'étiquette d'un nœud est <strong>strictement inférieure</strong> à celle de <strong>chaque</strong> nœud de son <strong>sous-arbre droit</strong>.</li>
+</ul>
+</div>
+<p><img alt="" class="center" src="../data/exABR.png" /></p>
+<p>À noter que l'arbre 3 (qui est bien un ABR) est appelé <strong>arbre filiforme</strong>. </p>
+<p>L'arbre 5 n'est pas un ABR à cause de la feuille 9, qui fait partie du sous-arbre gauche de 3 sans lui être inférieure.</p>
+<p><strong>Remarque :</strong> on pourrait aussi définir un ABR comme un arbre dont le parcours infixe est une suite croissante.</p>
+<h3 id="51-determiner-si-un-arbre-est-un-abr">5.1 Déterminer si un arbre est un ABR<a class="headerlink" href="#51-determiner-si-un-arbre-est-un-abr" title="Permanent link">⚓︎</a></h3>
+<p>Nous allons utiliser la remarque précédente, et nous servir du parcours infixe.</p>
+<p>Méthode : récupérer le parcours infixe dans une liste, et faire un test sur cette liste.</p>
+<div class="admonition note">
+<p class="admonition-title">Être ou ne pas être un ABR</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">est_ABR</span><span class="p">(</span><span class="n">arbre</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie un booléen indiquant si arbre est un ABR&#39;&#39;&#39;</span>
+    <span class="n">parcours</span> <span class="o">=</span> <span class="n">infixe</span><span class="p">(</span><span class="n">arbre</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parcours</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">parcours</span><span class="p">)</span> <span class="c1"># on regarde si le parcours est égal au parcours trié </span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># arbres-tests </span>
+
+<span class="c1">#arbre n°4</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1">#arbre n°5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">b</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_ABR</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_ABR</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h3 id="52-rechercher-une-cle-dans-un-abr">5.2 Rechercher une clé dans un ABR<a class="headerlink" href="#52-rechercher-une-cle-dans-un-abr" title="Permanent link">⚓︎</a></h3>
+<p>Un arbre binaire de taille <span class="arithmatex">\(n\)</span> contient <span class="arithmatex">\(n\)</span> clés (pas forcément différentes). Pour savoir si une valeur particulière fait partie des clés, on peut parcourir tous les nœuds de l'arbre, jusqu'à trouver (ou pas) cette valeur dans l'arbre. Dans le pire des cas, il faut donc faire <span class="arithmatex">\(n\)</span> comparaisons.</p>
+<p>Mais si l'arbre est un ABR, le fait que les valeurs soient «rangées» va considérablement améliorer la vitesse de recherche de cette clé, puisque la moitié de l'arbre restant sera écartée après chaque comparaison.</p>
+<div class="admonition note">
+<p class="admonition-title">Recherche d'une clé dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">contient_valeur</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">valeur</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p><strong>Exemple</strong> </p>
+<p>L'arbre <code>a</code> contient la valeur 8, mais l'arbre <code>b</code> ne la contient pas :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">contient_valeur</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h3 id="53-cout-de-la-recherche-dans-un-abr-equilibre">5.3  Coût de la recherche dans un ABR équilibré<a class="headerlink" href="#53-cout-de-la-recherche-dans-un-abr-equilibre" title="Permanent link">⚓︎</a></h3>
+<p><img alt="" class="center" src="../data/rechercheABR.png" /></p>
+<p><strong><em>définition : un arbre binaire de recherche équilibré est un arbre binaire de recherche qui maintient une profondeur équilibré entre ses branches.</em></strong>  </p>
+<p>Imaginons un arbre équilibré de taille <span class="arithmatex">\(n\)</span>. Combien d'étapes faudra-t-il, dans le pire des cas, pour trouver (ou pas) une clé particulière dans cet arbre ?</p>
+<p>Après chaque nœud, le nombre de nœuds restant à explorer est divisé par 2. On retrouve là le principe de recherche dichotomique, vu en classe de Première (voir <a href="https://nsimichelet91.github.io/1NSI/T4_Algorithmique/4.5_Dichotomie/cours/">ici</a>).</p>
+<p>S'il faut parcourir tous les étages de l'arbre avant de trouver (ou pas) la clé recherchée, le nombre de nœuds parcourus est donc égal à la hauteur <span class="arithmatex">\(h\)</span> de l'arbre.</p>
+<p>Pour un arbre complet de taille <span class="arithmatex">\(n\)</span> , cette hauteur vérifie la relation <span class="arithmatex">\(2^h -1= n\)</span> et donc <span class="arithmatex">\(2^h = n+1\)</span>.</p>
+<p><span class="arithmatex">\(h\)</span> est donc le «nombre de puissance de 2» que l'on peut mettre dans <span class="arithmatex">\(n+1\)</span>. Cette notion s'appelle le logarithme de base 2 et se note <span class="arithmatex">\(\log_2\)</span>.</p>
+<p>Par exemple, <span class="arithmatex">\(\log_2(64)=6\)</span> car <span class="arithmatex">\(2^6=64\)</span>.</p>
+<p>Le nombre maximal de nœuds à parcourir pour rechercher une clé dans un ABR équilibré de taille <span class="arithmatex">\(n\)</span> est donc de l'ordre de <span class="arithmatex">\(\log_2(n)\)</span>, ce qui est très performant !</p>
+<p>Pour un arbre contenant 1000 valeurs, 10 étapes suffisent.</p>
+<p>Cette <strong>complexité logarithmique</strong> est un atout essentiel de la structure d'arbre binaire de recherche.</p>
+<h3 id="54-insertion-dans-un-abr">5.4  Insertion dans un ABR<a class="headerlink" href="#54-insertion-dans-un-abr" title="Permanent link">⚓︎</a></h3>
+<p>L'insertion d'une clé va se faire au niveau d'une feuille, donc au bas de l'arbre. Dans la version récursive de l'algorithme d'insertion, que nous allons implémenter, il n'est pourtant pas nécessaire de descendre manuellement dans l'arbre jusqu'au bon endroit : il suffit de distinguer dans lequel des deux sous-arbres gauche et droit doit se trouver la future clé, et d'appeler récursivement la fonction d'insertion dans le sous-arbre en question.</p>
+<p><strong>Algorithme :</strong></p>
+<ul>
+<li>Si l'arbre est vide, on renvoie un nouvel objet Arbre contenant la clé.</li>
+<li>Sinon, on compare la clé à la valeur du nœud sur lequel on est positionné :<ul>
+<li>Si la clé est inférieure à cette valeur, on va modifier le sous-arbre gauche en le faisant pointer vers ce même sous-arbre une fois que la clé y aura été injecté, par un appel récursif.</li>
+<li>Si la clé est supérieure, on fait la même chose avec l'arbre de droite.</li>
+<li>on renvoie le nouvel arbre ainsi créé.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Insertion dans un ABR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2764.svg" title=":heart:" /></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">arbre</span> <span class="ow">is</span> <span class="kc">None</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">arbre</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">if</span> <span class="n">valeur</span> <span class="o">&lt;=</span> <span class="n">v</span> <span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">arbre</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">insertion</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">arbre</span>
+</code></pre></div>
+</div>
+<p><strong>Exemple :</strong> Nous allons insérer la valeur 4 dans l'arbre <code>a</code> et vérifier par un parcours infixe (avant et après l'insertion) que la valeur 4 a bien été insérée au bon endroit.</p>
+<p><img alt="" class="center" src="../data/insertionABR.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">insertion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">Arbre</span> <span class="n">at</span> <span class="mh">0x7f46f0507e80</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">infixe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="mi">0</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span>
+</code></pre></div>
+<p>La valeur 4 a donc bien été insérée au bon endroit.</p>
+<hr />
+<h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.</li>
+</ul>
+<script src="https://nsimichelet91.github.io/TNSI//js/material-tabbed-fix.js"></script>
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="28 novembre 2025 18:53:45 UTC">28 novembre 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+    <script src="../../../js/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://lyc-michelet-arpajon.ac-versailles.fr/" target="_blank" rel="noopener" title="Lycée Edmond Michelet - Arpajon" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 192c0-35.3 28.7-64 64-64h64L255.9 12.9c18.3-16.4 46-16.4 64.2 0L448 128h64c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64zm224 184v88h128v-88c0-22.1-17.9-40-40-40h-48c-22.1 0-40 17.9-40 40m-112 8c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16zm16-144v-32c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16m368 144c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16zm16-144v-32c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16m-224 16a64 64 0 1 0 0-128 64 64 0 1 0 0 128"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../scripts/mathjax.js"></script>
+      
+        <script src="../../../xtra/javascripts/interpreter.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flashcards : Rappels sur les Arbres Binaires</title>
+  <!-- Highlight.js pour colorer le Python -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <style>
+    :root {
+      --card-width: 520px;
+      --card-height: auto;
+      --gap: 26px;
+      --bg: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background: var(--bg);
+      margin: 0;
+      padding: 24px;
+      color: #2c3e50;
+    }
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 28px;
+    }
+    p {
+      color: #555;
+      margin-top: 6px;
+      margin-bottom: 18px;
+    }
+    .flashcards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+      gap: var(--gap);
+      margin-top: 20px;
+      max-width: 1500px;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: start;
+    }
+    .flashcard {
+      width: 100%;
+      min-height: 200px;
+      border-radius: 14px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      background: white;
+      border: 2px solid #e6e9ef;
+      overflow: hidden;
+      position: relative;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: left;
+    }
+    .q-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center; /* Ajoute cette ligne pour centrer horizontalement les enfants */
+
+      justify-content: flex-start;
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    .q-text {
+      width: 100%;
+      text-align: left;
+      white-space: pre-wrap;
+      line-height: 1.4;
+    }
+    .tree-img {
+      width: 30%;
+      max-width: 520px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      margin: 10px auto;
+      display: block;
+    }
+    pre {
+      width: auto; /* Remplace "width: 100%" par "width: auto" */
+      max-width: 90%; /* Limite la largeur maximale */
+      margin: 10px auto; /* Centre horizontalement */
+      background: #1e1e1e;
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      overflow: auto;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 14px;
+      box-sizing: border-box;
+      margin: 10px 0;
+      max-width: 100%;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .answer {
+      width: 100%;
+      white-space: pre-wrap;
+      line-height: 1.45;
+      font-size: 16px;
+      text-align: left;
+      padding: 12px;
+      background: #f7fffe;
+      border: 1px solid #c8d7d7;
+      border-radius: 8px;
+      margin-top: 12px;
+      display: none;
+    }
+    .answer.visible {
+      display: block;
+    }
+    .controls {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .show-answer-btn {
+      background: #0984e3;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 4px 8px rgba(9, 132, 227, 0.14);
+      margin-top: 10px;
+      align-self: center;
+    }
+    .show-answer-btn:active {
+      transform: translateY(1px);
+    }
+    button {
+      background: #0984e3;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 6px 14px rgba(9, 132, 227, 0.14);
+    }
+    button:active {
+      transform: translateY(1px);
+    }
+    button.secondary {
+      background: #6c7a89;
+    }
+    @media (max-width: 700px) {
+      :root {
+        --card-width: 320px;
+      }
+      pre {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Flashcards : Rappels sur les Arbres Binaires</h1>
+  <p>1 question = 1 carte. Clique sur "Voir la réponse" pour afficher la réponse. Les codes Python sont colorés.</p>
+  <div class="controls">
+    <button onclick="melangerFlashcards()">🔄 Mélanger</button>
+    <button class="secondary" onclick="resetOrder()">↺ Réinitialiser</button>
+  </div>
+  <div class="flashcards-container" id="flashcards-container"></div>
+  <script>
+    const initialFlashcardsData = [
+      { question: `Un arbre est composé de ... reliés entre eux par des liens appelés ...`, answer: `Nœuds — Arêtes` },
+      { question: `La ... est le nœud situé au sommet de l’arbre.`, answer: `La racine` },
+      { question: `Un nœud sans enfant est appelé une ....`, answer: `Feuille` },
+      { question: `La ... d’un arbre correspond au nombre de nœuds qu’il contient.`, answer: `Taille` },
+      { question: `la ... d'un nœud est le nombre de nœuds de son chemin le plus court vers la racine.`, answer: `Profondeur` },
+      { question: `la ... d'un arbre est la profondeur de son nœud le plus profond`, answer: `Hauteur` },      
+      { question: `Un arbre où chaque nœud n’a qu’un seul enfant est appelé un ...`, answer: `Arbre peigne` },
+      { question: `Un arbre où tous les niveaux sauf éventuellement le dernier sont remplis et où les feuilles sont le plus à gauche possible est un ...`, answer: `Arbre complet` },
+      { question: `Taille, hauteur et feuilles\n\nVoici l'arbre :`, questionImage: "data/arbre_q2.png", answer: `Taille = 7\nHauteur = 4\nNombre de feuilles = 3` },
+      { question: `On visite la racine en premier : parcours ...`, answer: `Préfixe` },
+      { question: `On visite la racine en dernier : parcours ...`, answer: `Suffixe` },
+      { question: `La racine est visitée entre le sous-arbre gauche et le sous-arbre droit : parcours ...`, answer: `Infixe` },
+      { question: `Parcours d'arbre\n\nVoici l'arbre :`, questionImage: "data/arbre_q2.png", answer: `Préfixe : A B D E C F G\nInfixe : D B E A C F G\nSuffixe : D E B G F C A` },
+      {
+        question: `Compléter un programme Python pour la taille :\n\nRemplir la ligne manquante dans la fonction suivante :\n\n`,
+        questionCode: `<pre><code class="language-python">
+def taille(arbre):
+    if arbre is None:
+        return 0
+    return ... + ... + ...
+        </code></pre>`,
+        answer: `<pre><code class="language-python">
+def taille(arbre):
+    if arbre is None:
+        return 0
+    return 1 + taille(arbre.gauche) + taille(arbre.droit)
+        </code></pre>`
+      },
+      {
+        question: `Quel est le rôle de cette fonction ?\n\n`,
+        questionCode: `<pre><code class="language-python">
+def mystere(arbre):
+    if arbre is None:
+        return 0
+    gauche = mystere(arbre.gauche)
+    droite = mystere(arbre.droit)
+    return 1 + max(gauche, droite)
+        </code></pre>`,
+        answer: `Cette fonction calcule la hauteur de l'arbre (en comptant 0 pour l'arbre vide -> convention).`
+      },
+      {
+        question: `Identifier le parcours pour le code suivant :\n\n`,
+        questionCode: `<pre><code class="language-python">
+def parcours(r):
+    if r is not None:
+        parcours(r.gauche)
+        parcours(r.droit)
+        print(r.valeur)
+        </code></pre>`,
+        answer: `Parcours suffixe (postfixe)`
+      },
+      { question: `Arbre peigne : La relation <b>h ≤ n ≤ 2^h − 1</b> est elle vérifiée ?\n\n`, questionImage: "data/peigne.png", answer: `Oui :\nh = 4 ; n = 4\n4 ≤ 4 ≤ 15` },
+      { question: `Arbre complet : La relation <b>h ≤ n ≤ 2^h − 1</b> est elle vérifiée ?\n\n`, questionImage: "data/AB_complet.png", answer: `Oui :\nh = 3 ; n = 7\n3 ≤ 7 ≤ 7` },
+      {
+        question: `Dans cette implémentation, comment représente-t-on un arbre vide ?\n\nCode :`,
+        questionCode: `<pre><code class="language-python">
+class Arbre:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+        </code></pre>`,
+        answer: `Un arbre vide est représenté par la valeur None.`
+      },
+      {
+        question: `Toujours avec la même implémentation, comment tester qu'un arbre est vide ?\n\nChoix :\n1) if arbre.est(vide) :\n2) if None.est_vide() :\n3) if arbre is None :`,
+        answer: `if arbre is None ou if arbre == None`
+      }
+    ];
+
+    let flashcardsData = JSON.parse(JSON.stringify(initialFlashcardsData));
+    let initialOrder = [...flashcardsData];
+
+    function creerFlashcards() {
+      const container = document.getElementById("flashcards-container");
+      container.innerHTML = "";
+      flashcardsData.forEach((card, idx) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "flashcard";
+
+        const qContent = document.createElement("div");
+        qContent.className = "q-content";
+
+        const qText = document.createElement("div");
+        qText.className = "q-text";
+        qText.innerHTML = `<strong>Q${idx + 1}.</strong> ${card.question}`;
+        qContent.appendChild(qText);
+
+        if (card.questionImage) {
+          const img = document.createElement("img");
+          img.className = "tree-img";
+          img.src = card.questionImage;
+          img.alt = "Arbre";
+          qContent.appendChild(img);
+        }
+        if (card.questionCode) {
+          const codeBlock = document.createElement("div");
+          codeBlock.innerHTML = card.questionCode;
+          qContent.appendChild(codeBlock);
+        }
+
+        const answerDiv = document.createElement("div");
+        answerDiv.className = "answer";
+        if (card.answer && typeof card.answer === "string" && card.answer.includes("<pre")) {
+          answerDiv.innerHTML = card.answer;
+        } else {
+          answerDiv.textContent = card.answer || "";
+        }
+
+        const showAnswerBtn = document.createElement("button");
+        showAnswerBtn.className = "show-answer-btn";
+        showAnswerBtn.textContent = "Voir la réponse";
+        showAnswerBtn.addEventListener("click", () => {
+          answerDiv.classList.toggle("visible");
+          showAnswerBtn.textContent = answerDiv.classList.contains("visible") ? "Cacher la réponse" : "Voir la réponse";
+        });
+
+        wrapper.appendChild(qContent);
+        wrapper.appendChild(answerDiv);
+        wrapper.appendChild(showAnswerBtn);
+        container.appendChild(wrapper);
+      });
+
+      // Mise en surbrillance des blocs de code
+      document.querySelectorAll("pre code").forEach((block) => {
+        hljs.highlightElement(block);
+      });
+    }
+
+    function melangerFlashcards() {
+      flashcardsData.sort(() => Math.random() - 0.5);
+      creerFlashcards();
+    }
+
+    function resetOrder() {
+      flashcardsData = JSON.parse(JSON.stringify(initialOrder));
+      creerFlashcards();
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      creerFlashcards();
+    });
+  </script>
+</body>
+</html>
