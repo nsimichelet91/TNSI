@@ -87,7 +87,7 @@ plugins:
       locale: fr
   - awesome-pages:
       collapse_single_pages: false
-  - sqlite-console
+  - sqlite_console
   - macros
   #- page-to-pdf
  
