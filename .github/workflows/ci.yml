@@ -23,7 +23,8 @@ jobs:
       - run: mkdocs gh-deploy --force
       - run: pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-awesome-pages-plugin git+https://github.com/Epithumia/mkdocs-sqlite-console.git
       - run: pip list
-      - run: python - <<EOF
+      - run: |
+          python - << 'EOF'
           import pkg_resources
           print([ep.name for ep in pkg_resources.iter_entry_points('mkdocs.plugins')])
           EOF
