@@ -78,7 +78,7 @@ markdown_extensions:
   - toc:
       permalink: ⚓︎
       toc_depth: 3
-  - md_in_html
+
 
 plugins:
   - search
@@ -87,7 +87,6 @@ plugins:
       locale: fr
   - awesome-pages:
       collapse_single_pages: false
-  - sqlite-console
   - macros
   #- page-to-pdf
  
@@ -114,9 +113,3 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
   - xtra/stylesheets/pyoditeur.css
-
-validation:
-  absolute_links: ignore
-  unrecognized_links: ignore
-
-
