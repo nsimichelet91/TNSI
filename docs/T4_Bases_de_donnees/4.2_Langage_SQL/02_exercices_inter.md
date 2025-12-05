@@ -385,7 +385,7 @@
     }}
         
 
-        
+ 
 
 !!! example "{{ exercice() }}"
     Gestion d'un réseau d'agences de location de voitures.   
