@@ -3,7 +3,7 @@
     - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
 !!! note ":star: Thème en cours d'étude :star: "
-    - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
+    - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/01_exercices_inter/)
     - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
     - [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
     - [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
@@ -95,7 +95,7 @@
 - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
 - [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
-- [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
+- [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/01_exercices_inter/)
 - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
 - [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
 - [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
@@ -128,7 +128,7 @@
 - [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
 - [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
 - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-- [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_inter/)
+- [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/01_exercices_inter/)
 - [Langage SQL : exercices Python/SQL](T4_Bases_de_donnees/4.2_Langage_SQL/03_python_et_SQL/)
 - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
 - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
