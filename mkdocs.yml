@@ -88,6 +88,8 @@ plugins:
   - awesome-pages:
       collapse_single_pages: false
   - macros
+  - sqlite-console
+  
   #- page-to-pdf
  
  
