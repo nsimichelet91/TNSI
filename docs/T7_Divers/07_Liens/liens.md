@@ -28,6 +28,7 @@ Quelques sites de challenges/énigmes/défis de programmation:
 ## Pour se former en autonomie
 
 Au cas où vous vous ennuieriez...
+
 - [codex](https://codex.forge.apps.education.fr/){:target="_blank"} 
 - [France-IOI](http://www.france-ioi.org/){:target="_blank"} 
 - [CheckIO](https://checkio.org/){:target="_blank"} 
