@@ -272,23 +272,28 @@ Remarquez que la clé primaire de cette relation est le couple dossard-numéroEt
 ## 8. Voici les **principaux avantages** de diviser une base de données relationnelle en **plusieurs tables** plutôt qu’en une seule :
 
 1. **Réduction de la redondance des données**
-   * Chaque information est stockée une seule fois.
-   * Évite les duplications inutiles.
+    * Chaque information est stockée une seule fois.
+    * Évite les duplications inutiles.
+     
 2. **Intégrité et cohérence des données**
-   * Les relations (clés primaires / étrangères) garantissent que les données restent valides.
-   * Une mise à jour se fait à un seul endroit, ce qui réduit les erreurs.
+    * Les relations (clés primaires / étrangères) garantissent que les données restent valides.
+    * Une mise à jour se fait à un seul endroit, ce qui réduit les erreurs.
+     
 3. **Maintenance et évolutivité facilitées**
-   * Les modifications de structure sont plus simples (ajout de colonnes ou de tables).
-   * Le modèle s’adapte mieux à l’évolution des besoins.
+    * Les modifications de structure sont plus simples (ajout de colonnes ou de tables).
+    * Le modèle s’adapte mieux à l’évolution des besoins.
+     
 4. **Meilleures performances**
-   * Les tables plus petites sont plus rapides à parcourir et à indexer.
-   * Les requêtes ciblent uniquement les données nécessaires.
+    * Les tables plus petites sont plus rapides à parcourir et à indexer.
+    * Les requêtes ciblent uniquement les données nécessaires.
+     
 5. **Clarté et organisation des données**
-   * Chaque table représente une entité logique (utilisateurs, produits, commandes…).
-   * Le schéma est plus compréhensible et plus facile à documenter.
+    * Chaque table représente une entité logique (utilisateurs, produits, commandes…).
+    * Le schéma est plus compréhensible et plus facile à documenter.
+     
 6. **Sécurité accrue**
-   * Possibilité de gérer les droits d’accès table par table.
-   * Les utilisateurs n’accèdent qu’aux données nécessaires.
+    * Possibilité de gérer les droits d’accès table par table.
+    * Les utilisateurs n’accèdent qu’aux données nécessaires.
 
 En résumé, concevoir une base en plusieurs tables permet d’améliorer la **fiabilité**, les **performances** et la **maintenabilité** de la base de données.
 
