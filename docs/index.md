@@ -4,16 +4,21 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
 
-    - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
-    - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/01_exercices_inter/)
-    - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-    - [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
-    - [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-    - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
-    - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
+    - [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+    - [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/exercices/) 
+    - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/exercices/)
+    - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+
 
 ### *Thèmes déjà traités*
 
+- [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
+- [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/01_exercices_inter/)
+- [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
+- [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
+- [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
+- [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
+- [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
 - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
 - [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
 - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)
