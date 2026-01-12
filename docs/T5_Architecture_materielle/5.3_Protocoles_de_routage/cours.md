@@ -269,7 +269,7 @@ Cet algorithme, ici exécuté de manière manuelle, est bien sûr programmable. 
     b. La liaison entre le routeur B et D a un coût de 5. Quel est le débit de cette liaison ?
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q1**  
