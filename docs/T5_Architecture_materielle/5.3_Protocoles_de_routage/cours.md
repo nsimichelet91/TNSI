@@ -79,8 +79,6 @@ De la même manière, la communication avec le réseau C nécessite de confier l
 
 ## 2. Le protocole RIP
 
-_voir le TP débranché_ : [le jeu dont vous êtes le routeur](https://github.com/glassus/nsi/tree/master/Terminale/Theme_5_Architecture_materielle/5.3_Protocoles_de_routage/TP_protocole_RIP){. target="_blank"}
-
 
 !!! abstract "Les règles du protocole RIP :heart: :heart: :heart:"
     Le Routing Information Protocol (RIP) est basé sur l'échange (toutes les 30 secondes) des tables de routage de chaque routeur.  
@@ -122,9 +120,6 @@ OSPF : *Open Shortest Path First*
 
 
 Un inconvénient majeur du protocole précédent est la non-prise en compte de la bande passante reliant les routeurs.
-
-![image](data/matrix.jpeg){: .center width=30%}
-
 
 
 !!! abstract "principe fondamental du protocole OSPF :heart:"
