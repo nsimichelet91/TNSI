@@ -456,7 +456,7 @@
 
     1. Déterminer à l'aide de ces tables le chemin emprunté par un paquet de données envoyé du routeur A vers le routeur F.
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             1. A-B-E-F  
@@ -471,7 +471,7 @@
     En s'appuyant sur les tables de routage, tracer les liaisons entre les routeurs.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/graphAN_corr.png){: .center}
@@ -486,7 +486,7 @@
     Exercice 4 du sujet [Nouvelle-Calédonie J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a.\" 
         ```195.168.1.0/24```
@@ -495,7 +495,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b.\" 
         ```195.168.1.17/24```
@@ -503,7 +503,7 @@
     )
     }}
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.c\" 
         Le réseau T2 a pour adresse ```172.162.1.0/24```. Sur ce réseau, 254 adresses sont initialement disponibles (de ```172.162.1.1```  à ```172.162.1.254```, puisque l'adresse ```172.162.1.255``` est réservée pour le *broadcast* sur le réseau). Comme le routeur R2 et le portable 5 prennent chacun une adresse IP, il en reste donc 252 pour le portable 4.
@@ -512,7 +512,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         - côté R4 : ```200.158.4.1```
@@ -523,7 +523,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.a.\" 
         Parcours possibles :  
@@ -536,7 +536,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.b.\" 
         Suivant le protocole RIP, le parcours le plus court est celui passant par R1 puis R2. Il comporte 2 sauts. 
@@ -545,7 +545,7 @@
     )
     }}
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.c\" 
         Si la liaison R1-R2 est rompue, le protocole RIP sera emprunter le chemin R1-R4-R2, qui est le nouveau meilleur chemin, comportant 3 sauts.
@@ -554,7 +554,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         Le câble utilisé est le cable c) Ethernet.  
@@ -565,7 +565,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.a.\" 
         $10=\\dfrac{10^9}{d}$ donc $d=\\dfrac{10^9}{10}=10^8$.
@@ -576,7 +576,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.b.\" 
          ![image](data/exoNC.png){: .center}
