@@ -33,7 +33,7 @@
         - d.   ```kill```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         1. b
@@ -62,7 +62,7 @@
     ![image](data/ex2_2.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/corr_exo21.png){: .center}
@@ -99,7 +99,7 @@
     **Q1.b.** Proposer un schéma illustrant les passages entre les différents états.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q1a.** Élu signifie que le processus est actuellement en cours d'exécution par le processeur.
@@ -129,7 +129,7 @@
     - iii. Dernier entré, premier sorti
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         **Q2a.** ii. Premier entré, premier sorti
@@ -158,7 +158,7 @@
     ![image](data/ex4_frise.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ![image](data/ex4_frise_corr.png){: .center} 
@@ -331,7 +331,7 @@
     Exercice 2 du sujet [Amérique du Nord J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         proposition 2
@@ -340,7 +340,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         ```cd lycee```
@@ -349,7 +349,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c.\" 
         ```mkdir algorithmique```
@@ -358,7 +358,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.d.\" 
         ```rm image1.jpg``` 
