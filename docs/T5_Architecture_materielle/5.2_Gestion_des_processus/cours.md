@@ -14,8 +14,7 @@ Un processus est caractérisé par :
 
 - l'ensemble des instructions qu'il va devoir accomplir (écrites dans le fichier exécutable obtenu par la compilation du code-source du programme)
 - les ressources que le programme va mobiliser (fichier en ouverture, carte son...)
-- l'état des registres du processeur (voir le cours de Première sur l'[architecture Von Neumann](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/){. target="_blank"})
-
+- l'état des registres du processeur (voir [architecture Von Neumann](https://nsimichelet91.github.io/1NSI/T3_Architecture_materielle/3.5_Architecture_Von_Neumann/cours/){. target="_blank"})
 
 
 ### 1.2 Observation des processus sous Linux
