@@ -91,7 +91,7 @@
 
 !!! example "{{ exercice() }}" 
 
-    _2021, Métropole Candidats Libres sujet 2_
+    [2021, Métropole Candidats Libres sujet 2](https://nsimichelet91.io/TNSI/T6_Annales/data/2021/21_Metropole_candidats_libres_2.pdf){. target="_blank"}
 
     **Q1.** Les états possibles d’un processus sont : *prêt*, *élu*, *terminé* et *bloqué*.
 
@@ -172,7 +172,7 @@
 !!! example "{{ exercice() }}"
 
 
-    _2021, sujet Amérique du Nord_
+    [2021, sujet Amérique du Nord](https://nsimichelet91.io/TNSI/T6_Annales/data/2021/21_Amérique_du_Nord.pdf){. target="_blank"}
 
     Un constructeur automobile utilise des ordinateurs pour la conception de ses véhicules.
     Ceux-ci sont munis d'un système d'exploitation ainsi que de nombreuses applications parmi lesquelles on peut citer :
@@ -217,7 +217,7 @@
 
 !!! example "{{ exercice() }}"   
 
-    _2021, Métropole sujet 2_
+    [2021, Métropole sujet 2](https://nsimichelet91.io/TNSI/T6_Annales/data/2021/21_Metropole_2.pdf){. target="_blank"}
 
     **Partie A**
 
@@ -328,7 +328,7 @@
 !!! example "{{ exercice() }}"        
 
 
-    Exercice 2 du sujet [Amérique du Nord J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="_blank"}
+    Exercice 2 du sujet [Amérique du Nord J2 2022](https://nsimichelet91.io/TNSI/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="_blank"}
 
     {{
     correction(False,
@@ -447,7 +447,7 @@
 !!! example "{{ exercice() }}"        
 
 
-    Exercice 2 du sujet [Polynésie J1](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
+    Exercice 2 du sujet [Polynésie J1](https://nsimichelet91.io/TNSI/T6_Annales/data/2023/2023_Polynesie_J1.pdf){. target="_blank"}
 
     {{
     correction(False,
@@ -534,7 +534,7 @@
 !!! example "{{ exercice() }}"        
 
 
-    Exercice 2 du [sujet 0 version B 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
+    Exercice 2 du [sujet 0 version B 2024](https://nsimichelet91.io/TNSI/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
     {{
     correction(False,
@@ -659,7 +659,7 @@
 !!! example "{{ exercice() }} <i id='ex1AN2024'></i>"        
 
 
-    Exercice 1 du [sujet Amérique du Nord J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
+    Exercice 1 du [sujet Amérique du Nord J1 2024](https://nsimichelet91.io/TNSI/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
 
     {{
     correction(False,
