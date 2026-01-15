@@ -2,8 +2,6 @@
 
 ![image](data/BO.png){: .center}
 
-![image](data/meme_deadlock.jpeg){: .center width=40%}
-
 ## 1. Notion de processus
 
 ### 1.1 Définition d'un processus
@@ -56,6 +54,12 @@ La commande ```top``` permet de connaître en temps réel la liste des processus
 
 On ferme ```top``` par la combinaison de touches ```Ctrl-C```.
 
+
+!!! info "Pourcentage d'utilisation du CPU"
+    En face de chaque processus est affichée sa consommation de CPU. Elle est calculée en prenant, sur un intervalle de temps donné, le temps qu'a passé le CPU à traiter le processus en question, et en divisant ce temps par le temps total de la mesure. 
+
+    $$\text{Pourcentage d'utilisation CPU} = \frac{\text{Temps d'utilisation CPU}}{\text{Temps total écoulé}} \times 100$$
+
 Si on repère alors un processus qui consomme beaucoup trop de ressources, on peut utiliser...
 
 ### 1.2.4 La commande ```kill``` 
@@ -64,7 +68,7 @@ La commande ```kill``` permet de fermer un processus, en donnant son ```PID```  
 Exemple : ```kill 1453``` tuera Chrome (voir la capture du 1.2.1)
 
 
-![image](data/kill.jpg){: .center width=50%}
+![image](data/meme_kill.jpeg){: .center width=50%}
 
 
 
@@ -173,12 +177,25 @@ Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour s
 - **Élu** : il est en cours d'exécution par le processeur.
 - **Bloqué** : pendant son exécution (état **Élu**), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt. Lorsque la ressource sera disponible, le processus repassera par l'état **Prêt** et attendra à nouveau son tour. 
 
+Voici les transitions possibles entre ces états (diagramme issu de [https://info.blaisepascal.fr/nsi-processus-et-ressources](https://info.blaisepascal.fr/nsi-processus-et-ressources){. target="_blank"}) : 
 
-![image](data/cycle.png){: .center}
+
+![image](data/etats_process.png){: .center .autolight}
+
+
+Ou de manière simplifiée :
+
+![image](data/cycle.png){: .center .autolight}
+
 
 On peut utiliser la métaphore suivante :
 
-> Sur le bureau d'un professeur, il y a 3 paquets de copies, correspondant aux classes A, B, et C. Ces paquets sont **Prêts** à être corrigés. Si le professeur ramène devant lui le paquet A, celui-ci devient **Élu**, et le professeur peut commencer à le corriger. Pour se changer les idées, il peut interrompre la correction du paquet A (qui va passer à l'état **Bloqué**) et ramener vers lui le paquet C. Il pourra ensuite prendre le paquet B, puis à nouveau le C, puis le A, ainsi de suite jusqu'à ce que tous les paquets soient totalement corrigés. Ces paquets seront alors **Terminés**.    
+Sur le bureau d'un professeur, il y a 3 paquets de copies, correspondant aux classes A, B, et C. Ces paquets sont **Prêts** à être corrigés.
+
+- Si le professeur ramène devant lui le paquet A, celui-ci devient **Élu**, et le professeur peut commencer à le corriger.
+- Pour se changer les idées, il peut interrompre la correction du paquet A (qui repassera à l'état **Prêt** en attendant son tour) et ramener vers lui le paquet C. Il pourra ensuite prendre le paquet B, puis à nouveau le C, puis le A, ainsi de suite jusqu'à ce que tous les paquets soient totalement corrigés. Ces paquets seront alors **Terminés**. 
+- Si, pendant la correction du paquet, le professeur donne celui-ci à sa fille pour qu'elle classe les copies par ordre alphabétique, ce paquet sera **Bloqué**. Il ne reviendra à l'état **Prêt** que quand la fille du professeur aura rendu le paquet.
+
 Au cours de cette procédure, le professeur n'a toujours eu devant lui qu'**un seul paquet de copies** (soit A, soit B, soit C).
 
 
@@ -208,9 +225,9 @@ Ces ressources (l'accès en écriture à un fichier, à un registre de la mémoi
 - A et B sont créés et passent à l'état **Prêt**.
 - L'ordonnanceur déclare **Élu** le processus A (ou bien B, cela ne change rien).
 - L'étape A1 de A est réalisée : la ressource R est donc affectée à A.
-- L'ordonnanceur déclare maintenant **Élu** le processus B. A est donc passé à **Bloqué** en attendant que son tour revienne.
+- L'ordonnanceur déclare maintenant **Élu** le processus B. A est donc passé à **Prêt** en attendant que son tour revienne.
 - L'étape B1 de B est réalisée : la ressource S est donc affectée à B.
-- L'ordonnanceur déclare à nouveau **Élu** le processus A. B est donc passé à **Bloqué** en attendant que son tour revienne.
+- L'ordonnanceur déclare à nouveau **Élu** le processus A. B est donc passé à **Prêt** en attendant que son tour revienne.
 - L'étape A2 de A est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource S, qui n'est pas disponible. L'ordonnanceur va donc passer A à **Bloqué** et va revenir au processus B qui redevient **Élu**.
 - L'étape B2 de B est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource R, qui n'est pas disponible. L'ordonnanceur va donc passer B à **Bloqué**.
 
@@ -250,7 +267,10 @@ Il existe trois stratégies pour éviter les interblocages :
 #### 3.5.2 Le carrefour maudit
 ![image](data/stop.png){: .center width=40%}
 
-#### 3.5.3 Le chômage éternel
+#### 3.5.3 Le rond-point fatal
+![image](data/bus_deadlock.jpg){: .center width=40%}
+
+#### 3.5.4 Le chômage éternel
 ![image](data/job.png){: .center width=30%}
 
 
@@ -267,4 +287,3 @@ Il existe trois stratégies pour éviter les interblocages :
     - [https://www.lecluse.fr/nsi/NSI_T/archi/process/](https://www.lecluse.fr/nsi/NSI_T/archi/process/)
     - [http://www.uqac.ca/pguerin/8INF341/Cours9_Interblocage.html}](http://www.uqac.ca/pguerin/8INF341/Cours9_Interblocage.html)
     - [http://www-inf.it-sudparis.eu/cours/AlgoRep/Web/8.25.html](http://www-inf.it-sudparis.eu/cours/AlgoRep/Web/8.25.html)
-
