@@ -1,5 +1,7 @@
 # Diviser pour régner
 
+{{initexo(0)}}
+
 ![image](data/BO.png){: .center}
 
 ## 1. Retour sur l'algorithme de dichotomie
@@ -11,7 +13,26 @@ Notre fonction renverra donc un booléen.
 
 La recherche *naïve* (élément par élément) est naturellement de complexité linéaire. Nous allons voir que la méthode dichotomique est plus efficace.
 
+
+:arrow_right: [Activité d'introduction](../intro_dichotomie/){. target="_blank"}
+
 ### 1.1 Version impérative
+
+{#
+!!! note "Dichotomie version impérative :heart:"
+    ```python linenums='1'
+    def recherche_dichotomique(tab, val) :
+        '''
+        renvoie True ou False suivant la présence de la valeur val dans le tableau trié tab.
+        '''
+        ...
+    ```
+#}
+
+
+
+
+
 
 !!! note "Dichotomie version impérative :heart:"
     ```python linenums='1'
@@ -38,6 +59,9 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
     3. si la valeur centrale est la valeur cherchée...
     4. si la valeur centrale est trop petite...
     5. on ne prend pas la valeur centrale qui a déjà été testée
+
+
+
 
 Exemple d'utilisation :
 
@@ -74,7 +98,18 @@ On comprend que  :
 
 #### 1.2.2 Dichotomie récursive avec slicing
 
+{#
 !!! note "Dichotomie version récursive avec slicing :heart:"
+    
+    ```python linenums='1'
+    def dichotomie_rec(tab, val):
+        ...
+    ```
+#}
+
+
+!!! note "Dichotomie version récursive avec slicing :heart:"
+    
     ```python linenums='1'
     def dichotomie_rec(tab, val):
         if len(tab) == 0:
@@ -88,8 +123,9 @@ On comprend que  :
             return dichotomie_rec(tab[:i_centre], val)  # (2)
     ```
 
-    1. On prend la partie droite de liste, juste après l'indice central.
+    1. On prend la partie droite de liste, juste après l'indice central. 
     2. On prend la partie gauche de liste, juste avant l'indice central.
+    
 
 
 Exemple d'utilisation :
@@ -109,6 +145,8 @@ False
 
 Il est possible de programmer de manière récursive la recherche dichotomique sans toucher à la liste, et donc en jouant uniquement sur les indices :
 
+
+
 !!! note "Dichotomie version récursive sans slicing :heart:"
     ```python linenums='1'
     def dicho_rec_2(tab, val, i=0, j=None): # (1)
@@ -126,7 +164,10 @@ Il est possible de programmer de manière récursive la recherche dichotomique s
     ```
 
     1. Pour pouvoir appeler simplement la fonction sans avoir à préciser les indices, on leur donne des paramètres par défaut.
-    2. Il est impossible de donner ```j=len(tab)-1``` par défaut (car ```tab``` est aussi un paramètre). On passe donc par une autre valeur (ici ```None```) qu'on va ici intercepter.
+    2. Il est impossible de donner ```j=len(tab)-1``` par défaut (car ```tab``` est aussi un paramètre). On passe donc par une autre valeur (ici ```None```) qu'on va ici intercepter dès le début du code.
+
+
+
 
 Exemple d'utilisation :
 
@@ -146,6 +187,7 @@ Une définition pourrait être :
 
 !!! abstract "Définition :heart:"
     Un problème peut se résoudre en employant le paradigme *diviser pour régner* lorsque :  
+
     - il est possible de décomposer ce problème en sous-problèmes **indépendants**.  
     - la taille de ces sous-problèmes est une **fraction** du problème initial
 
@@ -172,6 +214,8 @@ On appelle *exponentiation* le fait de mettre en puissance un nombre. On va donc
 
 ### 3.1 Algorithme classique
 
+
+
 !!! note "Exponentiation classique :heart:"
     ```python linenums='1'
     def puissance(a, n):
@@ -180,6 +224,8 @@ On appelle *exponentiation* le fait de mettre en puissance un nombre. On va donc
         else:
             return a * puissance(a, n-1)
     ```
+
+
 
 ### 3.2 Algorithme utilisant *diviser pour régner*
 
@@ -192,8 +238,17 @@ Pour tout nombre $a$,
 
 Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seule opération) pour que l'exposant diminue de **moitié**. On peut donc programmer la fonction ```puissance```  en utilisant le paradigme *diviser pour régner* : 
 
+{#
+!!! note "Exponentiation rapide :heart:"
+    
+    ```python linenums='1'
+    ...
+    ```
+#}
+
 
 !!! note "Exponentiation rapide :heart:"
+    
     ```python linenums='1'
     def puissance_mod(a, n):
         if n == 0:
@@ -205,31 +260,84 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
     ```
 
 
+
+
 ### 3.3 Comparaison de la vitesse d'exécution des deux algorithmes
 
 ![image](data/puiss.png){: .center}
 
-!!! example "Exercice"
-    === "Énoncé"
-        Recréer le graphique ci-dessus, qui compare les temps d'exécution des deux fonctions ```puissance``` et ```puissance_mod```.
+!!! example "{{ exercice() }}"
+    
+    Recréer le graphique ci-dessus, qui compare les temps d'exécution des deux fonctions ```puissance``` et ```puissance_mod```.
 
-        **Aide pour Matplotlib :** le code ci-dessous
+    **Aide pour Matplotlib :** le code ci-dessous
 
+    ```python linenums='1'
+    import matplotlib.pyplot as plt
+
+    def carre(x):
+        return x*x
+
+    x = list(range(10))
+    y = [carre(k) for k in x]
+    plt.plot(x, y)
+    plt.show()
+    ```
+
+    donne le graphique suivant :
+
+    ![image](data/carre.png){: .center width=50%}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
         import matplotlib.pyplot as plt
+        import time
 
-        def carre(x):
-            return x*x
+        def puissance(a, n):
+            if n == 0:
+                return 1
+            else:
+                return a * puissance(a, n-1)
 
-        x = list(range(10))
-        y = [carre(k) for k in x]
-        plt.plot(x, y)
+
+        def puissance_mod(a, n):
+            if n == 0:
+                return 1
+            if n % 2 == 0:
+                return puissance_mod(a*a, n//2)
+            else:
+                return a * puissance_mod(a*a, (n-1)//2)
+
+
+        def mesure_puissance(n):
+            t0 = time.time()
+            p = puissance(3,n)
+            return time.time()-t0
+
+        def mesure_puissance_mod(n):
+            t0 = time.time()
+            p = puissance_mod(3,n)
+            return time.time()-t0
+
+
+        x = list(range(200))
+
+        y1 = [mesure_puissance(k) for k in x]
+        y2 = [mesure_puissance_mod(k) for k in x]
+
+        plt.plot(x,y1, label='classique')
+        plt.plot(x,y2, label='modulaire')
+        plt.legend(loc='upper left')
         plt.show()
         ```
+    """
+    )
+    }}
+    
 
-        donne le graphique suivant :
-
-        ![image](data/carre.png){: .center}
         
 ## 4. Le tri-fusion
 En anglais le *merge sort*.
@@ -240,23 +348,28 @@ En anglais le *merge sort*.
 
 Le mécanisme principal du tri fusion est la **fusion** de deux listes triées en une nouvelle liste elle aussi triée.
 
+
+
 On appelera ce mécanisme l'**interclassement**.
 
-Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
+!!! tip "Principe de l'interclassement"
+    Pour interclasser deux listes ```lst1``` et ```lst2```.
 
-- on part d'une liste vide ```lst_totale```
-- on y ajoute alternativement les éléments de ```lst1``` et ```lst2```. Il faut pour cela gérer séparément un indice ```i1``` pour la liste ```lst1```  et un indice ```i2```  pour la liste ```i2```.
-- quand une liste est épuisée, on y ajoute la totalité restante de l'autre liste.
+    - on part d'une liste vide ```lst_totale```
+    - on y ajoute alternativement les éléments de ```lst1``` et ```lst2```, en veillant à maintenir un ordre croissant. Il faut pour cela gérer séparément un indice ```i1``` pour la liste ```lst1```  et un indice ```i2```  pour la liste ```i2```.
+    - quand une liste est épuisée, on y ajoute la totalité restante de l'autre liste.
 
 
+!!! example "{{ exercice() }}"
+    
+    Coder la fonction ```interclassement```. 
 
+    :arrow_right: [Aide avec des codes à trous](../intro_interclassement/){. target="_blank"}
 
-!!! example "Exercice"
-    === "Énoncé"
-        Coder la fonction ```interclassement```. 
-    === "Correction"
-        {{ correction(True,
-        "
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
         ```python
         def interclassement(lst1, lst2):
             i1 = 0
@@ -270,10 +383,12 @@ Principe de l'interclassement de deux listes ```lst1``` et ```lst2```.
                     lst_totale.append(lst2[i2])
                     i2 += 1
             return lst_totale + lst1[i1:] + lst2[i2:]
-        ```
-        "
-        ) }}
+        ```  
+    """
+    )
+    }}
 
+**Remarque :** cette fonction fait l'objet d'un [exercice de la BNS](https://nsimichelet91.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-242){. target="_blank"}, qui n'utilise pas le slicing (ce qui rend le code plus efficace).
 
 ### 4.2 La fusion
 
@@ -293,7 +408,21 @@ L'idée du tri fusion est le découpage de la liste originale en une multitude d
 
 La grande force de ce tri va être qu'il se programme simplement de manière **récursive**, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».
 
+
 !!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
+    
+    ```python
+    def interclassement(lst1, lst2):
+        ...
+
+    def tri_fusion(lst):
+        ...
+    ```
+
+
+{#
+!!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
+    
     ```python
     def interclassement(lst1, lst2):
         lst_totale = []
@@ -315,7 +444,8 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
             m = len(lst) // 2
             return interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))
     ```
-
+    
+#}
 
 
 #### 4.2.3 Visualisation
@@ -323,7 +453,7 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
 Une erreur classique avec les fonctions récursives est de considérer que les appels récursifs sont simultanés. Ceci est faux !
 L'animation suivante montre la progression du tri :
 
-<gif-player src="https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.1_Diviser_pour_regner/data/gif_fusion.gif" speed="1" play></gif-player>
+<gif-player src="https://nsimichelet91.github.io/terminale_nsi/T3_Algorithmique/3.1_Diviser_pour_regner/data/gif_fusion.gif" speed="1" play></gif-player>
 
 
 
@@ -336,25 +466,24 @@ Il est aussi conseillé d'observer l'évolution de l'algorithme grâce à Python
 
 La division par 2 de la taille de la liste pourrait nous amener à penser que le tri fusion est de complexité logarithmique, comme l'algorithme de dichotomie. Il n'en est rien.
 
-En effet, l'instruction finale ```interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))``` lance **deux** appels à la fonction ```tri_fusion``` (avec certe des données d'entrée deux fois plus petites).
+En effet, l'instruction finale ```interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))``` lance **deux** appels à la fonction ```tri_fusion``` (avec certes des données d'entrée deux fois plus petites).
 
 On peut montrer que :
 
 !!! note "Complexité du tri fusion :heart:"
     L'algorithme de tri fusion est en $O(n \log n)$.
 
-    On dit qu'il est **semi-logarithmique**.
+    On dit qu'il est **quasi-linéaire**. (ou *linéarithmique*)
 
-Une complexité semi-logarithmique (en $O(n \log n)$) se situe «entre» une complexité linéaire (en $O(n)$) et une complexité quadratique (en $O(n^2)$).
+Une complexité quasi-linéaire (en $O(n \log n)$) se situe «entre» une complexité linéaire (en $O(n)$) et une complexité quadratique (en $O(n^2)$). Mais elle est plus proche de la complexité linéaire.
 
 ![image](data/comparaison.png){: .center}
 
 
-Une jolie animation permettant de comparer les tris :
+Pour finir, une jolie animation permettant de comparer les tris :
 
 ![image](data/comparaisons.gif){: .center}
 
 Issue de ce [site](https://www.toptal.com/developers/sorting-algorithms)
-
 
 
