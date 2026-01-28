@@ -387,27 +387,7 @@ On appelera ce mécanisme l'**interclassement**.
     """
     )
     }}
-    {{
-    correction(True,
-    """
-    ??? success \"Correction\" 
-        ```python
-        def interclassement(lst1, lst2):
-            i1 = 0
-            i2 = 0
-            lst_totale = []
-            while i1 != len(lst1) and i2 != len(lst2):
-                if lst1[i1] < lst2[i2]:
-                    lst_totale.append(lst1[i1])
-                    i1 += 1
-                else:
-                    lst_totale.append(lst2[i2])
-                    i2 += 1
-            return lst_totale + lst1[i1:] + lst2[i2:]
-        ```  
-    """
-    )
-    }}
+    
 
 **Remarque :** cette fonction fait l'objet d'un [exercice de la BNS](https://nsimichelet91.github.io/TNSI/T6_6_Epreuve_pratique/BNS_2023/#exercice-242){. target="_blank"}, qui n'utilise pas le slicing (ce qui rend le code plus efficace).
 
