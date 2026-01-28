@@ -364,8 +364,44 @@ On appelera ce mécanisme l'**interclassement**.
     
     Coder la fonction ```interclassement```. 
 
-    :arrow_right: [Aide avec des codes à trous](../intro_interclassement/){. target="_blank"}
+    :arrow_right: [Aide avec des codes à trous](../../){. target="_blank"}
 
+    {{
+    correction(False,
+    """
+    ??? success \"Correction\" 
+        ```python
+        def interclassement(lst1, lst2):
+            
+            n1, n2 = len(lst1), len(lst2)
+            i, i1, i2 = 0, 0, 0
+            lst_totale = [0] * (n1 + n2)
+            
+            while i1 < n1 and i2 < n2:
+                if lst1[i1] < lst2[i2]:
+                    lst_totale[i] = lst1[i1]
+                    i1 += 1
+                    i += 1
+                else:
+                    lst_totale[i] = lst2[i2]
+                    i2 += 1
+                    i += 1
+            
+            while i1 < n1:
+                lst_totale[i] = lst1[i1]
+                i1 += 1
+                i += 1        
+                    
+            while i2 < n2:
+                lst_totale[i] = lst2[i2]
+                i2 += 1
+                i += 1    
+                    
+            return lst_totale
+        ```  
+    """
+    )
+    }}
     {{
     correction(True,
     """
@@ -443,7 +479,9 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
             return lst
         else:
             m = len(lst) // 2
-            return interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))
+            lst_gauche = lst[:m]
+            lst_droite = lst[m:]
+            return interclassement(tri_fusion(lst_gauche), tri_fusion(lst_droite))
     ```
     
 #}
@@ -454,20 +492,20 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
 Une erreur classique avec les fonctions récursives est de considérer que les appels récursifs sont simultanés. Ceci est faux !
 L'animation suivante montre la progression du tri :
 
-<gif-player src="https://nsimichelet91.github.io/terminale_nsi/T3_Algorithmique/3.1_Diviser_pour_regner/data/gif_fusion.gif" speed="1" play></gif-player>
+<gif-player src="https://nsimichelet91.github.io/TNSI/T3_Algorithmique/3.1_Diviser_pour_regner/data/gif_fusion.gif" speed="1" play></gif-player>
 
 
 
 Il est aussi conseillé d'observer l'évolution de l'algorithme grâce à PythonTutor :
 
-<iframe width="1000" height="700" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20interclassement%28lst1,%20lst2%29%3A%0A%20%20%20%20lst_totale%20%3D%20%5B%5D%0A%20%20%20%20n1,%20n2%20%3D%20len%28lst1%29,%20len%28lst2%29%0A%20%20%20%20i1,%20i2%20%3D%200,%200%0A%20%20%20%20while%20i1%20%3C%20n1%20and%20i2%20%3C%20n2%3A%0A%20%20%20%20%20%20%20%20if%20lst1%5Bi1%5D%20%3C%20lst2%5Bi2%5D%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lst_totale.append%28lst1%5Bi1%5D%29%0A%20%20%20%20%20%20%20%20%20%20%20%20i1%20%2B%3D%201%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lst_totale.append%28lst2%5Bi2%5D%29%0A%20%20%20%20%20%20%20%20%20%20%20%20i2%20%2B%3D%201%0A%20%20%20%20return%20lst_totale%20%2B%20lst1%5Bi1%3A%5D%20%2B%20lst2%5Bi2%3A%5D%0A%0Adef%20tri_fusion%28lst%29%3A%0A%20%20%20%20if%20len%28lst%29%20%3C%3D%201%3A%0A%20%20%20%20%20%20%20%20return%20lst%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20m%20%3D%20len%28lst%29%20//%202%0A%20%20%20%20%20%20%20%20return%20interclassement%28tri_fusion%28lst%5B%3Am%5D%29,%20tri_fusion%28lst%5Bm%3A%5D%29%29%0A%0Alst%20%3D%20%5B4,%203,%208,%202,%207,%201,%205%5D%0Aprint%28tri_fusion%28lst%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="1000" height="700" frameborder="0" src="https://pythontutor.com/render.html#code=def%20interclassement%28lst1,%20lst2%29%3A%0A%20%20%20%20lst_totale%20%3D%20%5B%5D%0A%20%20%20%20n1,%20n2%20%3D%20len%28lst1%29,%20len%28lst2%29%0A%20%20%20%20i1,%20i2%20%3D%200,%200%0A%20%20%20%20while%20i1%20%3C%20n1%20and%20i2%20%3C%20n2%3A%0A%20%20%20%20%20%20%20%20if%20lst1%5Bi1%5D%20%3C%20lst2%5Bi2%5D%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lst_totale.append%28lst1%5Bi1%5D%29%0A%20%20%20%20%20%20%20%20%20%20%20%20i1%20%2B%3D%201%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lst_totale.append%28lst2%5Bi2%5D%29%0A%20%20%20%20%20%20%20%20%20%20%20%20i2%20%2B%3D%201%0A%20%20%20%20return%20lst_totale%20%2B%20lst1%5Bi1%3A%5D%20%2B%20lst2%5Bi2%3A%5D%0A%0Adef%20tri_fusion%28lst%29%3A%0A%20%20%20%20if%20len%28lst%29%20%3C%3D%201%3A%0A%20%20%20%20%20%20%20%20return%20lst%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20m%20%3D%20len%28lst%29%20//%202%0A%20%20%20%20%20%20%20%20lst_gauche%20%3D%20lst%5B%3Am%5D%0A%20%20%20%20%20%20%20%20lst_droite%20%3D%20lst%5Bm%3A%5D%0A%20%20%20%20%20%20%20%20return%20interclassement%28tri_fusion%28lst_gauche%29,%20tri_fusion%28lst_droite%29%29%0A%0Alst%20%3D%20%5B161,%20181,%20585,%20860,%20705,%2068,%20457%5D%0Aprint%28tri_fusion%28lst%29%29&cumulative=false&curInstr=160&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
 
 ## 4.3 Complexité
 
 La division par 2 de la taille de la liste pourrait nous amener à penser que le tri fusion est de complexité logarithmique, comme l'algorithme de dichotomie. Il n'en est rien.
 
-En effet, l'instruction finale ```interclassement(tri_fusion(lst[:m]), tri_fusion(lst[m:]))``` lance **deux** appels à la fonction ```tri_fusion``` (avec certes des données d'entrée deux fois plus petites).
+En effet, l'instruction finale ```interclassement(tri_fusion(lst_gauche), tri_fusion(lst_droite))``` lance **deux** appels à la fonction ```tri_fusion``` (avec certes des données d'entrée deux fois plus petites).
 
 On peut montrer que :
 
