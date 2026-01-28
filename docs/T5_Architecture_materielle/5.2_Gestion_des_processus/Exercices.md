@@ -724,7 +724,7 @@
                     return self.contenu.pop(0)
 
                 def est_vide(self):
-                    \"\"\" Renvoie True si la file est vide, True sinon \"\"\"
+                    \"\"\" Renvoie True si la file est vide, False sinon \"\"\"
                     return self.contenu == []
         ```
     """
