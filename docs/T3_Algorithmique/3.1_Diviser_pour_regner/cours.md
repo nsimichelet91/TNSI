@@ -388,7 +388,7 @@ On appelera ce mécanisme l'**interclassement**.
     )
     }}
 
-**Remarque :** cette fonction fait l'objet d'un [exercice de la BNS](https://nsimichelet91.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2023/#exercice-242){. target="_blank"}, qui n'utilise pas le slicing (ce qui rend le code plus efficace).
+**Remarque :** cette fonction fait l'objet d'un [exercice de la BNS](https://nsimichelet91.github.io/TNSI/T6_6_Epreuve_pratique/BNS_2023/#exercice-242){. target="_blank"}, qui n'utilise pas le slicing (ce qui rend le code plus efficace).
 
 ### 4.2 La fusion
 
