@@ -30,10 +30,6 @@ La recherche *naïve* (élément par élément) est naturellement de complexité
 #}
 
 
-
-
-
-
 !!! note "Dichotomie version impérative :heart:"
     ```python linenums='1'
     def recherche_dichotomique(tab, val) :
@@ -280,7 +276,12 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
 
     x = list(range(10))
     y = [carre(k) for k in x]
+    
+    plt.clf() # pour effacer la figure précédente
     plt.plot(x, y)
+    plt.xlabel('n')
+    plt.ylabel('Temps (s)')
+    plt.title('Fonction carré')
     plt.show()
     ```
 
