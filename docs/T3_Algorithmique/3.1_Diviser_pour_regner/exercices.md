@@ -338,9 +338,8 @@
         )
         }}
 
-
 !!! example "{{ exercice() }}"
-    Exercice 5 du sujet [Métropole J2 2022](https://nsimichelet91.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
+    Exercice 5 du sujet [Métropole J2 2022](../../T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
 
     {{   
     correction(False,
