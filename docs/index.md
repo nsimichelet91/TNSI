@@ -4,14 +4,16 @@
 
 !!! note ":star: Thème en cours d'étude :star: "
 
-    - [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
-    - [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/) 
-    - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/)
-    - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+    - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
+    - [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
 
 
 ### *Thèmes déjà traités*
 
+- [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+- [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/) 
+- [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/)
+- [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
 - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
 - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/01_exercices_inter/)
 - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
