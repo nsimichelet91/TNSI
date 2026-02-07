@@ -5,7 +5,7 @@
     Exercice 4 du sujet [Amérique du Sud J2 2022](../../T6_Annales/data/2022/2022_Amerique_Sud_J2.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.a\" 
         ```python
@@ -24,7 +24,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.b\" 
         ```python linenums='1'
@@ -44,7 +44,7 @@
         ``` 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1'
@@ -97,7 +97,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1' hl_lines='8 10-13'
@@ -127,7 +127,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -166,7 +166,7 @@
         
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.\" 
         ```python linenums='1' hl_lines='4 8 10-11'
@@ -249,7 +249,7 @@
 
 
         {{
-        correction(False,
+        correction(True,
         """
         ??? success \"Correction\" 
             ```python linenums='1'
@@ -342,7 +342,7 @@
     Exercice 5 du sujet [Métropole J2 2022](../../T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
 
     {{   
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         ```python
@@ -353,7 +353,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1' hl_lines='7 9-11'
@@ -379,7 +379,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         ```python
@@ -393,7 +393,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python
@@ -407,7 +407,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.\" 
         ```python linenums='1' hl_lines='3 6 7'
@@ -427,7 +427,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6.\" 
         ![image](data/exo5.png){: .center}  
