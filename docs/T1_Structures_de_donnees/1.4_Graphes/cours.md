@@ -398,7 +398,7 @@ L'objet de type ```Graphe``` aura comme attributs :
 
 ### 3.3 Implémentation
 
-{#
+
 !!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
@@ -418,7 +418,8 @@ L'objet de type ```Graphe``` aura comme attributs :
     ```
 
 
-#}
+
+{#
 !!! abstract "Implémentation d'une classe ```Graphe``` :heart: :heart: :heart:"
     ```python linenums='1'
     class Graphe:
@@ -436,7 +437,7 @@ L'objet de type ```Graphe``` aura comme attributs :
         def sont_voisins(self, sommetA, sommetB):
             return sommetB in self.adjacents[sommetA]
     ```
-
+#}
 
 ## 4. :star: :star: :star: Parcours de graphes :star: :star: :star: 
 
@@ -502,7 +503,7 @@ On utilise :
 En début d'algorithme, seul le sommet de départ `#!py depart` donné en paramètre est découvert. La fonction `BFS` renvoie la liste des sommets dans l'ordre de visite lors du parcours en largeur.
 
 
-{#
+
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
     ```python linenums='1'
     def BFS(g, depart):
@@ -525,7 +526,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
 
     ```
 
-#}
+{#
 
 !!! abstract "Parcours en largeur - BFS :heart: :heart: :heart:"
     ```python linenums='1'
@@ -548,7 +549,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
         return traites
 
     ```
-
+#}
 
 !!! warning "Intérêt de la liste ```decouverts```"
     La liste ```decouverts``` contient tous les sommets qui ont été :
@@ -645,7 +646,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
     
     Lorsqu'on remontera de B vers A en passant par les sommets parents successifs, il ne peut y avoir qu'un seul sommet par «couche» : le chemin sera donc exactement de longueur ```k```, il sera donc minimal. 
 
-{#
+
 !!! abstract "Recherche du plus court chemin "
 
     
@@ -682,9 +683,9 @@ Il faudra ensuite une fonction pour recréer le chemin.
             chemin = ... + chemin
         return chemin
     ```
-#} 
+ 
     
-
+{#
     
     ```python linenums='1'
     def recherche_chemin(g, depart, arrivee):
@@ -719,7 +720,7 @@ Il faudra ensuite une fonction pour recréer le chemin.
             chemin = sommet + chemin
         return chemin
     ```
-
+#}
 
 
 
@@ -741,7 +742,7 @@ Dans un labyrinthe, ce parcours s'explique très bien : on prend tous les chemin
 
 C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
-{#
+
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
     ```python linenums='1'
     def DFSrec(g, traites, actuel):
@@ -751,11 +752,11 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
                 ...
         return traites
     ```
-#}
 
 
 
 
+{#
 !!! abstract "Parcours en profondeur - DFS :heart: :heart: :heart:"
     ```python linenums='1'
     def DFSrec(g, traites, actuel):
@@ -765,7 +766,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
                 DFSrec(g, traites, voisin)
         return traites
     ```
-
+#}
 
 
 !!! example "{{ exercice() }}"
@@ -836,7 +837,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
 
 Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on partira visiter le voisin tout juste ajouté à la *file d'attente* (qui porte maintenant très mal son nom, puisque c'est devenu une pile).
 
-{#
+
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
     def DFS_iteratif(graphe, start):
@@ -852,9 +853,9 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
                 ....append(...)
         return ...
     ```
-#}
 
 
+{#
 !!! abstract "Parcours en profondeur itératif - DFS "
     ```python linenums='1'
     def DFS_iteratif(graphe, start):
@@ -870,7 +871,7 @@ Il «suffit» de remplacer la file du parcours BFS par une **pile**. Ainsi, on p
                 traites.append(actuel)
         return traites
     ```
-
+#}
 
 **Remarques :**
 
