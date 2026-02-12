@@ -1,5 +1,7 @@
 # Graphes
 
+[Notebook du cours](https://capytale2.ac-paris.fr/web/c/a8be-2925012){. target="_blank"}
+
 ![image](data/memestart.jpg){: .center width=40%}
 
 
