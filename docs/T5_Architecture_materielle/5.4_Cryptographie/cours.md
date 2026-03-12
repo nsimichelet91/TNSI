@@ -39,7 +39,7 @@
         ```
 
       
-
+<!--
     === "Correction"
         ```python linenums='1'
         masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"
@@ -51,7 +51,7 @@
                 message_chiffre += lettre_chiffree
             return message_chiffre
         ```
-
+-->
 
 ### 1.2 Principe du chiffrement symétrique
 
