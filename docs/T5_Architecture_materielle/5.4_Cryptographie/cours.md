@@ -55,7 +55,8 @@
 
 ### 1.2 Principe du chiffrement symétrique
 
-> Dans un chiffrement symétrique, c'est **la même clé** qui va servir au chiffrement et au déchiffrement.
+!!! note "Chiffrement symétrique :heart:"
+    Dans un chiffrement symétrique, c'est **la même clé** qui va servir au chiffrement et au déchiffrement.
 
 ![image](data/sym.png){: .center}
 
@@ -166,10 +167,9 @@ Le protocole que nous allons décrire ci-dessous permet :
 
 ![image](data/total_auth.png){: .center}
 
-**En résumé :**
-
-- Alice est sûre que seul Bob pourra déchiffrer le message qu'elle envoie.
-- Bob est sûr que le message qu'il reçoit vient bien d'Alice.
+!!! abstract "En résumé"
+    - Alice est sûre que seul Bob pourra déchiffrer le message qu'elle envoie.
+    - Bob est sûr que le message qu'il reçoit vient bien d'Alice.
 
 ### 2.3 Un exemple de chiffrement asymétrique : le chiffrement RSA
  
@@ -204,6 +204,7 @@ Alice choisit 2 grands nombres premiers $p$ et $q$. Dans la réalité ces nombre
 Alice multiplie ces deux nombres $p$ et $q$ et obtient ainsi un nombre $n$.
 >Il est très facile pour Alice de calculer $n$ en connaissant $p$ et $q$, mais il  extrêmement difficile pour Marc de faire le travail inverse : trouver $p$ et $q$ en connaissant $n$ prend un temps exponentiel avec la taille de $n$.  
 C'est sur cette difficulté (appelée difficulté de *factorisation*) que repose la robustesse du système RSA.
+Le «dernier» (en 2020) grand nombre $n$ factorisé en $p \times q$ avait 250 chiffres, soit une clé de 829 bits. (voir [https://en.wikipedia.org/wiki/RSA_Factoring_Challenge](https://en.wikipedia.org/wiki/RSA_Factoring_Challenge){. target="_blank"})
 
 #### Étape 3
 Alice choisit un nombre $e$ qui doit être premier avec $(p-1)(q-1)$.  On note $\phi(n)$ le nombre $(p-1)(q-1)$.
@@ -219,7 +220,7 @@ Alice calcule maintenant sa clé privée : elle doit trouver un nombre *d* qui v
 
 Dans notre exemple, comme $7 \times 3  \equiv 1 [20]$, ce nombre $d$ est égal à 7.
 
-En pratique, il existe un algorithme simple (algorithme d'[Euclide étendu](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu)) pour trouver cette valeur $d$, appelée *inverse de e*.
+En pratique, il existe un algorithme simple (algorithme d'[Euclide étendu](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide_%C3%A9tendu)) pour trouver cette valeur $d$, appelée *inverse de e*. En Python, on utilisera ```pow(3, -1, 20)```. 
 
 Le couple $(d, n)$ sera **la clé privée** d'Alice. Elle ne la diffuse à personne.
 
