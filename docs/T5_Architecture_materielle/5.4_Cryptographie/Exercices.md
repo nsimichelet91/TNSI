@@ -11,7 +11,7 @@
     Décoder la phrase ```RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV```, sachant qu'elle a été chiffrée par décalage (*shift* en anglais...)
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -109,7 +109,7 @@
 
 
 !!! example "{{ exercice() }}"
-    Exercice 3 (Parties A et B) du sujet [Métropole J2 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
+    Exercice 3 (Parties A et B) du sujet [Métropole J2 2025](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
 
     **Partie A**
 
@@ -208,8 +208,7 @@
     correction(False,
     """
     ??? success \"Correction Q5\" 
-        On obtient AssertionError 'impossible' car la longueur de la clé est inférieure
-        à la longueur du message. 
+        On obtient AssertionError 'impossible' car la longueur de la clé est inférieure à la longueur du message. 
     """
     )
     }}
@@ -227,8 +226,7 @@
     correction(False,
     """
     ??? success \"Correction Q7\" 
-        Pour chaque caractère du message chiffré, on effectue la soustraction entre sa position dans l’alphabet et la position du caractère associé dans le masque. Si la valeur obtenue est strictement négative, on ajoute 26. On obtient finalement la
-        position du caractère en clair dans l’alphabet.
+        Pour chaque caractère du message chiffré, on effectue la soustraction entre sa position dans l’alphabet et la position du caractère associé dans le masque. Si la valeur obtenue est strictement négative, on ajoute 26. On obtient finalement la position du caractère en clair dans l’alphabet.
     """
     )
     }}
@@ -306,9 +304,6 @@
 
 
 
-
-
-
 !!! example "{{ exercice() }}"
     **Cryptographie RSA** presque à la main
 
@@ -316,7 +311,6 @@
 
     ```python linenums='1'
     import Crypto
-    import libnum
     from Crypto.Util.number import bytes_to_long, long_to_bytes
     from Crypto.Random import get_random_bytes 
 
