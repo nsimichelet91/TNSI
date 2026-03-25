@@ -11,7 +11,7 @@
     - [Exemple de grille d'évaluation de Grand Oral](T7_Divers/00_Grand_Oral/data/grilleGO.pdf){. target="_blank"}
     - [Liste de sujets NSI ou Maths/NSI](T7_Divers/00_Grand_Oral/sujets.md){. target="_blank"}
 
-## Progression :  
+## *Progression*
 
 !!! note "*Thèmes en cours d'étude*"
     - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
@@ -45,7 +45,7 @@
     - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
     - [Révisions](T2_Programmation/2.0_Revisions/revisions/)
 
-## Programme :
+## *Programme*
 
 !!! abstract "*Programme*"
     Le [programme](data/programme_TNSI.pdf) de terminale NSI est articulé autour de cinq thèmes.
