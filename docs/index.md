@@ -1,93 +1,85 @@
 
-!!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"
+!!! abstract ":star: Actualités :star:"
+    - **Journée porte ouverte samedi 28 mars 2026 : Bienvenue en NSI !** 
+
+!!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"      
     - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
-!!! note ":star: Thème en cours d'étude :star: "
+## Progression :  
+
+!!! note "*Thèmes en cours d'étude*"
     - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
+    - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)  
 
 
-### *Thèmes déjà traités*
+!!! note *Thèmes déjà traités*
+    - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
+    - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
+    - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
+    - [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
+    - [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
+    - [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/) 
+    - [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/)
+    - [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
+    - [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
+    - [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/01_exercices_inter/)
+    - [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
+    - [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
+    - [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
+    - [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
+    - [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
+    - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+    - [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
+    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)
+    - [TD récursivité](T2_Programmation/2.2_Recursivite/td/)
+    - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
+    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+    - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices/) 
+    - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
+    - [Révisions](T2_Programmation/2.0_Revisions/revisions/)
+
+## Programme :
+
+!!! abstract "*Programme*"
+    Le [programme](data/programme_TNSI.pdf) de terminale NSI est articulé autour de cinq thèmes.
+
+    Nous traiterons les différentes entrées du programme dans les chapitres suivants.
+
+    === "Thème 1"
+
+        1.1 Listes chaînées 
+        1.2 Piles et Files
+        1.3 Dictionnaires 
+        1.4 Arbres 
+        1.5 Graphes
 
 
-- [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
-- [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
-- [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
-- [Diviser pour régner : exercices](T3_Algorithmique/3.1_Diviser_pour_regner/exercices/)
-- [Gestion des processus : cours](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/) 
-- [Gestion des processus :  exercices](T5_Architecture_materielle/5.2_Gestion_des_processus/Exercices/) 
-- [Protocoles de routage : exercices](T5_Architecture_materielle/5.3_Protocoles_de_routage/Exercices/)
-- [Protocoles de routage : cours](T5_Architecture_materielle/5.3_Protocoles_de_routage/cours/)
-- [Langage SQL : exercices débranchés](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/)
-- [Langage SQL : exercices interactifs](T4_Bases_de_donnees/4.2_Langage_SQL/01_exercices_inter/)
-- [Langage SQL : cours](T4_Bases_de_donnees/4.2_Langage_SQL/cours/)
-- [Modèle relationnel : exercices](T4_Bases_de_donnees/4.1_Modele_relationnel/exercices/)
-- [Modèle relationnel : cours](T4_Bases_de_donnees/4.1_Modele_relationnel/cours/)
-- [Arbres : exercices](T1_Structures_de_donnees/1.3_Arbres/exercices/)
-- [Arbres : cours](T1_Structures_de_donnees/1.3_Arbres/cours/)
-- [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
-- [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
-- [Récursivité](T2_Programmation/2.2_Recursivite/cours/)
-- [TD récursivité](T2_Programmation/2.2_Recursivite/td/)
-- [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
-- [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
-- [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices/) 
-- [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
-- [Révisions](T2_Programmation/2.0_Revisions/revisions/)
+    === "Thème 2"
 
-### *Programme*
+        2.1 Programmation orientée objet 
+        2.2 Récursivité 
+        2.3 Calculabilité et décidabilité
+        2.4 Paradigmes de programmation
 
-Le [programme](data/programme_TNSI.pdf) de terminale NSI est articulé autour de cinq thèmes.
+    === "Thème 3"
 
-Nous traiterons les différentes entrées du programme dans les chapitres suivants.
+        3.1 Diviser pour régner 
+        3.2 Programmation dynamique
+        3.3 Recherche textuelle
 
-=== "Thème 1"
+    === "Thème 4"
 
-    1.1 Listes chaînées 
-    
-    1.2 Piles et Files 
-
-    1.3 Dictionnaires 
-
-    1.4 Arbres 
-    
-    1.5 Graphes
+        4.1 Modèle relationnel 
+        4.2 Langage SQL
 
 
-=== "Thème 2"
+    === "Thème 5"
 
-    2.1 Programmation orientée objet 
-
-    2.2 Récursivité 
-
-    2.3 Calculabilité et décidabilité
-
-    2.4 Paradigmes de programmation
-
-=== "Thème 3"
-
-    3.1 Diviser pour régner 
-
-    3.2 Programmation dynamique
-
-    3.3 Recherche textuelle
-
-=== "Thème 4"
-
-    4.1 Modèle relationnel 
-
-    4.2 Langage SQL
-
-
-=== "Thème 5"
-
-    5.1 Protocoles de routage
-
-    5.2 Gestion des processus
-
-    5.3 Sécurisation des communications
-
-    5.4 Système sur puce
+        5.1 Protocoles de routage
+        5.2 Gestion des processus
+        5.3 Sécurisation des communications
+        5.4 Système sur puce
 
 <!--
 === "Progression"
@@ -167,7 +159,7 @@ Nous traiterons les différentes entrées du programme dans les chapitres suivan
   -->
 
 
-### *Liens utiles*
+## *Liens utiles*
 
 **À propos de la spécialité NSI**
 
