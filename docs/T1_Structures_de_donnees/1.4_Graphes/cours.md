@@ -139,7 +139,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/grapheRS.png){: .center}    
@@ -151,7 +151,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
     **Q2.** Donner la matrice d'adjacence de ce graphe.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         $\\pmatrix{
@@ -182,7 +182,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
         }$
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex2_Q1.png){: .center} 
@@ -199,7 +199,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
         }$
     
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex2_Q2.png){: .center} 
@@ -219,7 +219,7 @@ Il peut exister de la même manière des graphes pondérés **et** orientés.
         }$    
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex2_Q3.png){: .center}
@@ -308,7 +308,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex3_Q1.png){: .center}        
@@ -332,7 +332,7 @@ La modélisation d'un graphe par sa matrice d'adjacence est loin d'être la seul
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ![image](data/ex3_Q2.png){: .center}        
@@ -592,7 +592,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     **Q1.** Donner le parcours en largeur de ```g```  grâce à l'algorithme BFS, si le sommet de départ est B. Cela correspond au parcours présenté par le gif de début de paragraphe.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -607,7 +607,7 @@ En début d'algorithme, seul le sommet de départ `#!py depart` donné en param�
     **Q2.** Deviner le parcours en largeur de départ D, puis de départ G. Vérifier grâce à votre algorithme.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -780,7 +780,7 @@ C'est un parcours qui s'écrit naturellement de manière **récursive** :
     **Q2.** Vérifier avec le code précédent. 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'

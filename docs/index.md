@@ -13,7 +13,7 @@
     - [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)  
 
 
-!!! note *Thèmes déjà traités*
+!!! note "*Thèmes déjà traités*"
     - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
     - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
     - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
@@ -48,38 +48,38 @@
 
     === "Thème 1"
 
-        1.1 Listes chaînées 
-        1.2 Piles et Files
-        1.3 Dictionnaires 
-        1.4 Arbres 
-        1.5 Graphes
+        - 1.1 Listes chaînées 
+        - 1.2 Piles et Files
+        - 1.3 Dictionnaires 
+        - 1.4 Arbres 
+        - 1.5 Graphes
 
 
     === "Thème 2"
 
-        2.1 Programmation orientée objet 
-        2.2 Récursivité 
-        2.3 Calculabilité et décidabilité
-        2.4 Paradigmes de programmation
+        - 2.1 Programmation orientée objet 
+        - 2.2 Récursivité 
+        - 2.3 Calculabilité et décidabilité
+        - 2.4 Paradigmes de programmation
 
     === "Thème 3"
 
-        3.1 Diviser pour régner 
-        3.2 Programmation dynamique
-        3.3 Recherche textuelle
+        - 3.1 Diviser pour régner 
+        - 3.2 Programmation dynamique
+        - 3.3 Recherche textuelle
 
     === "Thème 4"
 
-        4.1 Modèle relationnel 
-        4.2 Langage SQL
+        - 4.1 Modèle relationnel 
+        - 4.2 Langage SQL
 
 
     === "Thème 5"
 
-        5.1 Protocoles de routage
-        5.2 Gestion des processus
-        5.3 Sécurisation des communications
-        5.4 Système sur puce
+        - 5.1 Protocoles de routage
+        - 5.2 Gestion des processus
+        - 5.3 Sécurisation des communications
+        - 5.4 Système sur puce
 
 <!--
 === "Progression"

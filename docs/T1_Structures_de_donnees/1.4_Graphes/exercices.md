@@ -506,7 +506,7 @@
     Exercice 2 du [sujet Amérique du Nord J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1.\" 
         ![image](data/ANJ12024_1.png){: .center}
@@ -516,7 +516,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2.\" 
         ```python
@@ -537,7 +537,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3.\" 
         - ```position(sommets, 'G')``` renvoie 0
@@ -547,7 +547,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1' hl_lines='2 4 7 8'
@@ -565,7 +565,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5.\" 
         ```nb_amis(sommets, matrice_adj, 'G')``` renvoie 4.
@@ -575,7 +575,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6.\" 
         - ```c``` représente la clé.
@@ -585,7 +585,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7.\" 
         ```python
@@ -605,7 +605,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8.\" 
         ```python
@@ -617,7 +617,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9.\" 
         Le cercle d'amis de Lou est ```L J G Y E N```. 
@@ -639,7 +639,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10.\" 
         ```python linenums='1' hl_lines='3 5 7'
@@ -695,7 +695,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -787,7 +787,7 @@
 
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
