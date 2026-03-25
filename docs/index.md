@@ -208,13 +208,13 @@ Au cas où vous vous ennuieriez...
 - [CodinGame](https://www.codingame.com/start){:target="_blank"} :fr: 
 
 ### *Sources*
-    L'essentiel des sources des contenus de ce site:
+L'essentiel des sources des contenus de ce site:
 
-    - L'excellentissime site de Gilles Lassus : [https://glassus.github.io/terminale_nsi/](https://glassus.github.io/terminale_nsi/){:target="_blank"} 
-    - L'excellentissime site de Cédric Gouygou : [https://cgouygou.github.io/TNSI/](https://cgouygou.github.io/TNSI/){:target="_blank"} 
-    - Le site de David Roche, [https://pixees.fr/informatiquelycee](https://pixees.fr/informatiquelycee){:target="_blank"} 
-    - *Prépabac NSI, Tle générale*, C. Adobet, G. Connan, G. Rozsavolgyi, L. Signac, Hatier
-    - *NSI Tle, 24 leçons avec exercices corrigés*, T. Balabonski, S. Conchon, J-C. Filiâtre, K. Nguyen, Ellipses
-    - *Informatique et Sciences du Numérique*, G. Dowek, Eyrolles
-    - Les ressources disponibles sur [https://gitlab.com/eskool/profs-info](https://gitlab.com/eskool/profs-info){:target="_blank"} et sur le [forum NSI - INRIA](https://mooc-forums.inria.fr/moocnsi/){:target="_blank"}
-  
+- L'excellentissime site de Gilles Lassus : [https://glassus.github.io/terminale_nsi/](https://glassus.github.io/terminale_nsi/){:target="_blank"} 
+- L'excellentissime site de Cédric Gouygou : [https://cgouygou.github.io/TNSI/](https://cgouygou.github.io/TNSI/){:target="_blank"} 
+- Le site de David Roche, [https://pixees.fr/informatiquelycee](https://pixees.fr/informatiquelycee){:target="_blank"} 
+- *Prépabac NSI, Tle générale*, C. Adobet, G. Connan, G. Rozsavolgyi, L. Signac, Hatier
+- *NSI Tle, 24 leçons avec exercices corrigés*, T. Balabonski, S. Conchon, J-C. Filiâtre, K. Nguyen, Ellipses
+- *Informatique et Sciences du Numérique*, G. Dowek, Eyrolles
+- Les ressources disponibles sur [https://gitlab.com/eskool/profs-info](https://gitlab.com/eskool/profs-info){:target="_blank"} et sur le [forum NSI - INRIA](https://mooc-forums.inria.fr/moocnsi/){:target="_blank"}
+
