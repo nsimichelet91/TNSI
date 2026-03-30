@@ -368,7 +368,7 @@ On appelera ce mécanisme l'**interclassement**.
     :arrow_right: [Aide avec des codes à trous](../../){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -404,7 +404,7 @@ On appelera ce mécanisme l'**interclassement**.
     )
     }}
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
