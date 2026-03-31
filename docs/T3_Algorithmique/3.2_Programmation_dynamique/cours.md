@@ -8,7 +8,7 @@
 
 ### 1.1 Simple et inefficace
 
-Comme nous l'avons déjà vu [ici](https://nsimichelet91.github.io/TNSI/T2_Programmation/2.2_Recursivite/cours/#4-exemples-de-recursivite-double){. target="_blank"},
+Comme nous l'avons déjà vu [ici](https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/cours/#4-exemples-de-recursivite-double){. target="_blank"},
 la suite de Fibonacci définie par :
 
 - $F_0 = 0$
@@ -34,7 +34,7 @@ Ce code, d'une grande simplicité, est malheureusement très inefficace.
     Mesurer le temps de calcul de ```fibo(40)```.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -94,7 +94,7 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -126,7 +126,7 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
     Mesurer le temps de calcul de ```fibo(40)``` et comparer avec la mesure de l'exercice 1.
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         Le temps de calcul est maintenant de l'ordre de $10^{-5}$ secondes. C'est un million (!!!) de fois plus rapide que le code de l'exercice 1.
@@ -218,7 +218,7 @@ C'est en fait ce que nous faisons naturellement : si nous devions calculer menta
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
