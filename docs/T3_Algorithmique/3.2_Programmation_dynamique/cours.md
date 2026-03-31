@@ -1,9 +1,9 @@
 # Programmation dynamique
  
 ![image](data/BO.png){: .center}
-
+<!--
 ![image](data/meme.webp){: .center width=50%}
-
+-->
 ## 1. Retour sur la suite de Fibonacci
 
 ### 1.1 Simple et inefficace
@@ -139,9 +139,9 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
 #### 1.3.1 :arrow_right: **Juste une brute-force plus efficace ?**
 
 Notre technique de mémoïsation ne change pas vraiment la structure du programme : on continue de calculer toutes les valeurs intermédiaires, **mais on ne les calcule qu'une seule fois.**
-
+<!--
 ![image](data/bf_vs_dp.jpg){: .center width=40%}
-
+-->
 
 #### 1.3.2 :arrow_right: **Suppression de la variable globale**
 
