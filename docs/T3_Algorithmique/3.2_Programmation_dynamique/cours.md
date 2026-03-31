@@ -8,7 +8,7 @@
 
 ### 1.1 Simple et inefficace
 
-Comme nous l'avons déjà vu [ici](https://glassus.github.io/terminale_nsi/T2_Programmation/2.2_Recursivite/cours/#4-exemples-de-recursivite-double){. target="_blank"},
+Comme nous l'avons déjà vu [ici](https://nsimichelet91.github.io/TNSI/T2_Programmation/2.2_Recursivite/cours/#4-exemples-de-recursivite-double){. target="_blank"},
 la suite de Fibonacci définie par :
 
 - $F_0 = 0$
