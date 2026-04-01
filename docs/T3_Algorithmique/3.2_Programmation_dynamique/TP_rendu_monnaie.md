@@ -16,7 +16,7 @@
 
 ## 1. Retour sur l'algorithme glouton
 
-Nous avons vu [en Première](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/#2-le-probleme-du-rendu-de-monnaie){. target="_blank"} un algorithme capable de donner une combinaison de pièces pour rendre la somme ```somme```.
+Nous avons vu [en Première](https://nsimichelet91.github.io/1NSI/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/#2-le-probleme-du-rendu-de-monnaie){. target="_blank"} un algorithme capable de donner une combinaison de pièces pour rendre la somme ```somme```.
 
 Cet algorithme fonctionnait de manière gloutonne : on cherche à rendre à chaque fois la plus grosse pièce possible.
 
