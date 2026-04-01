@@ -169,7 +169,7 @@ La réponse est oui : si on ne regarde par exemple que les pixels diagonaux, l'a
 Pour éviter de refaire ces calculs, on va donc faire appel à la technique de ```mémoïsation```.
 
 !!! example "{{ exercice() }}"
-    Écrire la fonction ```pgcb_memo```, identique à la fonction ```pgcb``` mais qui mémoïse ses résultats. On pourra se servir d'une [fonction englobante](https://glassus.github.io/terminale_nsi/T3_Algorithmique/3.2_Programmation_dynamique/cours/#132-suppression-de-la-variable-globale){. target="_blank"} comme dans le cours sur Fibonacci.
+    Écrire la fonction ```pgcb_memo```, identique à la fonction ```pgcb``` mais qui mémoïse ses résultats. On pourra se servir d'une [fonction englobante](https://nsimichelet.github.io/TNSI/T3_Algorithmique/3.2_Programmation_dynamique/cours/#132-suppression-de-la-variable-globale){. target="_blank"} comme dans le cours sur Fibonacci.
 
     ```python linenums='1'
     def pgcb_memo(x, y):
