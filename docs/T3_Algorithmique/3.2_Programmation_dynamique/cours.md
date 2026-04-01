@@ -109,7 +109,7 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
     )
     }}
 
-
+<!--
 !!! abstract ":heart: :heart: :heart: Exemple de mémoïsation : Fibonacci :heart: :heart: :heart:"
     ```python linenums='1'
     dict_fibo = {0:0, 1:1}
@@ -120,7 +120,7 @@ L'idée générale est donc de stocker le résultat de chaque calcul, par exempl
         return dict_fibo[n]
     ```
     :warning: le dictionnaire ```dict_fibo``` doit être **à l'extérieur** de la fonction, sinon il est réinitialisé à chaque appel récursif !
-
+-->
 
 !!! example "{{ exercice() }}"
     Mesurer le temps de calcul de ```fibo(40)``` et comparer avec la mesure de l'exercice 1.
