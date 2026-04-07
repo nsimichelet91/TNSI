@@ -234,8 +234,7 @@ Pour cela on regarde le caractère ```X```  du texte sur lequel on s'est arrêt�
 - si ```X``` est dans le motif, on va regarder la place de la dernière occurence de ```X``` dans le motif et de déplacer de ce nombre, afin de faire coïncider le ```X``` du motif et le ```X``` du texte.
 
 ???+ tip "Illustration de l'algorithme"
-    <gif-player src="nsimichelet91.github.io/TNSI/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_BM.gif" speed="1" play></gif-player>
-
+    <gif-player src="https://nsimichelet91.github.io/TNSI/T3_Algorithmique/3.3_Recherche_textuelle/data/gif_BM.gif" speed="1" play></gif-player>
     _Vous pouvez contrôler le déroulement de l'animation en la survolant avec la souris._
 
 
