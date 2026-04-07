@@ -1,11 +1,12 @@
-
+{#
 !!! abstract ":star: Actualités :star:"
     - **Journée porte ouverte samedi 28 mars 2026 : Bienvenue en NSI !** 
-
+#}
 !!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"      
     - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
 !!! tip "Grand Oral"
+    - [Partage Pearltrees Grand Oral](https://www.pearltrees.com/private/id103504189?access=47ba8dddc10.62b593d.b271440eee23b52ca703872834d7d6f1){. target="_blank"}
     - [Guide Eduscol pour le Grand Oral (avec exemples de sujets NSI)](T7_Divers/00_Grand_Oral/data/GO_NSI_Eduscol.pdf){. target="_blank"}
     - [FAQ Grand Oral](T7_Divers/00_Grand_Oral/data/GO_FAQ.pdf){. target="_blank"}
     - [Exemple de grille d'évaluation de Grand Oral](T7_Divers/00_Grand_Oral/data/grilleGO.pdf){. target="_blank"}
@@ -14,12 +15,17 @@
 ## Progression :  
 
 !!! note "*Thèmes en cours d'étude*"
-    - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
-    - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
-    - [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)  
+    - [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
+    - [Programmation dynamique : Rendu de monnaie](T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/)
+    - [Programmation dynamique : TP Plus Grand Carré Blanc](T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/)
+    - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
+    - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
 
 
 !!! note "*Thèmes déjà traités*"
+    - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
+    - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
+    - [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)  
     - [TP Labyrinthe](T1_Structures_de_donnees/1.4_Graphes/TP_Labyrinthe/) 
     - [Graphes](T1_Structures_de_donnees/1.4_Graphes/cours/)
     - [Diviser pour régner : cours](T3_Algorithmique/3.1_Diviser_pour_regner/cours/)
