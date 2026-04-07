@@ -2,6 +2,8 @@
 
 ![image](data/BO.png){: .center}
 
+!!! example "Notebook du chapitre"
+    [Notebook](https://capytale2.ac-paris.fr/web/c/d17f-10531797){. target="_blank"}
 
 {{initexo(0)}}
 
