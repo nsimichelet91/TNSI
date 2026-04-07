@@ -2,7 +2,6 @@
 
 ![image](data/BO.png){: .center}
 
-![image](data/meme.png){: .center width=40%}
 
 {{initexo(0)}}
 
@@ -25,7 +24,7 @@
 
 [codes à trous](../intro_naive/){. target="_blank"}
 
-{#
+
 !!! note "Algorithme de recherche naïve :heart:"
     
     ```python linenums='1'
@@ -37,8 +36,8 @@
         
 
     ```
-#}
 
+{#
 !!! note "Algorithme de recherche naïve :heart:"
     
     ```python linenums='1'
@@ -60,7 +59,7 @@
         return indices
 
     ```
-
+#}
 
 Exemple d'utilisation :
 ```python
@@ -199,7 +198,7 @@ with open('Les_Miserables.txt') as f:
         
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -250,12 +249,12 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     *Exemple d'utilisation :*
 
     ```python
-    >>> dico_lettres("MAURIAC")
-    {'M': 0, 'A': 5, 'U': 2, 'R': 3, 'I': 4}
+    >>> dico_lettres("MICHELET")
+    {'M': 0, 'I': 1, 'C': 2, 'H': 3, 'E': 6, 'L': 5}
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -274,7 +273,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
 [codes à trous](../intro_BMH/){. target="_blank"}
 
 
-{#
+
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     
     ```python linenums='1'
@@ -286,9 +285,9 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
 
     ```
 
-#}
 
 
+{#
 !!! note "Algorithme de Boyer-Moore-Horspool :heart:"
     
     ```python linenums='1'
@@ -325,7 +324,7 @@ On va d'abord coder une fonction ```dico_lettres``` qui prend en paramètre un m
     4. On s'est arrêté avant la fin, sur une lettre présente dans le mot : il va falloir faire un décalage intelligent.
     5. On décale juste de ce qu'il faut pour mettre en correspondance les lettres, en faisant attention à ne pas décaler d'un nombre négatif. Au pire, on décale de 1.
     6. La lettre n'est pas dans le motif : on se positionne juste après elle.
-
+#}
 
    
 Exemple d'utilisation :
@@ -345,7 +344,7 @@ Exemple d'utilisation :
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
