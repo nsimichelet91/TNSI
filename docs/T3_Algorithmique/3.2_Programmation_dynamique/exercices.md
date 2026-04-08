@@ -1,7 +1,7 @@
 {{initexo(0)}}
 
 !!! example "{{ exercice() }}"
-    Exercice 1 du [sujet 0 - version B 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
+    Exercice 1 du [sujet 0 - version B 2024](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2024/bac_nsi_2024_sujet0b.pdf){. target="_blank"}
 
     {{
     correction(False,
@@ -162,7 +162,7 @@
 
 
 !!! example "{{ exercice() }}"
-    *Largement inspiré du sujet [24.2](https://glassus.github.io/terminale_nsi/T6_6_Epreuve_pratique/BNS_2024/#__tabbed_48_1){. target="_blank"} de la BNS 2024.*
+    *Largement inspiré du sujet [24.2](https://nsimichelet91.github.io/TNSI/T6_6_Epreuve_pratique/BNS_2024/#__tabbed_48_1){. target="_blank"} de la BNS 2024.*
 
     On considère un tableau non vide de nombre entiers, positifs ou négatifs, et on souhaite déterminer
     la plus grande somme possible de ses éléments consécutifs.
