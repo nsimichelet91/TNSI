@@ -37,9 +37,6 @@
         >>> chr(65)
         'A'
         ```
-
-      
-<!--
     === "Correction"
         ```python linenums='1'
         masque = "CETTEPHRASEESTVRAIMENTTRESTRESLONGUEMAISCESTFAITEXPRES"
@@ -51,6 +48,7 @@
                 message_chiffre += lettre_chiffree
             return message_chiffre
         ```
+<!--
 -->
 
 ### 1.2 Principe du chiffrement symétrique
@@ -59,9 +57,6 @@
     Dans un chiffrement symétrique, c'est **la même clé** qui va servir au chiffrement et au déchiffrement.
 
 ![image](data/sym.png){: .center}
-
-
-
 
 #### Qu'appelle-t-on une clé ?
 La clé est un renseignement permettant de chiffrer ou déchiffrer un message. Cela peut être :

@@ -368,7 +368,7 @@ On appelera ce mécanisme l'**interclassement**.
     :arrow_right: [Aide avec des codes à trous](../../){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -404,7 +404,7 @@ On appelera ce mécanisme l'**interclassement**.
     )
     }}
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction\" 
         ```python
@@ -446,7 +446,7 @@ L'idée du tri fusion est le découpage de la liste originale en une multitude d
 
 La grande force de ce tri va être qu'il se programme simplement de manière **récursive**, en appelant à chaque étape la même fonction mais avec une taille de liste divisée par deux, ce qui justifie son classement parmi les algorithmes utilisants «diviser pour régner».
 
-
+{#
 !!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
     
     ```python
@@ -456,9 +456,9 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
     def tri_fusion(lst):
         ...
     ```
+#}
 
 
-{#
 !!! abstract "Algorithme de tri fusion (*merge sort*) :heart: :heart: :heart:"
     
     ```python
@@ -485,7 +485,7 @@ La grande force de ce tri va être qu'il se programme simplement de manière **r
             return interclassement(tri_fusion(lst_gauche), tri_fusion(lst_droite))
     ```
     
-#}
+
 
 
 #### 4.2.3 Visualisation
