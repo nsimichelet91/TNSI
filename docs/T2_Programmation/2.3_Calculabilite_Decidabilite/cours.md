@@ -16,7 +16,7 @@ Le programme s'appelle ```accueil```, et pour fonctionner il a besoin d'un param
 
 Voici comment nous pouvons représenter notre machine ```accueil```, son paramètre d'entrée (5) et sa sortie (les 5 «bonjour»)
 
-![image](data/m1.png){: .center width="30%"}
+![image](data/m1.png){: .center width="30%" .autolight}
 
 
 Maintenant, enregistrons le code suivant dans un fichier ```test.py``` :
@@ -37,22 +37,26 @@ Le programme utilisé est alors ```python3```, qui prend comme paramètre le pro
 
 L'illustration correspondante sera donc :
 
-![image](data/m2.png){: .center width="30%"}
+![image](data/m2.png){: .center width="30%" .autolight}
  
 
 Mais nous pouvons aller encore plus loin : l'instruction ```python3 test.py``` est tapée dans mon Terminal Linux, qui lui-même est un programme appelé ```Terminal```.
 
 Et donc :
-![image](data/m3.png){: .center width="30%"}
+![image](data/m3.png){: .center width="30%" .autolight}
 
 
 Conclusion :
 
 **Il n'y a donc aucun obstacle à considérer un programme comme une simple donnée, pouvant être reçue en paramètre par un autre programme.** (voire par lui-même !)
 
-> À titre anecdotique, on pourra exécuter avec intérêt cette instruction Python :
-> ```a='a=%r;print(a%%a)';print(a%a)``` 
-> Ce type de code (magique !) existe dans tous les langages et s'appelle un [quine](https://fr.wikipedia.org/wiki/Quine_(informatique)){. target="_blank"}.
+
+??? tip "Les quines"
+    À titre anecdotique, on pourra exécuter en console cette instruction Python :
+    ```python
+    a='a=%r;print(a%%a)';print(a%a)
+    ```
+     Ce type de code (magique !) existe dans tous les langages et s'appelle un [quine](https://fr.wikipedia.org/wiki/Quine_(informatique)){. target="_blank"}.
 
 
 
@@ -91,7 +95,7 @@ Un tel programme (appelons-le ```halt```) prendrait en entrées :
  L'instruction ```halt(prog, x)``` renverrait ```True``` si ```prog(x)``` s'arrête, et ```False``` si ```prog(x)``` ne s'arrête pas.
  
 
-![image](data/halt1.png){: .center width="30%"}
+![image](data/halt1.png){: .center width="30%" .autolight}
 
 
 
@@ -130,7 +134,7 @@ def sym(prog):
 
 On peut remarquer que le programme ```halt``` est appelé avec comme paramètres ```prog, prog```, ce qui signifie que ```prog``` se prend lui-même en paramètre. On rappelle que ce n'est pas choquant, un code-source étant une donnée comme une autre.
 
-![image](data/halt3.png){: .center width="40%"}
+![image](data/halt3.png){: .center width="40%" .autolight}
 
 Ce programme ```sym``` reçoit donc en paramètre un programme ```prog```, et :
 
@@ -143,7 +147,7 @@ Puisqu'un programme peut prendre en paramètre son propre code-source, que donne
 
 Deux cas peuvent se présenter, suivant si ```halt(sym, sym)``` renvoie ```True``` ou ```False```.
 
-![image](data/halt4.png){: .center width="80%"}
+![image](data/halt4.png){: .center width="80%" .autolight}
 
 * **cas n°1** : ```halt(sym, sym)``` renvoie ```True```, ce qui signifie que ```sym(sym)```  devrait s'arrêter. Mais dans ce cas-là, l'exécution de ```sym(sym)``` rentre dans une boucle infinie. C'est une contradiction.
 
@@ -215,14 +219,14 @@ Certaines fonctions peuvent être calculables, *ou ne pas l'être* : c'est notam
 
 ### 2.2 Langages Turing-complets
 Ce résultat ne dépend pas du langage utilisé : le fait que nous ayons utilisé Python au paragraphe précédent n'a pas d'influence sur notre démonstration. Nous savons depuis les machines de Turing que tous nos langages de programmation sont **Turing-complets** : ils sont tous capables de faire la même chose (avec plus ou moins de facilité !). 
-Scratch, C, Python, Java, Basic, Haskell, Brainfuck... tous ces langages sont théoriquement équivalents : **la calculabilité ne dépend pas du langage utilisé**.
+Scratch, C, Python, Java, Basic, Haskell, [Brainfuck](https://fr.wikipedia.org/wiki/Brainfuck){. target="_blank"}, [Piet](https://fr.wikipedia.org/wiki/Piet){. target="_blank"}, [Whitespace](https://en.wikipedia.org/wiki/Whitespace_(programming_language)){. target="_blank"} ... tous ces langages sont théoriquement équivalents : **la calculabilité ne dépend pas du langage utilisé**.
 
 
 ### 2.3 (HP) Calculable, oui, mais facilement ? -> 1 million de $ à gagner ci-dessous.
 L'étude de la calculabilité d'une fonction (à prendre au sens le plus large, c'est-à-dire un algorithme) ne se limite pas à un choix binaire : «calculable» vs «non calculable».  
 Parmi les fonctions calculables, certaines peuvent l'être rapidement, et d'autre beaucoup moins.
 
-On retrouve alors la notion bien connue de **complexité** algorithmique, qui permet de classifier les algorithmes suivant leur dépendance à la taille de leurs données d'entrée (voir le [cours](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.2_Complexite/cours/){. target="_blank"} de Première).
+On retrouve alors la notion bien connue de **complexité** algorithmique, qui permet de classifier les algorithmes suivant leur dépendance à la taille de leurs données d'entrée (voir le [cours](https://nsimichelet91.github.io/premiere_nsi/T4_Algorithmique/4.2_Complexite/cours/){. target="_blank"} de Première).
 
 On peut regrouper les problèmes suivant la complexité de l'algorithme qui permet de les résoudre.
 
@@ -262,8 +266,8 @@ Si la solution peut être trouvée de manière polynomiale par une machine non-d
 Pour le résumer très grossièrement, un problème de classe NP est un problème dont on sait vérifier facilement si une solution proposée marche ou pas :
 
 - la résolution d'un sudoku est dans NP : si quelqu'un vous montre un sudoku rempli, vous pouvez très rapidement lui dire si sa solution est valable ou pas.
-- la factorisation d'un nombre est dans NP : si quelqu'un vous propose 4567*6037 comme décomposition de 27570979, vous pouvez très rapidement lui dire s'il a raison. (oui.)
-- le problème du [sac à dos](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/#3-le-probleme-du-sac-a-dos-knapsack-problem){. target="_blank"} (en version décisionnelle) est dans NP. Une proposition de butin peut facilement être examinée pour savoir si elle est possible ou non.
+- la factorisation d'un nombre est dans NP : si quelqu'un vous propose 4567*6037 comme décomposition de 27570979, vous pouvez très rapidement lui dire s'il a raison. (oui)
+- le problème du [sac à dos](https://nsimichelet91.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/#3-le-probleme-du-sac-a-dos-knapsack-problem){. target="_blank"} (en version décisionnelle) est dans NP. Une proposition de butin peut facilement être examinée pour savoir si elle est possible ou non.
 - le problème du voyageur de commerce (ou TSP : Traveller Sales Problem), en version décisionnelle, est dans NP. Si on vous propose un trajet, vous pouvez facilement vérifier que sa longueur est (par exemple) inférieure à 150 km.
 
 
@@ -296,14 +300,13 @@ Alors, P = NP ou P ≠ NP ? Réponse peut-être un jour...
 
 
 ---
-## Bibliographie
-- Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
-- Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
-- https://interstices.info/pnp-elementaire-ma-chere-watson/
-- https://interstices.info/alan-turing-du-calculable-a-lindecidable/
-- https://www.labri.fr/perso/betrema/MC/MC8.html
-- https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/
-
+??? quote "Bibliographie / Sitographie"
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+    - Prépabac NSI, Terminale, G. CONNAN, V. PETROV, G. ROZSAVOLGYI, L. SIGNAC, éditions HATIER.
+    - [ https://interstices.info/pnp-elementaire-ma-chere-watson/]( https://interstices.info/pnp-elementaire-ma-chere-watson/){. target="_blank"}
+    - [https://interstices.info/alan-turing-du-calculable-a-lindecidable/](https://interstices.info/alan-turing-du-calculable-a-lindecidable/){. target="_blank"} 
+    - [https://www.labri.fr/perso/betrema/MC/MC8.html](https://www.labri.fr/perso/betrema/MC/MC8.html){. target="_blank"} 
+    - [https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/](https://scienceetonnante.com/2020/07/17/est-ce-que-p-np/){. target="_blank"} 
 
 
 
