@@ -3,7 +3,7 @@
     - **Journée porte ouverte samedi 28 mars 2026 : Bienvenue en NSI !** 
 #}
 !!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"      
-    - 3 sujets 0 ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
+    - Les sujets ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
 !!! tip "Grand Oral"
     - [Partage Pearltrees Grand Oral](https://www.pearltrees.com/private/id103504189?access=47ba8dddc10.62b593d.b271440eee23b52ca703872834d7d6f1){. target="_blank"}
@@ -15,14 +15,34 @@
 ## *Progression*
 
 !!! note "*Thèmes en cours d'étude*"
+    - Révisions SQL / Cryptographie  : [Exercice 3 Polynésie J1 2025](T5_Architecture_materielle/5.4_Cryptographie/exercices/#ex3J1PO2025)  
+    - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
+    - Exercice sur les Listes/Piles/Files : [Exercice 3 du sujet Polynésie J2 2025](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/#ex3J2PO2025){. target="_blank"}
+    - Exercice sur les arbres : [Exercice 3 du sujet Amérique du Nord J1 2022](T1_Structures_de_donnees/1.3_Arbres/exercices/#ex3J1AN2022){. target="_blank"}
+    - Exercice sur les listes/POO : [Exercice 1 du sujet Amérique du Nord J2 2022](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/#ex1J2AN2022){. target="_blank"}
+    - Exercice sur les arbres : [Exercice 1 du sujet Métropole J2 2025](T1_Structures_de_donnees/1.3_Arbres/exercices/#ex1J2ME2025){. target="_blank"}
+    - Exercice POO + SQL : [Exercice 3 du sujet Asie J1 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J1A2024){. target="_blank"}
+    - Exercice POO : [Exercice 3 du sujet Métropole J1 2023](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J1ME2023){. target="_blank"}
+    - Exercice POO + algos gloutons : [Exercice 2 du sujet Amérique du Nord J1 2025](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex2J1AN2025){. target="_blank"}
+    - Exercice SQL : [Exercice 2 du sujet Polynésie J2 2025](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2PO2025){. target="_blank"}
+    - [Exercice 3 Partie B du sujet Centres Étrangers J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J2G12024){. target="_blank"}
+    - [Exercice 2 du sujet Amérique du Nord J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2AN2024){. target="_blank"}
+    - Groupe 1 : [sujet Centres Étrangers J1 2024](T6_Annales/corrections/2024/24-NSIJ1G1_corr.md){. target="_blank"}
+    - Groupe 2 : [sujet Métropole J1 2024](T6_Annales/corrections/2024/24-NSIJ1ME_corr.md){. target="_blank"}
+    - Retour sur [l'algorithme KNN](https://nsimichelet91.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/){. target="_blank"}
+    - [Exercices Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/exercices/)
+    - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
+    - [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
+
+
+!!! note "*Thèmes déjà traités*"
+    - [Exercices Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/exercices/)
+    - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/) 
     - [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
     - [Programmation dynamique : Rendu de monnaie](T3_Algorithmique/3.2_Programmation_dynamique/TP_rendu_monnaie/)
     - [Programmation dynamique : TP Plus Grand Carré Blanc](T3_Algorithmique/3.2_Programmation_dynamique/TP_carre_blanc/)
     - [Programmation dynamique : TP Pyramides](T3_Algorithmique/3.2_Programmation_dynamique/TP_pyramides/)
     - [Programmation dynamique : cours](T3_Algorithmique/3.2_Programmation_dynamique/cours/)
-
-
-!!! note "*Thèmes déjà traités*"
     - [Exercices sur les graphes](T1_Structures_de_donnees/1.4_Graphes/exercices/) 
     - [Cryptographie : cours](T5_Architecture_materielle/5.4_Cryptographie/cours/)
     - [Cryptographie : exercices](T5_Architecture_materielle/5.4_Cryptographie/exercices/)  
