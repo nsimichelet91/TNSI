@@ -29,7 +29,7 @@
     - [Exercice 2 du sujet Amérique du Nord J2 2024](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex2J2AN2024){. target="_blank"}
     - Groupe 1 : [sujet Centres Étrangers J1 2024](T6_Annales/corrections/2024/24-NSIJ1G1_corr.md){. target="_blank"}
     - Groupe 2 : [sujet Métropole J1 2024](T6_Annales/corrections/2024/24-NSIJ1ME_corr.md){. target="_blank"}
-    - Retour sur [l'algorithme KNN](https://nsimichelet91.github.io/premiere_nsi/T4_Algorithmique/4.7_Algorithme_KNN/cours/){. target="_blank"}
+    - Retour sur [l'algorithme KNN](https://nsimichelet91.github.io/1NSI/T4_Algorithmique/4.7_Algorithme_KNN/cours/){. target="_blank"}
     - [Exercices Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/exercices/)
     - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
     - [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
