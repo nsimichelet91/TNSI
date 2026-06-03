@@ -291,7 +291,7 @@
     }}        
 
 !!! example "{{exercice()}}"
-    Exercice 1 du sujet [Amérique du Nord J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
+    Exercice 1 du sujet [Amérique du Nord J1 2022](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
 
         
@@ -405,7 +405,7 @@
 
 
 !!! example "{{exercice()}}"
-    Exercice 4 du sujet [Centres Étrangers J1 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="_blank"}
+    Exercice 4 du sujet [Centres Étrangers J1 2022](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="_blank"}
     
 
 
@@ -519,7 +519,7 @@
 
 
 !!! example "{{exercice()}}"
-    Exercice 4 du sujet [Métropole J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
+    Exercice 4 du sujet [Métropole J2 2022](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2022/2022_Metropole_J2.pdf){. target="_blank"}
  
 
     {{
@@ -673,7 +673,7 @@
 
 
 !!! example "{{exercice()}}"
-    Exercice 2 du sujet [La Réunion J2 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="_blank"}
+    Exercice 2 du sujet [La Réunion J2 2022](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="_blank"}
 
     {{
     correction(True,
@@ -757,7 +757,7 @@
 
 !!! example "{{ exercice() }} <i id="ex3J1AN2024"></i>"
 
-    Exercice 3 du [sujet Amérique du Nord J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}    
+    Exercice 3 du [sujet Amérique du Nord J1 2024](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2024/24-NSIJ1AN1.pdf){. target="_blank"}    
 
     **Partie A**
 
@@ -1016,7 +1016,7 @@
 
 !!! example "{{ exercice() }} <i id="ex2J2AN2024"></i>"
 
-    Exercice 2 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}    
+    Exercice 2 du [sujet Amérique du Nord J2 2024](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}    
 
     
     {{
@@ -1123,7 +1123,7 @@
 
 !!! example "{{ exercice() }} <i id="ex3J2G12024"></i>"
 
-    Exercice 3 Partie B du [sujet Centres Étrangers J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2G1.pdf){. target="_blank"}    
+    Exercice 3 Partie B du [sujet Centres Étrangers J2 2024](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2024/24-NSIJ2G1.pdf){. target="_blank"}    
 
     
     {{
@@ -1232,3 +1232,368 @@
 
 
     
+!!! example "{{ exercice() }} <i id="ex2J2PO2025"></i>"
+
+    Exercice 2 du [sujet Polynésie J2 2025](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2025/25-NSIJ2PO1.pdf){. target="_blank"}    
+
+    
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1\" 
+        ```sql
+        SELECT nom 
+        FROM champignon 
+        WHERE lamelle = 'oui' and couleur = 'orange'
+        ```    
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2\" 
+        ```sql
+        SELECT nom
+        FROM champignon
+        WHERE pied_max = 0 AND chapeau_max = 15 AND chapeau_min = 15
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3\" 
+        La clé étrangère de la table ```champignon``` est ```id_ordre```. 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4\" 
+        ```sql
+        SELECT champignon.nom
+        FROM champignon
+        JOIN ordre ON champignon.id_ordre = ordre.id
+        WHERE ordre.classe = 'agaricomycètes'
+        ``` 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q5\" 
+        ```sql
+        INSERT INTO champignon ​
+        VALUES​ (56, 'amanite solitaire', 4,'oui','blanc', 6, 20, 4, 10)
+        ```      
+    """
+    )
+    }}
+    
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q6\" 
+        $\\texttt{\\underline{sdf}}$
+
+        
+        ```champignon(```$\\underline{\\texttt{id}}$```, nom, #id_ordre, lamelle, couleur, chapeau_min, chapeau_max, pied_min, pied_max, #id_toxicite)``` 
+
+        ```ordre(```$\\underline{\\texttt{id}}$```, nom, classe)```
+
+        ```toxicite(```$\\underline{\\texttt{id_tox}}$```, type, effet)```  
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q7\" 
+        ```sql
+        UPDATE champignon
+        SET id_toxicite = 1
+        WHERE nom = 'amanite citrine'
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q8\" 
+        ```sql
+        SELECT champignon.nom
+        FROM champignon
+        JOIN ordre ON champignon.id_ordre = ordre.id
+        WHERE ordre.nom = 'amanitales' AND champignon.id_toxicite = 1
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q9\" 
+        ```python
+        for e in liste_champi:
+            if e.saison == 'été':
+                print(e.nom)
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q10\" 
+        L'attribut ```cuisson``` du champignon ayant pour attribut ```nom``` ```'Lactaire délicieux'``` est ```'12 minutes à feu moyen'```.
+
+        Il est donc normal que la ligne ```return c.cuisson == 'feu moyen'``` renvoie ```False```.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q11\" 
+        ```python
+        for c in liste_champi:
+            if c.nom == 'Lactaire délicieux':
+                return recherche_textuelle(c.cuisson, 'feu moyen')
+        ```     
+    """
+    )
+    }}
+
+
+!!! example "{{ exercice() }} <i id="ex3J1AN2026"></i>"
+
+    Exercice 3 du [sujet Amérique du Nord J1 2026](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2026/26_NSIJ1AN1.pdf){. target="_blank"}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q1\"
+         Il peut y avoir plusieurs immeubles ayant le même numéro dans des rues différentes, donc le numéro dans la rue ne peut pas être clé primaire.
+        
+    """
+    )
+    }}  
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q2\" 
+        ```sql
+        SELECT id_immeuble
+        FROM immeuble
+        WHERE rue_immeuble = 'la mer'
+        ORDER BY id_immeuble
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q3\" 
+        ```sql
+        SELECT id_appart
+        FROM appartement
+        WHERE id_immeuble = 16 AND etage_appart >= 5
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q4\"
+        La table ```appartement``` est reliée à la table ```immeuble``` par la clé étrangère ```id_immeuble```. Si on supprime un immeuble dans la table ```immeuble```, cela va poser un problème pour tous les appartements qui y font référence. 
+        
+    """
+    )
+    }}  
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q5\" 
+        ```sql
+        INSERT INTO immeuble
+        VALUES (140, 6, 13, 'Turing')
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q6\" 
+        ```sql
+        UPDATE appartement
+        SET prix_appart = prix_appart * 2
+        WHERE id_appart = 603
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q7\" 
+        ```sql
+        SELECT MAX(appartement.prix_appart)
+        FROM appartement
+        JOIN immeuble ON appartement.id_immeuble = immeuble.id_immeuble
+        WHERE immeuble.rue_immeuble = 'la mer'
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q8\" 
+        Les sous-séquences strictement croissantes de longueur 2 de la liste ```L2``` sont :
+
+        - ```[3, 8]``` 
+        - ```[3, 5]``` 
+        - ```[1, 8] ```
+        - ```[1, 2]``` 
+        - ```[1, 5]``` 
+        - ```[2, 5] ```
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q9\" 
+        La plus longue sous-séquences strictement croissantes de longueur 2 de la liste ```L2``` est ```[1, 2, 5] ```.
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q10\" 
+        ```python
+        def est_strict_croissante(seq):
+            for i in range(len(seq)-1):
+                if seq[i] >= seq[i+1]:
+                    return False
+            return True
+        ```
+    """
+    )
+    }}
+
+    ```python
+    def llsc_fin(tab, i):
+        if ...:
+            return ...
+        max_len = 1
+        for j in range(i):
+            if tab[j] < ...:
+                max_len = max(max_len, llsc_fin(tab, j)+1)
+        return max_len
+
+    def llsc_rec(tab):
+        n = len(tab)
+        return max([llsc_fin(tab, i) for i in range(n)]) 
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q11\" 
+        ```python
+        def llsc_fin(tab, i):
+            if i == 0:
+                return 1
+            max_len = 1
+            for j in range(i):
+                if tab[j] < tab[i]:
+                    max_len = max(max_len, llsc_fin(tab, j)+1)
+            return max_len
+
+        def llsc_rec(tab):
+            n = len(tab)
+            return max([llsc_fin(tab, i) for i in range(n)]) 
+        ```
+    """
+    )
+    }}
+    
+    ```python
+    def llsc_dyn(tab):
+        n = len(tab)
+        dyn = [1] * n
+        for i in range(1, n):
+            for j in range(i):
+                if tab[j] < tab[i]:
+                    dyn[i] = max(..., ...)
+        return ...
+    ```
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q12\" 
+        ```python
+        def llsc_dyn(tab):
+            n = len(tab)
+            dyn = [1] * n
+            for i in range(1, n):
+                for j in range(i):
+                    if tab[j] < tab[i]:
+                        dyn[i] = max(dyn[i], dyn[j]+1)
+            return max([k for k in dyn])
+        ```
+        ou
+        ```python
+        def llsc_dyn(tab):
+            n = len(tab)
+            dyn = [1] * n
+            for i in range(1, n):
+                for j in range(i):
+                    if tab[j] < tab[i]:
+                        dyn[i] = max(dyn[i], dyn[j]+1)
+            return max(dyn)
+        ```
+
+
+    """
+    )
+    }}
+
+    {{
+    correction(False,
+    """
+    ??? success \"Correction Q13\" 
+        La programmation dynamique évite de recalculer plusieurs fois les mêmes valeurs, chose que ne permet pas la récursivité.
+    """
+    )
+    }}
