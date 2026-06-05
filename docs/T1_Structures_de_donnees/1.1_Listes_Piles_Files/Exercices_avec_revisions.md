@@ -91,7 +91,7 @@
 
 !!! example "{{ exercice() }}"
 
-    Exercice 1 du sujet [La Réunion J2 - 2022](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="blank"}
+    Exercice 1 du sujet [La Réunion J2 - 2022](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="blank"}
 
 
     {{
@@ -162,7 +162,7 @@
         
 !!! example "{{ exercice() }}"
 
-    Exercice 2 du sujet [Métropole Candidats Libres J1 - 2021](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2021/21_Metropole_Candidats_libres_1.pdf){. target="blank"}
+    Exercice 2 du sujet [Métropole Candidats Libres J1 - 2021](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2021/21_Metropole_Candidats_libres_1.pdf){. target="blank"}
 
 
 
@@ -250,7 +250,7 @@
 
 !!! example "{{ exercice() }}"
 
-    Exercice 5 du sujet [Amérique du Nord J1 - 2021](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2021/21_Am%C3%A9rique_du_Nord.pdf){. target="blank"}
+    Exercice 5 du sujet [Amérique du Nord J1 - 2021](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2021/21_Am%C3%A9rique_du_Nord.pdf){. target="blank"}
 
     {{
     correction(True,
@@ -357,7 +357,7 @@
 
 !!! example "{{ exercice() }}"
 
-    Exercice 2 du sujet [Centres Étrangers J1 - 2022](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="blank"}
+    Exercice 2 du sujet [Centres Étrangers J1 - 2022](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="blank"}
 
     {{
     correction(True,
@@ -427,7 +427,8 @@
 
 
 !!! example "{{ exercice() }}"
-    Exercice 3 du sujet [Centres Etrangers J1 - 2023](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"}
+
+    Exercice 3 du sujet [Centres Etrangers J1 - 2023](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2023/2023_Centres_Etrangers_J1.pdf){. target="blank"}
 
     [Jeu du Simon](https://www.memozor.com/fr/jeux-du-simon/jeu-du-simon){. target="_blank"}
 
@@ -697,7 +698,7 @@
 
     Cet exercice peut être résolu **beaucoup** plus efficacement grâce à l'utilisation d'une pile... mais comment ?
 
-    Vous pouvez utiliser l'implémentation de pile disponible [ici](https://nsimichelet91.github.io/TNSIcorrection(True/T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/#321-a-laide-du-type-list-de-python){. target="_blank"}.
+    Vous pouvez utiliser l'implémentation de pile disponible [ici](https://nsimichelet91.github.io/TNSI/correction(True/T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/#321-a-laide-du-type-list-de-python){. target="_blank"}.
 
 
     ??? aide "Aide à la construction de l'algorithme"
@@ -762,7 +763,7 @@
 
 !!! example "{{ exercice() }} <i id="ex2J2ME32024"></i>"
 
-    Exercice 2 du sujet [Métropole J2 - Septembre 2024](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2024/24-NSIJ2ME3.pdf){. target="blank"}  
+    Exercice 2 du sujet [Métropole J2 - Septembre 2024](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2024/24-NSIJ2ME3.pdf){. target="blank"}  
 
     On pourra utiliser la classe ```Pile``` ci-dessous :
 
@@ -972,7 +973,7 @@
 
 
 !!! example "{{ exercice() }}"
-    Exercice 2 du sujet [Métropole J1 - 2025](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2025/25_NSIJ1ME1.pdf){. target="blank"} 
+    Exercice 2 du sujet [Métropole J1 - 2025](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2025/25_NSIJ1ME1.pdf){. target="blank"} 
 
     {{
     correction(True,
@@ -1114,7 +1115,7 @@
 
 
 !!! example "{{ exercice() }} <i id="ex1J2AN2022"></i>"
-    Exercice 1 du sujet [Amérique du Nord J2 - 2022](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="blank"} 
+    Exercice 1 du sujet [Amérique du Nord J2 - 2022](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="blank"} 
 
     {{
     correction(True,
@@ -1212,7 +1213,7 @@
     }}
 
 !!! example "{{ exercice() }} <i id="ex3J2PO2025"></i>"
-    Exercice 3 du sujet [Polynésie J2 - 2025](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2025/25-NSIJ2PO1.pdf){. target="blank"} 
+    Exercice 3 du sujet [Polynésie J2 - 2025](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2025/25-NSIJ2PO1.pdf){. target="blank"} 
 
     {{
     correction(True,

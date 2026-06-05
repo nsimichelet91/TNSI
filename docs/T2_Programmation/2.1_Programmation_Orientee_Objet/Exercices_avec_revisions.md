@@ -1,6 +1,6 @@
 # Exercices
 
-
+[notebook d'exercices](https://capytale2.ac-paris.fr/web/c/a37f-6964227){:target="_blank"}   
          
 {{ initexo(0) }}
 
@@ -276,56 +276,56 @@
 
         
 
-!!! capytale "À faire sur Capytale : [activité 2ef0-54279](https://capytale2.ac-paris.fr/web/c/2ef0-54279){. target="_blank"}"
-    !!! example "{{ exercice() }}"
-        
-        Créer une classe ```CompteBancaire``` dont la méthode constructeur recevra en paramètres :
 
-        - un attribut ```titulaire``` stockant le nom du propriétaire.
-        - un attribut ```solde``` contenant le solde disponible sur le compte.  
-        
-        Cette classe contiendra deux méthodes ```retrait``` et ```depot``` qui permettront de retirer ou de déposer de l'argent sur le compte. 
+!!! example "{{ exercice() }}"
     
-        !!! info "Exemple d'utilisation de la classe"
-            ```python
-            >>> compteGL = CompteBancaire("G.Lassus", 1000)
-            >>> compteGL.retrait(50)
-            Vous avez retiré 50 euros
-            Solde actuel du compte : 950 euros
-            >>> compteGL.retrait(40000)
-            Retrait impossible
-            >>> compteGL.depot(10000000)
-            Vous avez déposé 10000000 euros
-            Solde actuel du compte : 10000950 euros
-            ```
-                
-        {{
-        correction(True,
-        """
-        ??? success \"Correction\" 
-            ```python linenums='1'
-            class CompteBancaire:
-                def __init__(self, titulaire, solde):
-                    self.titulaire = titulaire
-                    self.solde = solde
-                    
-                def retrait(self, somme):
-                    if somme > self.solde:
-                        print('Retrait impossible')
-                    else :
-                        self.solde -= somme
-                        print('Vous avez retiré {} euros'.format(somme))
-                        print('Solde actuel du compte : {} euros'.format(self.solde))
+    Créer une classe ```CompteBancaire``` dont la méthode constructeur recevra en paramètres :
 
-                def depot(self, somme):
-                    self.solde += somme
-                    print('Vous avez déposé {} euros'.format(somme))
-                    print('Solde actuel du compte : {} euros'.format(self.solde))
-            ```            
-        """
-        )
-        }}
+    - un attribut ```titulaire``` stockant le nom du propriétaire.
+    - un attribut ```solde``` contenant le solde disponible sur le compte.  
+    
+    Cette classe contiendra deux méthodes ```retrait``` et ```depot``` qui permettront de retirer ou de déposer de l'argent sur le compte. 
+
+    !!! info "Exemple d'utilisation de la classe"
+        ```python
+        >>> compteGL = CompteBancaire("G.Lassus", 1000)
+        >>> compteGL.retrait(50)
+        Vous avez retiré 50 euros
+        Solde actuel du compte : 950 euros
+        >>> compteGL.retrait(40000)
+        Retrait impossible
+        >>> compteGL.depot(10000000)
+        Vous avez déposé 10000000 euros
+        Solde actuel du compte : 10000950 euros
+        ```
             
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        class CompteBancaire:
+            def __init__(self, titulaire, solde):
+                self.titulaire = titulaire
+                self.solde = solde
+                
+            def retrait(self, somme):
+                if somme > self.solde:
+                    print('Retrait impossible')
+                else :
+                    self.solde -= somme
+                    print('Vous avez retiré {} euros'.format(somme))
+                    print('Solde actuel du compte : {} euros'.format(self.solde))
+
+            def depot(self, somme):
+                self.solde += somme
+                print('Vous avez déposé {} euros'.format(somme))
+                print('Solde actuel du compte : {} euros'.format(self.solde))
+        ```            
+    """
+    )
+    }}
+        
 
             
 
@@ -658,7 +658,7 @@
 
 
 !!! example "{{ exercice() }} <i id="ex1J2G12024"></i>"
-    Exercice 1 du [sujet Centres Étrangers J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2G1.pdf){. target="_blank"}   
+    Exercice 1 du [sujet Centres Étrangers J2 2024](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2024/24-NSIJ2G1.pdf){. target="_blank"}   
 
 
     ```python linenums='1'
@@ -853,7 +853,7 @@
 
 
 !!! example "{{ exercice() }} <i id="ex2J1AN2025"></i>"
-    Exercice 2 du [sujet Amérique du Nord J1 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ1AN1.pdf){. target="_blank"}   
+    Exercice 2 du [sujet Amérique du Nord J1 2025](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2025/25_NSIJ1AN1.pdf){. target="_blank"}   
 
     ```python
     class Colis:
@@ -1061,7 +1061,7 @@
 
 
 !!! example "{{ exercice() }} <i id="ex3J1A2024"></i>"
-    Exercice 3 du [sujet Asie J1 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ1JA1.pdf){. target="_blank"}   
+    Exercice 3 du [sujet Asie J1 2024](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2024/24-NSIJ1JA1.pdf){. target="_blank"}   
 
     ```python
     class Personne():
@@ -1296,7 +1296,7 @@
 
 
 !!! example "{{ exercice() }} <i id="ex3J1ME2023"></i>"
-    Exercice 3 du [sujet Métropole J1 2023](https://glassus.github.io/terminale_nsi/T6_Annales/data/2023/2023_Metropole_J1.pdf){. target="_blank"}
+    Exercice 3 du [sujet Métropole J1 2023](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2023/2023_Metropole_J1.pdf){. target="_blank"}
 
     ```python
     class Region:
@@ -1500,7 +1500,7 @@
 
 
 !!! example "{{ exercice() }} <i id="ex3J2AN2024"></i>"
-    Exercice 3 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"} 
+    Exercice 3 du [sujet Amérique du Nord J2 2024](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"} 
       
     ??? abstract "Blockchain"
         ![image](data/blockchain.jpg){: .center}
@@ -1718,7 +1718,7 @@
 
 
 !!! example "{{ exercice() }} <i id="ex1J1G112025"></i>"
-    Exercice 1 du [sujet Centre Étrangers J1 2025](https://glassus.github.io/terminale_nsi/T6_Annales/data/2025/25_NSIJ1G11.pdf){. target="_blank"}
+    Exercice 1 du [sujet Centre Étrangers J1 2025](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2025/25_NSIJ1G11.pdf){. target="_blank"}
 
     ```python linenums='1'
     class Balise:

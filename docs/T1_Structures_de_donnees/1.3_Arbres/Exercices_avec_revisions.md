@@ -2,7 +2,7 @@
 {{initexo(0)}}
 
 !!! example "{{ exercice() }}"
-    Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}  
+    Exercice 2 du sujet [Nouvelle-Calédonie J2 2022](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2022/2022_Nouvelle-Caledonie_J2.pdf){. target="_blank"}  
 
     {{
     correction(True,
@@ -981,7 +981,7 @@
 !!! example "{{ exercice() }}"
     
 
-    Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"}
+    Exercice 3 du sujet [Centres Etrangers J2 - 2023](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2023/2023_Centres_Etrangers_J2.pdf){. target="blank"}
 
 
     {{
@@ -1118,7 +1118,7 @@
 
 !!! example "{{ exercice() }} <i id="ex1J2ME2025"></i>"
 
-    Exercice 1 du [sujet Métropole J2 2025](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
+    Exercice 1 du [sujet Métropole J2 2025](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
     
     {{
     correction(True,
@@ -1341,7 +1341,7 @@
 
 !!! example "{{ exercice() }} <i id="ex3J1AN2022"></i>"
 
-    Exercice 3 du [sujet Amérique du Nord J1 2022](https://nsimichelet91.github.io/TNSIcorrection(True/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
+    Exercice 3 du [sujet Amérique du Nord J1 2022](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
     {{
     correction(True,
