@@ -1,5 +1,9 @@
 # Annales des Épreuves Écrites
 
+## 2026
+- [Amérique du Nord J1](data/2026/26_NSIJ1AN1.pdf)
+- [Amérique du Nord J2](data/2026/26_NSIJ2AN1.pdf)
+
 ## 2025
 - [Polynésie J2](data/2025/25-NSIJ2PO1.pdf)
 - [Polynésie J1](data/2025/25-NSIJ1PO1.pdf)
