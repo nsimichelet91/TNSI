@@ -1385,7 +1385,7 @@
     Exercice 3 du [sujet Amérique du Nord J1 2026](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2026/26_NSIJ1AN1.pdf){. target="_blank"}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q1\"
          Il peut y avoir plusieurs immeubles ayant le même numéro dans des rues différentes, donc le numéro dans la rue ne peut pas être clé primaire.
@@ -1395,7 +1395,7 @@
     }}  
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q2\" 
         ```sql
@@ -1409,7 +1409,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q3\" 
         ```sql
@@ -1422,7 +1422,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q4\"
         La table ```appartement``` est reliée à la table ```immeuble``` par la clé étrangère ```id_immeuble```. Si on supprime un immeuble dans la table ```immeuble```, cela va poser un problème pour tous les appartements qui y font référence. 
@@ -1432,7 +1432,7 @@
     }}  
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q5\" 
         ```sql
@@ -1444,7 +1444,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q6\" 
         ```sql
@@ -1457,7 +1457,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q7\" 
         ```sql
@@ -1471,7 +1471,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q8\" 
         Les sous-séquences strictement croissantes de longueur 2 de la liste ```L2``` sont :
@@ -1487,7 +1487,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q9\" 
         La plus longue sous-séquences strictement croissantes de longueur 2 de la liste ```L2``` est ```[1, 2, 5] ```.
@@ -1496,7 +1496,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q10\" 
         ```python
@@ -1526,7 +1526,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q11\" 
         ```python
@@ -1559,7 +1559,7 @@
     ```
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q12\" 
         ```python
@@ -1590,7 +1590,7 @@
     }}
 
     {{
-    correction(False,
+    correction(True,
     """
     ??? success \"Correction Q13\" 
         La programmation dynamique évite de recalculer plusieurs fois les mêmes valeurs, chose que ne permet pas la récursivité.
