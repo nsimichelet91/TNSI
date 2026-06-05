@@ -15,6 +15,9 @@
 ## *Progression*
 
 !!! note "*Thèmes en cours d'étude*"
+    - Révisions POO / Graphes: [Exercice 1 Centre Étrangers J1 2025](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex1J1G112025)   
+    - Révisions SQL / Programmation dynamique: [Exercice 3 Amérique du Nord J1 2026](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2026) 
+    - Révisions Cryptographie / Réseaux  : [Exercice 3 Métropole J2 2025](T5_Architecture_materielle/5.4_Cryptographie/exercices/#ex3J2ME2025) 
     - Révisions SQL / Cryptographie  : [Exercice 3 Polynésie J1 2025](T5_Architecture_materielle/5.4_Cryptographie/Exercices_avec_revisions/#ex3J1PO2025){. target="_blank"}  
     - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices_avec_revisions/#ex3J2AN2024){. target="_blank"}
     - Exercice sur les Listes/Piles/Files : [Exercice 3 du sujet Polynésie J2 2025](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices_avec_revisions/#ex3J2PO2025){. target="_blank"}
