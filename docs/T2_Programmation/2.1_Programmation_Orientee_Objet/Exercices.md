@@ -2,313 +2,993 @@
 
 [notebook d'exercices](https://capytale2.ac-paris.fr/web/c/a37f-6964227){:target="_blank"}   
 
-!!! example "Exercice 1"
-    === "Énoncé"
-        1. Écrire une classe ```Eleve``` qui contiendra les attributs ```nom```, ```classe``` et ```note```.
-        2. Instancier trois élèves de cette classe.
-        3. Écrire une fonction ```compare(eleve1, eleve2)``` qui renvoie le nom de l'élève ayant la meilleure note.
+{{initexo(0)}}
 
-        ??? info "Exemple d'utilisation de la classe"
-            ```python
-            >>> riri = Eleve("Henri", "TG2", 12)
-            >>> fifi = Eleve("Philippe", "TG6", 15)
-            >>> loulou = Eleve("Louis", "TG1", 8)
-            >>> compare(riri, fifi)
-            'Philippe'
-            ```
-<!--
-    === "Correction"
-
-   
-        ```python linenums='1'
-        class Eleve:
-            def __init__(self, nom, classe, note):
-                self.nom = nom
-                self.classe = classe
-                self.note = note
-                
-        def compare(eleve1, eleve2):
-            if eleve1.note > eleve2.note:
-                return eleve1.nom
-            else:
-                return eleve2.nom
-        ```
--->
-
-!!! example "Exercice 2"
-    === "Énoncé"
-        Écrire une classe ```Triangle_rect``` qui contiendra les attributs ```cote1```, ```cote2``` et ```hypotenuse```.
-
-        La méthode constructeur ne prendra en paramètres que ```cote1``` et ```cote2```, l'attribut ```hypotenuse``` se calculera automatiquement.
-
-        ??? info "Exemple d'utilisation de la classe"
-
-            ```python
-            >>> mon_triangle = Triangle_rect(3,4)
-            >>> mon_triangle.cote1
-            3
-            >>> mon_triangle.cote2
-            4
-            >>> mon_triangle.hypotenuse
-            5.0
-            ```
-
-
-
-<!--     === "Correction"
-
-        ```python linenums='1'
-        class Triangle_rect:
-            def __init__(self, a, b):
-                self.cote1 = a
-                self.cote2 = b
-                self.hypotenuse = (self.cote1**2 + self.cote2**2)**0.5
-        ```  -->
-
-!!! example "Exercice 3"
-    === "Énoncé"
-        1. Écrire une classe ```Chrono``` qui contiendra les attributs ```heures```, ```minutes``` et ```secondes```.
-        2. Doter la classe d'une méthode ```affiche()``` qui fera affichera le temps ```t```.
-        3. Doter la classe d'une méthode ```avance(s)``` qui fera avancer le temps ```t``` de ```s``` secondes.
-
-        ??? info "Exemple d'utilisation de la classe"
-
-            ```python
-            >>> t = Chrono(17,25,38)
-            >>> t.heures
-            17
-            >>> t.minutes
-            25
-            >>> t.secondes
-            38
-            >>> t.affiche()
-            'Il est 17 heures, 25 minutes et 38 secondes'
-            >>> t.avance(27)
-            >>> t.affiche()
-            'Il est 17 heures, 26 minutes et 5 secondes'
-            ```
-<!--
-    === "Correction"
-        ```python linenums='1'
-        class Chrono:
-            def __init__(self, h, m, s):
-                self.heures = h
-                self.minutes = m
-                self.secondes = s
-                
-            def affiche(self):
-                return f"Il est {self.heures} heures, {self.minutes} minutes \
-                et {self.secondes} secondes"
-
-            def avance(self, s):
-                self.secondes += s
-                # il faut ajouter les minutes supplémentaires si les secondes
-                # dépassent 60
-                self.minutes += self.secondes // 60
-                # il ne faut garder des secondes que ce qui n'a pas servi
-                # à fabriquer des minutes supplémentaires
-                self.secondes = self.secondes % 60
-                # il faut ajouter les heures supplémentaires si les minutes
-                # dépassent 60
-                self.heures += self.minutes // 60
-                # il ne faut garder des minutes que ce qui n'a pas servi
-                # à fabriquer des heures supplémentaires
-                self.minutes = self.minutes % 60
-        ```
--->  
-
-!!! example "Exercice 4"
-    === "Énoncé"
-        Écrire une classe ```Player``` qui :
-
-        - ne prendra aucun argument lors de son instanciation.
-        - affectera à chaque objet créé un attribut ```energie``` valant 3 par défaut. 
-        - affectera à chaque objet créé un attribut ```alive``` valant ```True``` par défaut.
-        - fournira à chaque objet une méthode ```blessure()``` qui diminue l'attribut ```energie``` de 1.
-        - fournira à chaque objet une méthode ```soin()``` qui augmente l'attribut ```energie``` de 1.
-        - si l'attribut ```energie``` passe à 0, l'attribut ```alive``` doit passer à ```False``` et ne doit plus pouvoir évoluer.
-
-        ??? info "Exemple d'utilisation de la classe"
-
-            ```python
-            >>> mario = Player()
-            >>> mario.energie
-            3
-            >>> mario.soin()
-            >>> mario.energie
-            4
-            >>> mario.blessure()
-            >>> mario.blessure()
-            >>> mario.blessure()
-            >>> mario.alive
-            True
-            >>> mario.blessure()
-            >>> mario.alive
-            False
-            >>> mario.soin()
-            >>> mario.alive
-            False
-            >>> mario.energie
-            0
-            ```
-<!--
-    === "Correction"
-        ```python linenums='1'
-        class Player:
-            def __init__(self):
-                self.energie = 3
-                self.alive = True
-            
-            def blessure(self):
-                self.energie -= 1
-                if self.energie <= 0:
-                    self.alive = False
-                
-            def soin(self):
-                if self.energie > 0:
-                    self.energie += 1
-        ```
--->
-
-!!! example "Exercice 5"
-    === "Énoncé"
-        Créer une classe ```Compte_bancaire``` dont la méthode constructeur recevra en paramètres :
-
-        - un attribut ```titulaire``` stockant le nom du propriétaire.
-        - un attribut ```solde``` contenant le solde disponible sur le compte.  
-        
-        Cette classe contiendra deux méthodes ```retrait()``` et ```depot()``` qui permettront de retirer ou de déposer de l'argent sur le compte. 
+!!! example "{{ exercice() }}"
     
-        !!! info "Exemple d'utilisation de la classe"
-            ```python
-            >>> compte_picsou = Compte_bancaire("Picsou", 1000)
-            >>> compte_picsou.retrait(50)
-            Vous avez retiré 50 euros
-            Solde actuel du compte : 950 euros
-            >>> compte_picsou.retrait(40000)
-            Retrait impossible
-            >>> compte_picsou.depot(10000000)
-            Vous avez déposé 10000000 euros
-            Solde actuel du compte : 10000950 euros
-            ```
-<!--                
-        === "Correction"
-            ```python linenums='1'
-            class Compte_bancaire:
-                def __init__(self, titulaire, solde):
-                    self.titulaire = titulaire
-                    self.solde = solde
 
-                def retrait(self, montant):
-                    if montant > self.solde:
-                        print("Retrait impossible")
-                    else:
-                        self.solde -= montant
-                        print(f"Vous avez retiré {montant} euros")
-                        print(f"Solde actuel du compte : {self.solde} euros")
-
-                def depot(self, montant):
-                    self.solde += montant
-                    print(f"Vous avez déposé {montant} euros")
-                    print(f"Solde actuel du compte : {self.solde} euros")
-                        ```
--->
+    **Utilisation des bibliothèques cryptographiques du module ```sympy```.**
 
 
-!!! abstract "Exercice 6"
-    === "Énoncé"
-        **Cet exercice est l'exercice 5.2 de la BNS (version 2022)**.
+    Documentation : [https://docs.sympy.org/latest/modules/crypto.html](https://docs.sympy.org/latest/modules/crypto.html){target="_blank"}
 
-        On dispose d’un programme permettant de créer un objet de type Paquet_de_carte, selon les éléments indiqués dans le code ci-dessous. Compléter ce code aux endroits indiqués par ???, puis ajouter des assertions dans l’initialiseur de Carte, ainsi que dans la méthode get_cart_at().
+    Décoder la phrase ```RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV```, sachant qu'elle a été chiffrée par décalage (*shift* en anglais...)
 
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
-        class Carte:
-            """Initialise Couleur (entre 1 a 4), et Valeur (entre 1 a 13)"""
-            def __init__(self, c, v):
-                self.Couleur = c
-                self.Valeur = v
+        from sympy.crypto.crypto import decipher_shift
 
-            """Renvoie le nom de la Carte As, 2, ... 10, 
-            Valet, Dame, Roi"""
-            def get_nom(self):
-                if ( self.Valeur > 1 and self.Valeur < 11):
-                    return str( self.Valeur)
-                elif self.Valeur == 11:
-                    return "Valet"
-                elif self.Valeur == 12:
-                    return "Dame"
-                elif self.Valeur == 13:
-                    return "Roi"
-                else:
-                    return "As"
+        msg = 'RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV'
 
-            """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
-            def get_couleur(self):
-                return ['pique', 'coeur', 'carreau', 'trefle' ][self.Couleur - 1]
+        for cle in range(26):
+            phrase = decipher_shift(msg, cle)
+            print(phrase)
+        ```        
+    """
+    )
+    }}
 
-        class Paquet_de_carte:
-            def __init__(self):
-                self.contenu = []
 
-            """Remplit le paquet de cartes"""
-            def remplir(self):
-                ??? = [ ??? for couleur in range(1, ???) for valeur in range( 1, ???)]
+!!! example "{{ exercice() }}"
 
-            """Renvoie la Carte qui se trouve à la position donnee"""
-            def get_carte_at(self, pos):
-                if 0 <= pos < ??? :
-                    return ???  
-        ```
 
-        Exemple :
+    **Chiffrage affine**
 
+    Principe du chiffrage affine :
+
+    - Chaque lettre est codée par son rang, en commençant à 0 (A->0, B->1, ..., Z->25)
+    - On applique à chaque rang la transformation affine 
+    $f(x) = (ax+b)\, \%26$
+
+    où $a$ et $b$ sont deux nombres entiers. Attention, $a$ doit être premier avec 26.
+
+    !!! quote "Rappel sur les nombres premiers entre eux"
+        Deux nombres sont dits *premiers entre eux* si leur PGCD vaut 1. 
+
+        Exemples :
+        
+        - 8 et 15 sont premiers entre eux (ils n'ont aucun diviseur commun autre que 1)
+        - 8 et 12 ne sont pas premiers entre eux (leur PGCD vaut 4).
+
+    **Q1.** Codez votre fonction ```affine(msg, a, b)```.
+
+    Pour tester votre fonction :
+    ```python
+    >>> affine("BONJOUR", 3, 5)
+    'IVSGVNE'
+    ```
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        def rang(lettre):
+            return ord(lettre) - 65
+
+        def affine(msg, a, b):
+            sol = ''
+            for lettre in msg:
+                rg = rang(lettre)
+                nv_rg = (a*rg + b) % 26 #chiffrement affine
+                nv_lettre = chr(nv_rg + 65)
+                sol += nv_lettre
+            return sol
+        ```        
+    """
+    )
+    }}
+
+
+
+    **Q2.** Comparez vos résultats avec ceux obtenus par la fonction ```encipher_affine()``` de ```sympy```.
+
+    **Q3.** Décodez la phrase ```UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC```, sachant qu'elle contient le mot ```TRAVAIL``` et que $a$ et $b$ sont inférieurs à 20.
+
+    !!! tip "Aide"
+        L'instruction ```gcd``` du module ```math``` permet de calculer le PGCD de deux nombres.
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        from sympy.crypto.crypto import decipher_affine
+        from math import gcd
+
+        for a in range(1,20):
+            if gcd(a,26) == 1:
+                for b in range(1,20):
+                    p = decipher_affine('UCGXLODCMOXPMFMSRJCFQOGTCRSUSXC', (a, b))
+                    if 'TRAVAIL' in p:
+                        print(p)
+        ```        
+    """
+    )
+    }}
+
+
+
+!!! example "{{ exercice() }}"
+    Exercice 3 (Parties A et B) du sujet [Métropole J2 2025](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
+
+    **Partie A**
+
+    ```python
+    alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+    'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+    'W', 'X', 'Y', 'Z']
+    ```
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1\" 
+        On obtient le mot PGRDX. 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2\" 
         ```python
-        >>> un_paquet = Paquet_de_carte()
-        >>> un_paquet.remplir()
-        >>> une_carte = un_paquet.get_carte_at(20)
-        >>> print(une_carte.get_nom() + " de " + une_carte.get_couleur())
-        8 de coeur
+        def indice(L, element):
+            for i in range(len(L)):
+                if L[i] == element:
+                    return i  
         ```
-<!--
-    === "Correction"
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3\" 
+        ```python
+        def lettres_vers_indices(txt):
+            lst = []
+            for c in txt:
+                lst.append(indice(alphabet,c))
+            return lst
+        ```
+    """
+    )
+    }}
+
+    ```python
+    def indices_vers_lettres(lst):
+        s = ''
+        for c in lst:
+            s += alphabet[c]
+        return s
+    ```
+
+    ```python
+    def chiffrement(msg, cle):
+        assert len(cle) >= len(msg), 'impossible'
+        indices_msg = lettres_vers_indices(msg)
+        indices_cle = lettres_vers_indices(cle)
+        n = len(msg)
+        indices_msg_chiffre = []
+        for k in range(n):
+            ind = ...
+            if ind >= 26:
+                ind = ...
+            indices_msg_chiffre.append(ind)
+        msg_chiffre = indices_vers_lettres(...)
+        return msg_chiffre    
+    ```
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4\" 
+        ```python
+        def chiffrement(msg, cle):
+            assert len(cle) >= len(msg), 'impossible'
+            indices_msg = lettres_vers_indices(msg)
+            indices_cle = lettres_vers_indices(cle)
+            n = len(msg)
+            indices_msg_chiffre = []
+            for k in range(n):
+                ind = indices_msg[k] + indices_cle[k]
+                if ind >= 26:
+                    ind = ind - 26
+                indices_msg_chiffre.append(ind)
+            msg_chiffre = indices_vers_lettres(indices_msg_chiffre)
+            return msg_chiffre
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q5\" 
+        On obtient AssertionError 'impossible' car la longueur de la clé est inférieure
+        à la longueur du message. 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q6\" 
+        On obtient le mot BRAVO.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q7\" 
+        Pour chaque caractère du message chiffré, on effectue la soustraction entre sa position dans l’alphabet et la position du caractère associé dans le masque. Si la valeur obtenue est strictement négative, on ajoute 26. On obtient finalement la
+        position du caractère en clair dans l’alphabet.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q8\" 
+        ```python
+        def dechiffrement(msg, cle):
+            assert len(cle) >= len(msg), 'impossible'
+            indices_msg = lettres_vers_indices(msg)
+            indices_cle = lettres_vers_indices(cle)
+            n = len(msg)
+            indices_msg_dechiffre = []
+            for k in range(n):
+                ind = indices_msg[k] - indices_cle[k]
+                if ind < 0:
+                    ind = ind + 26
+            indices_msg_dechiffre.append(ind)
+            msg_dechiffre = indices_vers_lettres(indices_msg_dechiffre)
+            return msg_dechiffre
+        ```
+    """
+    )
+    }}
+
+
+    **Partie B**
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q9\" 
+        Avec un chiffrement symétrique, la connaissance d'une seule et unique clé est requise pour chiffrer et déchiffrer le message. Dans un chiffrement asymétrique, la clé de déchiffrement est connue seulement du destinataire, alors que la clé de chiffrement est publique et distribuée à tous.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q10\" 
+        Il suffit à Bob de déchiffer le message avec sa clé privée.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q11\" 
+        Tout le monde a la clé publique de Bob, donc tout le monde peut écrire en se faisant passer pour Alice.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q12\" 
+        Dans le protocole ```https```, une clé AES est générée par chiffrement asymétrique au tout début de la communication (TLS). Ensuite, le reste du flux est chiffré avec le chiffrement symétrique AES.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q13\" 
+        Utiliser un chiffrement asymétrique tout au long de la navigation ralentirait considérablement le trafic car un chiffrement asymétrique consomme beaucoup de ressources de calcul, contrairement au chiffrement symétrique.
+    """
+    )
+    }}
+
+
+
+
+
+
+!!! example "{{ exercice() }}"
+    **Cryptographie RSA** presque à la main
+
+
+
+    ```python linenums='1'
+    import Crypto
+    import libnum
+    from Crypto.Util.number import bytes_to_long, long_to_bytes
+    from Crypto.Random import get_random_bytes 
+
+    bits = 256
+
+    p = ...
+    q = ...
+
+    n = ...
+    phi = ...
+
+    e = 65537  # très souvent choisi comme exposant de chiffrement
+    d = ...  # on calcule l'inverse de e modulo phi
+
+
+    def encipher(msg):
+        M = bytes_to_long(msg.encode('utf-8')) # on convertit le message msg en un nombre M
+        c = ... # M puissance e modulo n
+        return c
+
+    def decipher(c):
+        res = ...
+        return long_to_bytes(res) # on convertit le nombre res en une chaine de caractères
+
+
+    ```
+
+    - Pour générer un grand nombre premier de taille ```bits``` , on utilise la fonction ```Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)```.
+    - Pour inverser un nombre $x$ modulo $n$, on utilise la fonction    ```pow(x, -1, n)```.
+    - Pour calculer ```a``` à la puissance ```b``` modulo ```n```, on utilise ```pow(a, b, n)```.
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
         ```python linenums='1'
-        class Carte:
-            """Initialise Couleur (entre 1 a 4), et Valeur (entre 1 a 13)"""
-            def __init__(self, c, v):
-                self.Couleur = c
-                self.Valeur = v
+        import Crypto
+        from Crypto.Util.number import bytes_to_long, long_to_bytes
+        from Crypto.Random import get_random_bytes 
 
-            """Renvoie le nom de la Carte As, 2, ... 10, 
-            Valet, Dame, Roi"""
-            def get_nom(self):
-                if ( self.Valeur > 1 and self.Valeur < 11):
-                    return str( self.Valeur)
-                elif self.Valeur == 11:
-                    return "Valet"
-                elif self.Valeur == 12:
-                    return "Dame"
-                elif self.Valeur == 13:
-                    return "Roi"
-                else:
-                    return "As"
+        bits = 256
 
-            """Renvoie la couleur de la Carte (parmi pique, coeur, carreau, trefle"""
-            def get_couleur(self):
-                return ['pique', 'coeur', 'carreau', 'trefle' ][self.Couleur - 1]
+        p = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
+        q = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
 
-        class Paquet_de_carte:
-            def __init__(self):
-                self.contenu = []
+        n = p * q
+        phi = (p - 1) * (q - 1)
 
-            """Remplit le paquet de cartes"""
-            def remplir(self):
-                self.contenu = [ Carte(couleur, valeur) for couleur in range(1, 5) for valeur in range( 1, 14)]
+        e = 65537  # 65537 est un nombre qui sera (normalement) premier avec phi
+        d = pow(e, -1, phi)  # on calcule l'inverse de e modulo phi
 
-            """Renvoie la Carte qui se trouve à la position donnee"""
-            def get_carte_at(self, pos):
-                if 0 <= pos < len(self.contenu) :
-                    return self.contenu[pos]
+
+        def encipher(msg):
+            M = bytes_to_long(msg.encode('utf-8'))
+            c = pow(M, e, n) # M puissance e modulo n
+            return c
+
+        def decipher(c):
+            res = pow(c, d, n)
+            return long_to_bytes(res)
+
+
+
+        ```        
+    """
+    )
+    }}
+
+
+!!! example "{{ exercice() }}"
+
+    En vous servant du code précédent, déchiffrez le message ```58152918114477529438769495136495430966050302170947748011925859233600631318929939319619808279389222131229963717435870597641010567365311762267359794338657867540621133550787677728203831932548041236152866441194127191404729294628415184239755221703677388875259927092794165578604353985011899152968982365630138088486380827379488939561996226754182```  sachant que :
+
+    - $e$ vaut 65537.
+    - $p$ et $q$ sont respectivement les 13èmes et 14èmes nombres de Mersenne.
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction\" 
+        ```python linenums='1'
+        import Crypto
+        from Crypto.Util.number import bytes_to_long, long_to_bytes
+        from Crypto.Random import get_random_bytes 
+
+
+        p = 2**521 - 1 # 13ème nombre de Mersenne
+        q = 2**607 - 1 # 14ème nombre de Mersenne
+
+
+        n = p * q
+        phi = (p - 1) * (q - 1)
+
+        e = 65537  # 65537 est un nombre premier, donc forcément premier avec phi
+        d = pow(e, -1, phi)  # on calcule l'inverse de e modulo phi
+
+        c = 58152918114477529438769495136495430966050302170947748011925859233600631318929939319619808279389222131229963717435870597641010567365311762267359794338657867540621133550787677728203831932548041236152866441194127191404729294628415184239755221703677388875259927092794165578604353985011899152968982365630138088486380827379488939561996226754182
+
+        def decipher(c):
+            res = pow(c, d, n)
+            return long_to_bytes(res)
+        ```        
+    """
+    )
+    }}
+
+
+
+!!! example "{{ exercice() }}"
+    **module RSA** dans les règles de l'art
+
+
+
+    ```python
+    from Crypto.PublicKey import RSA
+    from Crypto.Cipher import PKCS1_OAEP
+    import binascii
+
+    keyPair = RSA.generate(1024)
+
+    pubKey = keyPair.publickey()
+
+    pubKeyPEM = pubKey.exportKey()
+
+    privKeyPEM = keyPair.exportKey()
+
+
+    msg = b'vive la crypto en NSI !'
+    encryptor = PKCS1_OAEP.new(pubKey)
+    encrypted = encryptor.encrypt(msg)
+    print("Encrypted:", binascii.hexlify(encrypted))
+
+
+    decryptor = PKCS1_OAEP.new(keyPair)
+    decrypted = decryptor.decrypt(encrypted)
+    print('Decrypted:', decrypted)
+    ```
+
+!!! example "{{ exercice() }} <i id="ex3J1PO2025"></i>"
+    Exercice 3 du sujet [Polynésie J1 2025](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2025/25-NSIJ1PO1.pdf){. target="_blank"}
+
+    ```python linenums='1'
+    from random import randint
+
+    def gen_mdp(longueur, cont_min, cont_maj, cont_spe):
+        # Pour qu'un mot de passe soit non vide, il doit
+        # pouvoir contenir des minuscules ou des majuscules
+        # ou des caractères spéciaux.
+        assert (cont_min or cont_maj or cont_spe)
+        minuscules = [chr(i) for i in ...]
+        majuscules = [...]
+        caracteres_speciaux = ... + ...
+        jeu_caracteres = []
+        if cont_min:
+            ...
+        ...
+            ...
+        ...
+            ...
+        mot_de_passe = ''
+        n = len(jeu_caracteres)
+        for i in range(longueur):
+            mot_de_passe = ...
+        return mot_de_passe
+    ```
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1\"
+        ```python
+        gen_mdp(8, True, True, False)
+        ``` 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2\"
+        ```python linenums='8'
+        minuscules = [chr(i) for i in range(97, 123)]
+        majuscules = [chr(i) for i in range(65, 91)]
+        caracteres_speciaux = [chr(i) for i in range(33, 48)] + [chr(i) for i in range(58, 65)]
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3\"
+        ```python linenums='12'
+        if cont_min:
+            jeu_caracteres += minuscules
+        if cont_maj:
+            jeu_caracteres += majuscules
+        if cont_spe:
+            jeu_caracteres += caracteres_speciaux
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4\"
+        ```python linenums='1'
+        from random import randint
+
+        def gen_mdp(longueur, cont_min, cont_maj, cont_spe):
+            # Pour qu'un mot de passe soit non vide, il doit
+            # pouvoir contenir des minuscules ou des majuscules
+            # ou des caractères spéciaux.
+            assert (cont_min or cont_maj or cont_spe)
+            minuscules = [chr(i) for i in range(97, 123)]
+            majuscules = [chr(i) for i in range(65, 91)]
+            caracteres_speciaux = [chr(i) for i in range(33, 48)] + [chr(i) for i in range(58, 65)]
+            jeu_caracteres = []
+            if cont_min:
+                jeu_caracteres += minuscules
+            if cont_maj:
+                jeu_caracteres += majuscules
+            if cont_spe:
+                jeu_caracteres += caracteres_speciaux
+            mot_de_passe = ''
+            n = len(jeu_caracteres)
+            for i in range(longueur):
+                mot_de_passe = mot_de_passe + jeu_caracteres[randint(0, n-1)]
+            return mot_de_passe
 
         ```
--->
+        
+    """
+    )
+    }}
 
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q5\"
+        Comme on utilise une fonction aléatoire, rien ne garantit qu'on aura un caractère spécial ou une lettre minuscule.
+        
+    """
+    )
+    }}
+    
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q6\"
+        Le principe d'une clé primaire est de référence de manière unique chaque enregistrement. Si l'attribut ```mot_de_passe``` est déclaré clé primaire de la table ```compte```, il est alors impossible d'avoir le même mot de passe pour deux sites différents.
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q7\"
+        ```sql
+        SELECT url
+        FROM site
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q8\"
+        ```sql
+        UPDATE compte
+        SET mot_de_passe = '@rDfohpj!&'
+        WHERE mot_de_passe = 'yhTS?d@UTJe'
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q9\"
+        ```sql
+        SELECT id_site
+        FROM compte
+        WHERE renouvellement < '2024-03-20'
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q10\"
+        Ce format de date permet de faire des comparaisons entre les dates, puisqu'on commence par l'année, puis le mois, puis le jour. 
+        
+        Avec le format JJ-MM-AAAA, le fait de commencer par le jour rend la date '01-02-2023' inférieure à la date '13-06-2022', ce qui est illogique.
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q11\"
+        ```sql
+        SELECT compte.mot_de_passe, compte.utilisateur
+        FROM compte
+        JOIN site ON site.id = compte.id_site
+        WHERE site.nom_site = 'Votremailp'
+        ORDER BY compte.renouvellement
+        ```
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q12\"
+        Utiliser deux tables permet à Alice de ne pas mélanger les informations : une table pour la gestion de ses mots de passe, une table pour les sites.
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q13\"
+        ```chiffrement('gestionnaire.db', '../Perso/secret.db', '../Perso/cle')``` 
+        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q14\"
+        
+        - ```A3``` correspond au nombre décimal 163, donc au nombre binaire ```10100011```.  
+        - ```59``` correspond au nombre décimal 89, donc au nombre binaire ```1011001```.
+        - L'opération XOR entre les nombres binaires ```10100011``` et ```1011001``` donne 250, qui s'écrit ```FA``` en hexadécimal.
+    """
+    )
+    }}
+
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q15\"
+        |`a`| `b` | `a XOR b`|`(a XOR b) XOR b`|
+        |:--:|:-:|:--:|:--:|
+        |0|0|0|0|
+        |1|0|1|1|
+        |0|1|1|0|
+        |1|1|0|1|
+
+        La colonne ```(a XOR b) XOR b``` est identique la colonne ```a```.  
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q16\"
+        L'opération XOR permet de chiffrer et de déchiffrer avec la même clé, ce qui est caractéristique d'un chiffrement symétrique.        
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q17\"
+        Le fichier ```secret.db``` étant directement accessible en lecture pour tout le monde, il est donc à la merci d'un attaquant. Alice devrait restreindre les droits en lecture de son fichier pour ne le rendre lisible que par elle-même.       
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q18\"
+
+        - Alice a des mots de passe différents pour chaque site, elle respecte donc la recommandation P1.
+        - Ses mots de passe sont bien de longueur minimale 8 et contiennent des minuscules, des majuscules, des chiffres et des caractères spéciaux. Elle respecte donc la recommandation P2.
+        - On ne sait pas si Alice communique ou non ses mots de passe à des tiers. On ne peut donc rien dire sur la recommandation P3.
+        - Alice n'utilise pas de gestionnaire de mots de passe : elle ne respecte donc pas la recommandation P4.
+    """
+    )
+    }}
+
+!!! example "{{ exercice() }} <i id="ex3J2ME2025"></i>"
+    Exercice 3 du sujet [Métropole J2 2025](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q1\" 
+        Prenons comme exemple la deuxième lettre, I. Son rang est 8. La lettre du masque qui lui correspond est Y, qui est de rang 24.
+
+        $8+24=32=6\%26$
+
+        On prend donc la lettre de rang 6, qui est G.
+
+        Si on fait de même pour les autres lettres, on trouve PGRDX.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q2\" 
+        ```python
+        def indice(L, element):
+            for i in range(len(L)):
+                if L[i] == element:
+                    return i
+        ```
+        ou bien
+        ```python
+        def indice(L, element):
+            return L.index(element)
+        ```
+
+    """
+    )
+    }}
+    
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q3\" 
+        ```python
+        def lettres_vers_indices(chaine):
+            lst = []
+            for car in chaine:
+                lst.append(indice(alphabet, car))
+            return lst
+        ```
+    """
+    )
+    }}
+
+    ```python
+    alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+    def indices_vers_lettres(lst):
+        s = ''
+        for k in lst:
+            s += alphabet[k]
+        return s
+
+    def chiffrement(msg, cle):
+        assert len(cle) >= len(msg), 'impossible'
+        indices_msg = lettres_vers_indices(msg)
+        indices_cle = lettres_vers_indices(cle)
+        n = len(msg)
+        indices_msg_chiffre = []
+        for k in range(n):
+
+            ind = ...
+            if ind >= 26:
+                ind = ...
+            indices_msg_chiffre.append(ind)
+        msg_chiffre = indices_vers_lettres(...)
+        return msg_chiffre
+    ```
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q4\" 
+        ```python
+        def chiffrement(msg, cle):
+            assert len(cle) >= len(msg), 'impossible'
+            indices_msg = lettres_vers_indices(msg)
+            indices_cle = lettres_vers_indices(cle)
+            n = len(msg)
+            indices_msg_chiffre = []
+            for k in range(n):
+                ind = indices_msg[k] + indices_cle[k]
+                if ind >= 26:
+                    ind = ind % 26
+                indices_msg_chiffre.append(ind)
+            msg_chiffre = indices_vers_lettres(indices_msg_chiffre)
+            return msg_chiffre
+        ```
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q5\" 
+        La longueur de la clé est plus petite que le message à chiffrer, donc la fonction va s'arrêter au premier ```assert``` et renvoyer ```impossible```.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q6\" 
+        On obtient le message ```BRAVO```.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q7\" 
+        Prenons par exemple l'avant-dernière lettre du message chiffré, D. Elle a été chiffrée avec la lettre I.
+
+        D a pour rang 3, I a pour rang 8. On fait 3 - 8, qui donne -5. On ajoute 26 pour finalement trouver 21. La lettre de rang 21 est la lettre V.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q8\" 
+        ```python
+        def dechiffrement(msg, cle):
+            assert len(cle) >= len(msg), 'impossible'
+            indices_msg = lettres_vers_indices(msg)
+            indices_cle = lettres_vers_indices(cle)
+            n = len(msg)
+            indices_msg_chiffre = []
+            for k in range(n):
+                ind = indices_msg[k] - indices_cle[k]
+                if ind < 0:
+                    ind = ind + 26
+                indices_msg_chiffre.append(ind)
+            msg_chiffre = indices_vers_lettres(indices_msg_chiffre)
+            return msg_chiffre
+
+        ```
+    """
+    )
+    }}
+
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q9\" 
+        Dans un chiffrement symétrique, c'est la même clé qui sert à chiffrer et à déchiffrer.
+
+        Dans un chiffrement asymétrique, il y a 2 clés, une clé publique et une clé privée.
+        Si Bob veut communiquer avec Alice, il va chiffrer son message avec la clé publique d'Alice. Seule Alice pourra le déchiffrer à l'aide de sa clé privée. 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q10\" 
+        Il suffit à Bob d'appliquer sa clé privée sur le message envoyé par Alice. 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q11\" 
+        Comme tout le monde connaît la clé publique de Bob, rien ne garantit qu'Alice est l'expéditrice du message.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q12\" 
+        Le protocole HTTPS fonctionne en 2 temps.
+
+        Dans un premier temps, le client et le serveur vont échanger une clé en utilisant un chiffrement asymétrique (souvent RSA).
+
+        Dans un second temps, ils vont communiquer en chiffrement symétrique (souvent AES) avec la clé échangée au préalable.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q13\" 
+        Le chiffrement asymétrique demande beaucoup de ressources, il n'est donc pas adapté aux échanges rapides. 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q14\" 
+        Marc s'est trompé dans le troisième octet de l'adresse IP. Il aurait dû écrire ```ping 192.168.110.115```. 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q15\" 
+        Le masque en binaire ```11111111.11111111.11111111.11100000``` a pour représentation décimale ```255.255.255.224```. (on convertit chaque octet en décimal) 
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q16\" 
+        Il y a 5 bits à zéro dans le masque, ce qui donne 32 adresses disponibles. Si on enlève la première (adresse du réseau) et la dernière (adresse de broadcast), il reste 30 adresses disponibles.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q17\" 
+        134 s'écrit ```10000110``` en binaire.
+    """
+    )
+    }}
+
+    {{
+    correction(True,
+    """
+    ??? success \"Correction Q18\" 
+        L'adresse IP ```192.168.110.134``` donne une adresse de réseau de ```192.168.110.128```.
+
+        L'adresse IP ```192.168.110.115``` (commande n°1) donne une adresse de réseau de ```192.168.110.96```.
+
+        L'adresse IP ```192.168.110.153``` (commande n°2) donne une adresse de réseau de ```192.168.110.128```.
+
+        Seule le ping de la commande n°2 peut donc aboutir.
+    """
+    )
+    }}
