@@ -15,8 +15,8 @@
 ## *Progression*
 
 !!! note "*Thèmes en cours d'étude*"
-    - Révisions SQL / Cryptographie  : [Exercice 3 Polynésie J1 2025](T5_Architecture_materielle/5.4_Cryptographie/exercices/#ex3J1PO2025)  
-    - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024)
+    - Révisions SQL / Cryptographie  : [Exercice 3 Polynésie J1 2025](T5_Architecture_materielle/5.4_Cryptographie/exercices/#ex3J1PO2025){. target="_blank"}  
+    - Révisions POO : [Exercice 3 Amérique du Nord J2 2024](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/#ex3J2AN2024){. target="_blank"}
     - Exercice sur les Listes/Piles/Files : [Exercice 3 du sujet Polynésie J2 2025](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/#ex3J2PO2025){. target="_blank"}
     - Exercice sur les arbres : [Exercice 3 du sujet Amérique du Nord J1 2022](T1_Structures_de_donnees/1.3_Arbres/exercices/#ex3J1AN2022){. target="_blank"}
     - Exercice sur les listes/POO : [Exercice 1 du sujet Amérique du Nord J2 2022](T1_Structures_de_donnees/1.1_Listes_Piles_Files/exercices/#ex1J2AN2022){. target="_blank"}
@@ -67,7 +67,7 @@
     - [TD récursivité](T2_Programmation/2.2_Recursivite/td/)
     - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
     - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
-    - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices/) 
+    - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/exercices/) 
     - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
     - [Révisions](T2_Programmation/2.0_Revisions/revisions/)
 
