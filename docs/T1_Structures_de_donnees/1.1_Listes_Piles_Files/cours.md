@@ -171,9 +171,9 @@ Mais plus précisément, on a :
 !!! example "{{ exercice() }}"
     === "Énoncé"
         Retrouvez comment accéder aux éléments 3, 5 et 1.
-<!--
+
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         >>> lst.contenu
@@ -185,7 +185,7 @@ Mais plus précisément, on a :
         ``` 
         "
         ) }}
--->
+
 
 
 On pourra remarquer que l'interface proposée à l'utilisateur n'est pas des plus pratiques...
@@ -240,9 +240,9 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
         10. lst.renvoie_tete()
         11. lst.est_vide()    
         ```
-<!--        
+        
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         1. lst = Liste()      # lst = None
@@ -259,7 +259,7 @@ Imaginons que nous possédons une interface offrant les fonctionnalités suivant
         ```
         "
         ) }}
--->
+
 
 ## 3. Les piles
 
@@ -297,9 +297,9 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
         9. p.depile() 
         10. p.est_vide() 
         ```
-<!--
+
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         1. p = Pile()  # p = None
@@ -316,7 +316,7 @@ Pour être utilisée, l'interface d'une pile doit permettre a minima :
         ```
         "
         ) }}
--->
+
 
 ### 3.2 Implémentation(s) d'une pile
 
@@ -336,9 +336,9 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
         
         Le type ```list``` de Python est parfaitement adapté. Des renseignements intéressants à son sujet peuvent être trouvés [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists).
 
-<!--
+
     === "Correction :heart:"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         class Pile:
@@ -383,7 +383,7 @@ L'objectif est de créer une classe ```Pile```. L'instruction  ```Pile()```  cr�
         
         "
         ) }}
--->
+
 
 
 
@@ -404,9 +404,9 @@ class Cellule :
     === "Énoncé"
         À l'aide cette classe, re-créer une classe ```Pile``` disposant exactement de la même interface que dans l'exercice précédent.
 
-<!--
+
     === "Correction :heart:"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         class Pile:
@@ -445,7 +445,7 @@ class Cellule :
         ```
         "
         ) }}
--->
+
 
 
 
@@ -474,9 +474,9 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
         >>> n.back()
         page quittée : google.fr
         ```
-<!--
+
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         class Nav:
@@ -493,7 +493,7 @@ pour l'utilisateur, les interfaces du 3.2.1 et 3.2.2 sont strictement identiques
         ```      
         "
         ) }}
--->
+
 
 
 
@@ -533,9 +533,9 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
         10. f.defile()
         11. f.est_vide() 
         ```
-<!--
+
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python
         1. f est vide
@@ -552,7 +552,7 @@ La représentation la plus courante d'une file se fait horizontalement, en enfil
         ```
         "
         ) }}
--->
+
 
 
 ### 4.2 Implémentation d'une file
@@ -569,9 +569,9 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
         Créer la classe ci-dessus. Là encore, le type ```list```  de Python est peut être utilisé.
         
         Penser à aller voir [ici](https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists) les méthodes des objets de types ```list```, notamment la méthode ```insert```.
-<!--
+
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         class File:
@@ -611,7 +611,7 @@ L'objectif est de créer une classe ```File```, disposant des méthodes suivante
 
         "
         ) }}
--->
+
 
 **Remarque :**  
 Notre implémentation répond parfaitement à l'interface qui était demandée. Mais si le «cahier des charges» obligeait à ce que les opérations ```enfile()``` et ```defile()``` aient lieu en temps constant (en $O(1)$), notre implémentation ne conviendrait pas.  
@@ -636,7 +636,7 @@ L'idée est la suivante : on crée une pile d'entrée et une pile de sortie.
     === "Énoncé"
         Implémentez une file avec 2 piles
 
-<!--
+
 ```python linenums='1'
 # il est impératif de comprendre qu'on peut choisir l'implémentation
 # de la classe Pile qu'on préfère parmi les deux traitées plus haut.
@@ -711,7 +711,7 @@ class File:
 >>> f.defile()
 5
 ```
--->
+
 
 
 ---
@@ -720,6 +720,4 @@ class File:
 - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
 - Cours du DIU-EIL, David RENAULT, Université de Bordeaux.
 
-
----
 

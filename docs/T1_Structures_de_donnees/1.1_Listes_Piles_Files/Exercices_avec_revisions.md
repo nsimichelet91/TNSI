@@ -5,7 +5,7 @@
     Exercice 5 du sujet [Centres Étrangers 1 - 2021](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         ![image](data/ex1Q1.png){: .center width=50%}        
@@ -14,7 +14,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ![image](data/ex1Q2.png){: .center width=50%}    
@@ -23,7 +23,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -61,7 +61,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         **Q4a.** On va vider la pile ```P``` dans une pile ```Q``` tout en comptant le nombre d'éléments dépilés dans une variable ```t```. 
@@ -95,7 +95,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         ![image](data/ex2Q1.png){: .center width=70%}
@@ -105,7 +105,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\" 
         La variable ```temp``` contient la valeur 25.    
@@ -115,7 +115,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\" 
         ```p1``` est identique, elle contient toujours les valeurs 25, 3 et 7. 
@@ -126,7 +126,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -140,7 +140,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -168,7 +168,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         ```python linenums='1'
@@ -182,7 +182,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         L'affichage produit est ```7, 5, 5, 2```.        
@@ -191,7 +191,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a.\" 
         - Cas n°1 : ```3, 2``` 
@@ -204,7 +204,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b\" 
         La fonction ```mystere``` permet d'obtenir la pile retournée jusqu'à un élément particulier (s'il existe).        
@@ -213,7 +213,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -227,7 +227,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -253,7 +253,7 @@
     Exercice 5 du sujet [Amérique du Nord J1 - 2021](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2021/21_Am%C3%A9rique_du_Nord.pdf){. target="blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         Le contenu de la pile P sera 
@@ -273,7 +273,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         ```python linenums='1'
@@ -293,7 +293,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
 
@@ -315,7 +315,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -337,7 +337,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -360,7 +360,7 @@
     Exercice 2 du sujet [Centres Étrangers J1 - 2022](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         Il faut écrire l'instruction : 
@@ -373,7 +373,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1'
@@ -387,7 +387,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -407,7 +407,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -433,7 +433,7 @@
     [Jeu du Simon](https://www.memozor.com/fr/jeux-du-simon/jeu-du-simon){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         ```python linenums='1' hl_lines='3 4'
@@ -448,7 +448,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ```python
@@ -461,7 +461,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1' hl_lines='5 6 8-10'
@@ -481,7 +481,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.a.\" 
         ```python linenums='1' hl_lines='2 6 7 8 10-12'
@@ -504,7 +504,7 @@
 
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.b.\" 
         Question bizarre...
@@ -796,7 +796,7 @@
                 self.empile(p_temp.depile())
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\" 
         ![image](data/sept2024Q1.png){: .center .autolight} 
@@ -817,7 +817,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1'
@@ -844,7 +844,7 @@
         return m1, m2
     ```
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -862,7 +862,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\" 
         ```python linenums='1'
@@ -878,7 +878,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.\" 
         ```python linenums='1'
@@ -925,7 +925,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6.\" 
         ```python linenums='1'
@@ -952,7 +952,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7.\" 
         ```python linenums='1'
@@ -976,7 +976,7 @@
     Exercice 2 du sujet [Métropole J1 - 2025](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2025/25_NSIJ1ME1.pdf){. target="blank"} 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.\"
         ```python
@@ -990,7 +990,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\"
         ```python
@@ -1004,7 +1004,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\"
         ```python
@@ -1018,7 +1018,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.\"
         Après le rajout de la tâche n°6 et de la tâche n°7 :
@@ -1030,7 +1030,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5.\"
         ```f.defiler()[0]``` renvoie ```<t3>```.
@@ -1043,7 +1043,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6.\"
         ```f.examiner()[1]``` renvoie ```4```.
@@ -1058,7 +1058,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7.\"
         ```python linenums='1'
@@ -1077,7 +1077,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8.\"
         On peut dire que le nombre d'opérations est directement proportionnel en ```m```, donc que la complexité de cette fonction est linéaire.
@@ -1086,7 +1086,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9.\"
         ```3 7 3 3 3 1 2 1 2 2 6 6 6 4 5 4 5``` 
@@ -1095,7 +1095,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10.\"
         ```python linenums='1'
@@ -1118,7 +1118,7 @@
     Exercice 1 du sujet [Amérique du Nord J2 - 2022](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2022/2022_Amerique_Nord_J2.pdf){. target="blank"} 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a\"
         ```python
@@ -1135,7 +1135,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b\"
         L'attribut ```temps_tot``` de ```c1``` vaut 87.67 + 12, soit 99.67.
@@ -1144,7 +1144,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.c\"
         L'instruction permettant d'accéder à l'attribut ```temps_tot``` de ```c1``` est ```c1.temps_tot```.
@@ -1154,7 +1154,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.a\"
         ```python
@@ -1171,7 +1171,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b\"
         ```python
@@ -1182,7 +1182,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\"
         ```python
@@ -1203,7 +1203,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\"
         ![image](data/ex1ANJ12022.png){: .center .autolight}
@@ -1216,7 +1216,7 @@
     Exercice 3 du sujet [Polynésie J2 - 2025](https://nsimichelet91.github.io/TNSI/correction(True/T6_Annales/data/2025/25-NSIJ2PO1.pdf){. target="blank"} 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\"
         Une Pile est une structure de donnée dans laquelle le **dernier** élément à avoir été mis dans la Pile sera le premier à en sortir.
@@ -1225,7 +1225,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\"
         Une File est une structure de donnée dans laquelle le **premier** élément à avoir été mis dans la File sera le premier à en sortir.
@@ -1234,7 +1234,7 @@
     }}
 
     {{
-    correction(True, 
+    correction(False, 
     """
     ??? success \"Correction Q3\"
         Plusieurs mots peuvent être reliés entre eux. Un graphe parait donc adapté. Il n'y a pas de notion de sens dans la relation entre deux mots, donc le graphe est non orienté.
@@ -1243,7 +1243,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\"
         ![image](data/exo3_PO_1.png){: .center .autolight}
@@ -1261,7 +1261,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\"
         ```python
@@ -1286,7 +1286,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\"
         La liste ```tab``` contient toutes les lettres de ```mot1```. Dans la boucle de la ligne 3, on va parcourir toutes les lettre de ```mot2``` et tester si elles sont dans ```tab```, donc dans ```mot1```. Si c'est le cas, on l'enlève de ```tab```.
@@ -1310,7 +1310,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\"
         ```python
@@ -1327,7 +1327,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\"
         - 3ème tour :
@@ -1363,7 +1363,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\"
         ```python
@@ -1390,7 +1390,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\"
         ```python
@@ -1407,7 +1407,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\"
         ```python

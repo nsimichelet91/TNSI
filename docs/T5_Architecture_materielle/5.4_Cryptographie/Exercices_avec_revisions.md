@@ -11,7 +11,7 @@
     Décoder la phrase ```RYTVJKGCLJWRTZCVRMVTLEDFULCVHLZWRZKKFLKRMFKIVGCRTV```, sachant qu'elle a été chiffrée par décalage (*shift* en anglais...)
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -58,7 +58,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -88,7 +88,7 @@
         L'instruction ```gcd``` du module ```math``` permet de calculer le PGCD de deux nombres.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -120,7 +120,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         On obtient le mot PGRDX. 
@@ -129,7 +129,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -143,7 +143,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python
@@ -182,7 +182,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         ```python
@@ -205,7 +205,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         On obtient AssertionError 'impossible' car la longueur de la clé est inférieure
@@ -215,7 +215,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         On obtient le mot BRAVO.
@@ -224,7 +224,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         Pour chaque caractère du message chiffré, on effectue la soustraction entre sa position dans l’alphabet et la position du caractère associé dans le masque. Si la valeur obtenue est strictement négative, on ajoute 26. On obtient finalement la
@@ -234,7 +234,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```python
@@ -260,7 +260,7 @@
     **Partie B**
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         Avec un chiffrement symétrique, la connaissance d'une seule et unique clé est requise pour chiffrer et déchiffrer le message. Dans un chiffrement asymétrique, la clé de déchiffrement est connue seulement du destinataire, alors que la clé de chiffrement est publique et distribuée à tous.
@@ -269,7 +269,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         Il suffit à Bob de déchiffer le message avec sa clé privée.
@@ -278,7 +278,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         Tout le monde a la clé publique de Bob, donc tout le monde peut écrire en se faisant passer pour Alice.
@@ -287,7 +287,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         Dans le protocole ```https```, une clé AES est générée par chiffrement asymétrique au tout début de la communication (TLS). Ensuite, le reste du flux est chiffré avec le chiffrement symétrique AES.
@@ -296,7 +296,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13\" 
         Utiliser un chiffrement asymétrique tout au long de la navigation ralentirait considérablement le trafic car un chiffrement asymétrique consomme beaucoup de ressources de calcul, contrairement au chiffrement symétrique.
@@ -349,7 +349,7 @@
     - Pour calculer ```a``` à la puissance ```b``` modulo ```n```, on utilise ```pow(a, b, n)```.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -394,7 +394,7 @@
     - $p$ et $q$ sont respectivement les 13èmes et 14èmes nombres de Mersenne.
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -484,7 +484,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\"
         ```python
@@ -496,7 +496,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\"
         ```python linenums='8'
@@ -510,7 +510,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\"
         ```python linenums='12'
@@ -527,7 +527,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\"
         ```python linenums='1'
@@ -561,7 +561,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\"
         Comme on utilise une fonction aléatoire, rien ne garantit qu'on aura un caractère spécial ou une lettre minuscule.
@@ -572,7 +572,7 @@
     
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\"
         Le principe d'une clé primaire est de référence de manière unique chaque enregistrement. Si l'attribut ```mot_de_passe``` est déclaré clé primaire de la table ```compte```, il est alors impossible d'avoir le même mot de passe pour deux sites différents.
@@ -582,7 +582,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\"
         ```sql
@@ -595,7 +595,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\"
         ```sql
@@ -609,7 +609,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\"
         ```sql
@@ -623,7 +623,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\"
         Ce format de date permet de faire des comparaisons entre les dates, puisqu'on commence par l'année, puis le mois, puis le jour. 
@@ -635,7 +635,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\"
         ```sql
@@ -651,7 +651,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\"
         Utiliser deux tables permet à Alice de ne pas mélanger les informations : une table pour la gestion de ses mots de passe, une table pour les sites.
@@ -661,7 +661,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13\"
         ```chiffrement('gestionnaire.db', '../Perso/secret.db', '../Perso/cle')``` 
@@ -671,7 +671,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q14\"
         
@@ -685,7 +685,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q15\"
         |`a`| `b` | `a XOR b`|`(a XOR b) XOR b`|
@@ -701,7 +701,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q16\"
         L'opération XOR permet de chiffrer et de déchiffrer avec la même clé, ce qui est caractéristique d'un chiffrement symétrique.        
@@ -710,7 +710,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q17\"
         Le fichier ```secret.db``` étant directement accessible en lecture pour tout le monde, il est donc à la merci d'un attaquant. Alice devrait restreindre les droits en lecture de son fichier pour ne le rendre lisible que par elle-même.       
@@ -719,7 +719,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q18\"
 
@@ -735,7 +735,7 @@
     Exercice 3 du sujet [Métropole J2 2025](https://nsimichelet91.github.io/TNSI/T6_Annales/data/2025/25_NSIJ2ME1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Prenons comme exemple la deuxième lettre, I. Son rang est 8. La lettre du masque qui lui correspond est Y, qui est de rang 24.
@@ -750,7 +750,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -770,7 +770,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python
@@ -809,7 +809,7 @@
     ```
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         ```python
@@ -832,7 +832,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         La longueur de la clé est plus petite que le message à chiffrer, donc la fonction va s'arrêter au premier ```assert``` et renvoyer ```impossible```.
@@ -841,7 +841,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         On obtient le message ```BRAVO```.
@@ -850,7 +850,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         Prenons par exemple l'avant-dernière lettre du message chiffré, D. Elle a été chiffrée avec la lettre I.
@@ -861,7 +861,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```python
@@ -886,7 +886,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         Dans un chiffrement symétrique, c'est la même clé qui sert à chiffrer et à déchiffrer.
@@ -898,7 +898,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         Il suffit à Bob d'appliquer sa clé privée sur le message envoyé par Alice. 
@@ -907,7 +907,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         Comme tout le monde connaît la clé publique de Bob, rien ne garantit qu'Alice est l'expéditrice du message.
@@ -916,7 +916,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         Le protocole HTTPS fonctionne en 2 temps.
@@ -929,7 +929,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13\" 
         Le chiffrement asymétrique demande beaucoup de ressources, il n'est donc pas adapté aux échanges rapides. 
@@ -938,7 +938,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q14\" 
         Marc s'est trompé dans le troisième octet de l'adresse IP. Il aurait dû écrire ```ping 192.168.110.115```. 
@@ -947,7 +947,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q15\" 
         Le masque en binaire ```11111111.11111111.11111111.11100000``` a pour représentation décimale ```255.255.255.224```. (on convertit chaque octet en décimal) 
@@ -956,7 +956,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q16\" 
         Il y a 5 bits à zéro dans le masque, ce qui donne 32 adresses disponibles. Si on enlève la première (adresse du réseau) et la dernière (adresse de broadcast), il reste 30 adresses disponibles.
@@ -965,7 +965,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q17\" 
         134 s'écrit ```10000110``` en binaire.
@@ -974,7 +974,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q18\" 
         L'adresse IP ```192.168.110.134``` donne une adresse de réseau de ```192.168.110.128```.

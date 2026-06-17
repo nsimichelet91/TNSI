@@ -64,7 +64,7 @@ Pour illustrer les problématiques liées à l'appariement, nous allons nous pla
     ![image](data/stable.png){: .center}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         Le couple Christopher-Evelyn est un couple instable.

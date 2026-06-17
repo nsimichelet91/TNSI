@@ -4,7 +4,7 @@
 
 !!! example "{{ exercice() }}"
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Le fait que la liste des prédécesseurs de s2 soit vide s'explique par le fait qu'aucun site ne pointe vers s2.
@@ -13,7 +13,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -25,7 +25,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         `s2.successeurs[1][1]` vaut 5 et signifie que s2 a 5 liens qui pointent vers s3.
@@ -34,7 +34,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         Le site 1 a une popularité de 6. En effet le site 2 apporte 4 liens et le site 4 apporte 2 liens.
@@ -43,7 +43,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         ```python
@@ -58,7 +58,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         Le fait d'enlever un élément en tête de liste et d'en rajouter en fin de liste est caractéristique d'une file. 
@@ -67,7 +67,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         Ce parcours est un parcours en largeur.
@@ -76,7 +76,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         `parcoursGraphe(s1)` renverra la liste `[s1, s3, s4, s5]`.
@@ -85,7 +85,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         ```python
@@ -103,7 +103,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         La ligne de code `lePlusPopulaire(parcoursGraphe(s1)).nom` renvoie `'site3'` car le site 3 est le plus populaire parmi tous les sites visités lors du parcours en largeur depuis le site1. 
@@ -112,7 +112,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         Ce code n'est pas adapté à un très grand nombre de sites car le graphe deviendrait vite très lourd à manipuler, notamment pour le parcours en largeur.
@@ -123,7 +123,7 @@
 
 !!! example "{{ exercice() }}"
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         Un SGBD assure l'intégrité de la base de données et évite (par exemple) la redondance des données. 
@@ -132,7 +132,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         Suivant le protocole RIP, la route suivie serait Bureau n°1 - B - E - A - Prestataire. 
@@ -141,7 +141,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         Suivant le protocole OSPF, les deux routes possibles seraient Bureau n°2 - C - I - G - F - D - A - Prestataire et Bureau n°2 - C - I - H - F - D - A - Prestataire, pour un coût équivalent de 2,3.
@@ -150,7 +150,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         L'attribut `id_client` a été choisi comme clé primaire de la relation `clients` car il authentifie de manière unique chaque client.    
@@ -159,7 +159,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         Une clé étrangère est une clé primaire d'une autre table. 
@@ -174,7 +174,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         Le nom des escales 'Puerto sebo', 'Puerto kifecho', 'Puerto kifebo' et 'Puerto repo' n'existent pas dans la table `villes`. Or cela est nécessaire car ces attributs sont des clés étrangères. Il faut donc d'abord rentrer ces villes dans la table `villes` avant d'exécuter le code donné.
@@ -183,7 +183,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         La première requête sert à récupérer l'identifiant de Jean Barc, qui est sans doute 1243. La deuxième requête sert à récupérer les identifiants de toutes les réservations de Jean Barc.    
@@ -193,7 +193,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ```sql
@@ -207,7 +207,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         ```sql
@@ -220,7 +220,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         ```sql
@@ -236,7 +236,7 @@
 !!! example "{{ exercice() }}"
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         ```python
@@ -247,7 +247,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python
@@ -259,7 +259,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         ```python
@@ -270,7 +270,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         ```python
@@ -286,7 +286,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         ```python
@@ -297,7 +297,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         `convert('4h36')` va renvoyer le nombre `4.6` 
@@ -307,7 +307,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
         ```python
@@ -323,7 +323,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         ![image](data/exo3.png){: .center .autolight}
@@ -333,7 +333,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q9\" 
         C'est un parcours infixe.
@@ -342,7 +342,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q10\" 
         La fonction `inserer` est récursive car elle s'appelle elle-même dans sa propre définition.    
@@ -351,7 +351,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q11\" 
         ```python
@@ -372,7 +372,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q12\" 
         ```python
@@ -387,7 +387,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q13\" 
         ![image](data/exo3b.png){: .center .autolight}
@@ -397,7 +397,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q14\" 
         ```python

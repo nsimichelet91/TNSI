@@ -7,7 +7,7 @@
     === "Énoncé"
         Écrire une fonction récursive ```puissance(x,n)``` qui calcule le nombre $x^n$.
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def puissance(x, n):
@@ -31,7 +31,7 @@
 
         Écrire un algorithme récursif ```pgcd(a,b)```.
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def pgcd(a, b):
@@ -55,7 +55,7 @@
         2. On appelle «temps de vol» le nombre d'étapes nécessaires avant de retomber sur 1. Modifier la fonction précédente afin qu'elle affiche le temps de vol pour tout nombre ```n```.
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         1.
         ```python linenums='1'
@@ -93,7 +93,7 @@
         ![](data/carres_turtle.png){: .center width=40%}
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         from turtle import *
@@ -129,7 +129,7 @@
         - sinon $a^n=a \times (a \times a)^{(n-1)/2}$
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def puissance_mod(x,n):
@@ -162,7 +162,7 @@
         ``` 
 
     === "Correction"
-        {{ correction(True,
+        {{ correction(False,
         "
         ```python linenums='1'
         def recherche(lst,m):
@@ -313,7 +313,7 @@
     Exercice 4 du sujet [Amérique du Nord J1 2022](../../T6_Annales/data/2022/2022_Amerique_Nord_J1.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         Proposition 3        
@@ -322,7 +322,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         ```txt[0]``` vaut 'b'  
@@ -333,7 +333,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.\" 
         ```python linenums='1'
@@ -348,7 +348,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.\" 
         ```python linenums='1'
@@ -368,7 +368,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.a.\" 
         ```python linenums='1'
@@ -384,7 +384,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.b\" 
         'GATCGTCTAGCA' n'est pas un palindrome donc 'GATCGT' n'est pas palindromique.        
@@ -393,7 +393,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4.c\" 
         ```python linenums='1'
@@ -413,7 +413,7 @@
     Exercice 1 du sujet [Centres Étrangers J2 2022](../../T6_Annales/data/2022/2022_Centres_Etrangers_J2.pdf){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.a.\" 
         ```f(5)``` affichera :
@@ -428,7 +428,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1.b.\" 
         On dit que cette fonction est récursive car elle s'appelle elle-même à l'intérieur de sa propre définition.        
@@ -437,7 +437,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction  Q2.a.\" 
         ```python linenums='1'
@@ -452,7 +452,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.b.\" 
         La commande renvoie :
@@ -464,7 +464,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2.c.\" 
         La commande renvoie :
@@ -502,7 +502,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.a.\" 
         Comme ```n``` vaut 0, on est dans le cas de base et donc la commande renvoie ```[\"\"]```.
@@ -513,7 +513,7 @@
     }}
         
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.b.\" 
         ```produit('ab', 1) ``` renvoie  ```['a', 'b']```.        
@@ -522,7 +522,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3.c.\" 
         ```produit('ab', 2) ``` renvoie  ```['aa', 'ab', 'ba', 'bb']```.           
@@ -537,7 +537,7 @@
     Exercice 1 du [sujet Amérique du Nord J2 2024](https://glassus.github.io/terminale_nsi/T6_Annales/data/2024/24-NSIJ2AN1.pdf){. target="_blank"}    
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q1\" 
         ```python linenums='1'
@@ -551,7 +551,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q2\" 
         ```python linenums='1' hl_lines='6-8'
@@ -572,7 +572,7 @@
 
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q3\" 
         Cet algorithme est récursif car aux lignes 6, 7 et 8, la fonction s'appelle elle-même.
@@ -581,7 +581,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q4\" 
         ```k``` vaut ```(5 - 0 + 1) // 3```, donc ```k``` vaut 2. 
@@ -590,7 +590,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q5\" 
         - étape 1 : 3 appels
@@ -603,7 +603,7 @@
     }}
     
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q6\" 
         - case 1 : ```triStooge(A,1,3)``` 
@@ -614,7 +614,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q7\" 
 
@@ -631,7 +631,7 @@
     }}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction Q8\" 
         Nous connaissons (par exemple) le tri par sélection, dont l'ordre est en $n^2$. 

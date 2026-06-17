@@ -290,7 +290,7 @@ Ainsi, dans le cas où $n$ est pair, il suffit d'élever $a$ au carré (une seul
     ![image](data/carre.png){: .center width=50%}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python linenums='1'
@@ -368,7 +368,7 @@ On appelera ce mécanisme l'**interclassement**.
     :arrow_right: [Aide avec des codes à trous](../../){. target="_blank"}
 
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python
@@ -404,7 +404,7 @@ On appelera ce mécanisme l'**interclassement**.
     )
     }}
     {{
-    correction(True,
+    correction(False,
     """
     ??? success \"Correction\" 
         ```python

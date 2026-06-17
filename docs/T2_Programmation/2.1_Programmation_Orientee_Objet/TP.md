@@ -352,7 +352,7 @@ Créez cette classe et instanciez une balle.
 
 <!--
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
@@ -422,7 +422,7 @@ correction(True,
 L'idée est de stocker dans une liste ```sac_a_balles``` un nombre déterminé de balles... 
 <!--
 {{
-correction(True,
+correction(False,
 """
 ??? success \"Correction\" 
     ```python linenums='1'
