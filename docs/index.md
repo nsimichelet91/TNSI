@@ -1,7 +1,10 @@
+!!! abstract ":star: Actualités :star:"
+    - **Bonne rentrée à tous - Bienvenue en NSI !** 
+
 {#
 !!! abstract ":star: Actualités :star:"
     - **Journée porte ouverte samedi 28 mars 2026 : Bienvenue en NSI !** 
-#}
+
 !!! abstract ":star: :star: :star: Épreuve Pratique 2026 :star: :star: :star:"      
     - Les sujets ont été publiés, vous pouvez les retrouver sur [cette page](T6_6_Epreuve_pratique/BNS_2026.md){. target="_blank"}.
 
@@ -11,10 +14,15 @@
     - [FAQ Grand Oral](T7_Divers/00_Grand_Oral/data/GO_FAQ.pdf){. target="_blank"}
     - [Exemple de grille d'évaluation de Grand Oral](T7_Divers/00_Grand_Oral/data/grilleGO.pdf){. target="_blank"}
     - [Liste de sujets NSI ou Maths/NSI](T7_Divers/00_Grand_Oral/sujets.md){. target="_blank"}
-
+#}
 ## *Progression*
 
 !!! note "*Thèmes en cours d'étude*"
+    - [Révisions](T2_Programmation/2.0_Revisions/revisions/)
+
+
+!!! note "*Thèmes déjà traités*"
+
     - Révisions POO / Graphes: [Exercice 1 Centre Étrangers J1 2025](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices_avec_revisions/#ex1J1G112025)   
     - Révisions SQL / Programmation dynamique: [Exercice 3 Amérique du Nord J1 2026](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2026) 
     - Révisions Cryptographie / Réseaux  : [Exercice 3 Métropole J2 2025](T5_Architecture_materielle/5.4_Cryptographie/Exercices_avec_revisions/#ex3J2ME2025) 
@@ -36,9 +44,6 @@
     - [Exercices Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/exercices/)
     - [Calculabilité / Décidabilité](T2_Programmation/2.3_Calculabilite_Decidabilite/cours/)
     - [System On Chip](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
-
-
-!!! note "*Thèmes déjà traités*"
     - [Exercices Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/exercices/)
     - [Recherche textuelle](T3_Algorithmique/3.3_Recherche_textuelle/cours/) 
     - [Programmation dynamique : exercices](T3_Algorithmique/3.2_Programmation_dynamique/exercices/)
