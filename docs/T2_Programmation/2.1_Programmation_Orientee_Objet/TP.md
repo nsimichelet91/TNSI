@@ -94,8 +94,8 @@ Il faut donc écrire une fonction (**PAS UNE METHODE**) pour tester les collisio
 ## 4. Organisation du projet
 
 !!! tip "Calendrier du projet"
-    - 25/09/2025 : démarrage du projet
-    - remise du projet sur Capytale : **jeudi 16/10/2025 dernier délai**
+    - 22/09/2026 : démarrage du projet
+    - remise du projet sur Capytale : **jeudi 5/11/2026 dernier délai**
 
 !!! Capytale 
     "Dépôt de projet sur Capytale : [notebook](https://capytale2.ac-paris.fr/web/c/0d5d-6963432){:target="_blank"}
