@@ -1,5 +1,7 @@
+{#
 !!! abstract ":star: Actualités :star:"
     - **Bonne rentrée à tous - Bienvenue en NSI !** 
+#}
 
 {#
 !!! abstract ":star: Actualités :star:"
@@ -18,11 +20,19 @@
 ## *Progression*
 
 !!! note "*Thèmes en cours d'étude*"
-    - [Révisions](T2_Programmation/2.0_Revisions/revisions/)
+    - [TD récursivité](T2_Programmation/2.2_Recursivite/td/)
+    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)
+    - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
 
 
 !!! note "*Thèmes déjà traités*"
+    - [Révisions](T2_Programmation/2.0_Revisions/revisions/)
+    - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
+    - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
+    - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices/) 
+    
 
+{#
     - Révisions POO / Graphes: [Exercice 1 Centre Étrangers J1 2025](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices_avec_revisions/#ex1J1G112025)   
     - Révisions SQL / Programmation dynamique: [Exercice 3 Amérique du Nord J1 2026](T4_Bases_de_donnees/4.2_Langage_SQL/02_exercices_ecrit/#ex3J1AN2026) 
     - Révisions Cryptographie / Réseaux  : [Exercice 3 Métropole J2 2025](T5_Architecture_materielle/5.4_Cryptographie/Exercices_avec_revisions/#ex3J2ME2025) 
@@ -78,7 +88,7 @@
     - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices/) 
     - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
     - [Révisions](T2_Programmation/2.0_Revisions/revisions/)
-
+#}
 ## *Programme*
 
 !!! abstract "*Programme*"
