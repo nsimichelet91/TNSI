@@ -3,7 +3,7 @@
 !!! example "Exercice 1"
     === "Énoncé"
         Exercice 5 du sujet [Centres Étrangers 1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Centres_Etrangers_1.pdf){. target="blank"}
-
+{#
     === "Corr. Q1"
         ![image](data/ex1Q1.png){: .center width=50%}
 
@@ -61,11 +61,12 @@
                 empile(P, depile(Q))
             return t
         ```
+#}
 
 !!! example "Exercice 2"
     === "Énoncé"
         Exercice 1 du sujet [La Réunion J2 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_LaReunion_J2.pdf){. target="blank"}
-
+{#
     === "Corr. Q1"
         ![image](data/ex2Q1.png){: .center width=70%}
 
@@ -91,11 +92,11 @@
         empiler(p, 7)
         multiplication(p)
         ```
-
+#}
 !!! example "Exercice 3"
     === "Énoncé"
         Exercice 2 du sujet [Métropole Candidats Libres J1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Metropole_Candidats_libres_1.pdf){. target="blank"}
-
+{#
     === "Corr. Q1a"
         ```python linenums='1'
         pile1 = Pile()
@@ -135,11 +136,11 @@
                 val = p_temp.depiler()
                 pile.empiler(val)
         ```
-
+#}
 !!! example "Exercice 4"
     === "Énoncé"
         Exercice 5 du sujet [Amérique du Nord J1 - 2021](https://glassus.github.io/terminale_nsi/T6_Annales/data/2021/21_Am%C3%A9rique_du_Nord.pdf){. target="blank"}
-
+{#
     === "Corr. Q1a"
         Le contenu de la pile P sera 
 
@@ -202,11 +203,11 @@
                    nb_elements(F, "vert") <= nb_vert and \
                    nb_elements(F, "jaune") <= nb_jaune
         ```
-
+#}
 !!! example "Exercice 5"
     === "Énoncé"
         Exercice 2 du sujet [Centres Étrangers J1 - 2022](https://glassus.github.io/terminale_nsi/T6_Annales/data/2022/2022_Centres_Etrangers_J1.pdf){. target="blank"}
-
+{#
     === "Corr. Q1"
         Il faut écrire l'instruction : 
 
@@ -243,7 +244,7 @@
                 horaire_dernier = self.defile()[3]
             return horaire_dernier - horaire_premier                 
         ```
-
+#}
 
 ??? example "Exercice 6"
 
@@ -278,13 +279,13 @@
     >>> simplifiable('C', 'C')
     False
     ```
-
+{#
     ??? aide "Correction"
         ```python linenums='1'
         def simplifiable(l1, l2):
             return abs(ord(l1) - ord(l2)) == 32
         ```
-
+#}
     #### 2. Une seule simplification de la chaîne de caractères
 
     Écrire une fonction ```simplifie``` qui prend en paramètre une chaîne de caractère ```s``` et qui renvoie cette même chaîne de caractères, ayant été simplifiée une fois au maximum.
@@ -313,7 +314,7 @@
     'cde'
     ```
 
-
+{#
     ??? aide "Correction"
         ```python linenums='1'
         def simplifie(s):
@@ -322,7 +323,7 @@
                     return s[:i] + s[i+2:]
             return s
         ```
-
+#}
     #### 3. Résolution du problème
 
     Après vous être demandé comment savoir facilement qu'une chaîne n'était plus simplifiable, proposer une fonction ```reduction``` qui prend en paramètre une chaîne ```s``` et qui renvoie cette chaîne ```s``` une fois effectuées **toutes** les simplifications possibles.
@@ -332,7 +333,7 @@
     >>> reduction('dabAcCaCBAcCcaDA')
     'dabCBAcaDA'
     ```
-
+{#
     ??? aide "Correction"
         ```python linenums='1'
         def reduction(s):
@@ -344,7 +345,7 @@
                     fini = True
             return s
         ```
-
+#}
     #### 4. Le vrai énoncé d'Advent of Code
 
     Dans cette énigme n°5, la réponse à donner est le nombre de caractères de la chaîne une fois simplifiée. Ce qui ne devrait pas nous poser de problème.
@@ -359,7 +360,7 @@
     Anecdotique ? Pas vraiment...
 
     Effectuez la réduction de cette chaîne avec votre programme précédent. Que remarquez-vous ?
-
+{#
     ??? aide "Correction"
         ```python linenums='1'
         s = 'YyLlXxYKkbNnQqBFfxXbyYWwBhHyYTCBbCjI...'
@@ -386,7 +387,7 @@
         ```
         
         Le résultat (9370) est loooong à nous parvenir ! (30 secondes sur ma machine)
-    
+#}   
 
     #### 5. Sauvé par une pile
 
@@ -394,7 +395,7 @@
 
     Vous pouvez utiliser l'implémentation de pile disponible [ici](https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/#321-a-laide-du-type-list-de-python){. target="_blank"}.
 
-
+{#
     ??? aide "Aide à la construction de l'algorithme"
         Pour chaque lettre de la chaîne :
         
@@ -425,5 +426,5 @@
         ```
 
         Le résultat est cette fois immédiat : 0.04 secondes sur ma machine, soit environ 1000 fois plus rapide que le code précédent.
-
+#}
 
