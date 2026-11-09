@@ -20,9 +20,8 @@
 ## *Progression*
 
 !!! note "*Thèmes en cours d'étude*"
-    - [TD récursivité](T2_Programmation/2.2_Recursivite/td/)
-    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)
-    - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
+    - [Listes / piles / files : cours](T1_Structures_de_donnees/1.1_Listes_Piles_Files/cours/)
+    - [Listes / piles / files : exercices](T1_Structures_de_donnees/1.1_Listes_Piles_Files/Exercices/)
 
 
 !!! note "*Thèmes déjà traités*"
@@ -30,7 +29,9 @@
     - [Programmation Orientée Objet](T2_Programmation/2.1_Programmation_Orientee_Objet/cours/) 
     - [TP d'introduction à la POO](T2_Programmation/2.1_Programmation_Orientee_Objet/TP/)
     - [Exercices POO](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices/) 
-    
+    - [TD récursivité](T2_Programmation/2.2_Recursivite/td/)
+    - [Récursivité](T2_Programmation/2.2_Recursivite/cours/)
+    - [Exercices sur la récursivité](T2_Programmation/2.2_Recursivite/2_Exercices_recursivite/) 
 
 {#
     - Révisions POO / Graphes: [Exercice 1 Centre Étrangers J1 2025](T2_Programmation/2.1_Programmation_Orientee_Objet/Exercices_avec_revisions/#ex1J1G112025)   
